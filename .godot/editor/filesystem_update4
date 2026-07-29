@@ -1,0 +1,5 @@
+res://Gameplay/main_gameplay_3d.tscn
+res://gameplay/main_gameplay_3d.tscn
+res://environment.tscn
+res://player/player_3d.tscn
+res://player/player_3d.gd
