@@ -1,20 +1,18 @@
 [gd_scene format=3 uid="uid://c44r7tlycsq3f"]
 
 [ext_resource type="Script" uid="uid://bjpghh8u56lp7" path="res://player/player_3d.gd" id="1_nni6y"]
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_qif3h"]
+[ext_resource type="Script" uid="uid://b43trd85ku457" path="res://player/character_skin_3d.gd" id="2_a5lo2"]
+[ext_resource type="PackedScene" uid="uid://bmp6pyyqxxkrk" path="res://player/default character/default_character_skin.tscn" id="3_6g8ua"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_nni6y"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_nni6y"]
 
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_6g8ua"]
+
 [node name="Player3D" type="CharacterBody3D" unique_id=1108755822]
 script = ExtResource("1_nni6y")
-
-[node name="Skin" type="MeshInstance3D" parent="." unique_id=194614921]
-unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-mesh = SubResource("CapsuleMesh_qif3h")
+model = ExtResource("3_6g8ua")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=460190403]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -31,3 +29,11 @@ spring_length = 8.0
 [node name="Camera3D" type="Camera3D" parent="CameraPivot/SpringArm3D" unique_id=196451326]
 unique_name_in_owner = true
 fov = 40.0
+
+[node name="CharacterSkin3D" type="Node3D" parent="." unique_id=300302681]
+unique_name_in_owner = true
+script = ExtResource("2_a5lo2")
+
+[node name="TemporaryMeshInstance3D" type="MeshInstance3D" parent="CharacterSkin3D" unique_id=239737805]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_6g8ua")

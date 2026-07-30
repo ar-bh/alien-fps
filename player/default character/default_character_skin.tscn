@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://bmp6pyyqxxkrk"]
+
+[ext_resource type="PackedScene" uid="uid://7uwubm4ndlb5" path="res://player/default character/default_character.glb" id="1_v8vja"]
+
+[node name="DefaultCharacterSkin" unique_id=1752741881 instance=ExtResource("1_v8vja")]
+
+[node name="Skeleton3D" parent="FinishedRig" parent_id_path=PackedInt32Array(1195474761) index="0" unique_id=46418228]
+bones/3/position = Vector3(0.0024333112, 2.817178e-07, -3.7210734)
+bones/5/position = Vector3(0.0024318192, -6.539971, -3.7194173)
+bones/6/position = Vector3(-4.021728, 0.0024881335, -15.238558)
+bones/6/rotation = Quaternion(0.5001053, 0.50041133, -0.49999794, 0.49948502)
+bones/12/position = Vector3(-1.8437506, 0.6449956, -11.54299)
+bones/13/position = Vector3(-0.5804447, 0.6689287, -3.6434002)
+bones/15/rotation = Quaternion(-0.00023241923, 0.70724165, 0.7069719, -8.326717e-05)
+bones/16/rotation = Quaternion(6.891466e-05, 0.70724136, 0.7069722, 0.00021816272)
+bones/17/rotation = Quaternion(-0.0002324937, -0.7071067, 0.70710677, -0.00023250017)
+bones/18/rotation = Quaternion(7.1960734e-05, 0.70710665, -0.7071068, 0.00039291865)
+bones/19/rotation = Quaternion(2.5753667e-07, -9.895284e-08, -2.1776918e-07, 1)
+bones/21/position = Vector3(-0.00723699, 0.19355012, 0.020364132)
+bones/21/rotation = Quaternion(0.70737207, 0.00024309363, 0.00043876917, 0.70684123)
+bones/21/scale = Vector3(1.0000006, 0.9999999, 1.0000002)
+bones/22/rotation = Quaternion(0.048403144, 0.8688416, 0.4876766, -0.07030594)
+bones/24/rotation = Quaternion(-0.018299034, 0.96892935, 0.22830728, -0.09336431)
+bones/26/rotation = Quaternion(-0.01824659, 0.96881455, 0.22885744, -0.09321862)
+bones/36/position = Vector3(3.9949894, -15.080362, 0.014465006)
+bones/37/position = Vector3(8.333794, -18.409792, 7.018232)
+bones/37/rotation = Quaternion(-0.70411164, -0.063282095, 0.063252695, 0.70442975)
+bones/38/position = Vector3(-8.272153, -18.488972, 7.0578647)
+bones/38/rotation = Quaternion(-0.70427907, 0.06304086, -0.06289197, 0.7043163)
+bones/39/position = Vector3(-4.005009, -15.084371, 0.011158502)
+
+[node name="Torso" parent="FinishedRig/Skeleton3D" index="0" unique_id=1722956702]
+transform = Transform3D(0.99999905, -0.00044652217, -0.00061220396, 0.00044654284, 0.99999934, -0.00030981394, 0.00061247865, 0.00030935352, 0.99999934, -0.005007081, -4.784605, 0.012083203)
+
+[node name="LeftLeg" parent="FinishedRig/Skeleton3D" index="1" unique_id=1819266201]
+transform = Transform3D(0.9999991, -1.6530976e-07, 0.00020641663, 5.9430022e-08, -0.9999999, -7.1028466e-05, 0.00020655288, 7.124891e-05, -0.9999997, 3.9949899, -4.7828183, 0.013737112)
+
+[node name="RightLeg" parent="FinishedRig/Skeleton3D" index="2" unique_id=1691414186]
+transform = Transform3D(0.9999992, -3.434252e-09, -0.00024747686, 1.891749e-07, -0.99999946, -7.1028924e-05, -0.0002473408, 7.112971e-05, -0.9999995, -4.005004, -4.7863917, 0.010430246)
+
+[node name="Left Hand" parent="FinishedRig/Skeleton3D" index="3" unique_id=1261875876]
+transform = Transform3D(0.9475612, 0.12404143, 0.29452053, 0.29448503, -0.6968697, -0.6539507, 0.12412538, 0.70638967, -0.6968546, 9.5902195, 1.7010999, 3.1539116)
+
+[node name="Left Arm" parent="FinishedRig/Skeleton3D" index="4" unique_id=2019172160]
+transform = Transform3D(-0.9852652, 0.16632739, -0.03985764, -0.17036939, -0.9338435, 0.31450087, 0.015089276, 0.316657, 0.94842, 6.2571454, 9.008933, 0.024164906)
+
+[node name="Right Hand" parent="FinishedRig/Skeleton3D" index="5" unique_id=999230982]
+transform = Transform3D(0.9477741, -0.12401097, -0.29384768, -0.29398078, -0.6969791, -0.6540608, -0.12369495, 0.7062866, -0.6970352, -9.605135, 1.6997604, 3.1387484)
+
+[node name="Right Arm" parent="FinishedRig/Skeleton3D" index="6" unique_id=817062050]
+transform = Transform3D(-0.0667203, -0.1662318, -0.98382723, -0.30949607, -0.933941, 0.1787919, -0.9485569, 0.3164194, 0.010864732, -6.272864, 9.0080595, 0.014267377)
+
+[node name="Head" parent="FinishedRig/Skeleton3D" index="7" unique_id=555226340]
+transform = Transform3D(1.0000005, -7.008406e-05, 0.0006160753, 7.000449e-05, 1.0000004, 0.0001305613, -0.00061608356, -0.00013052503, 0.99999964, -0.008129448, 12.818498, 0.018722553)
+
+[node name="Torso Rock" parent="FinishedRig/Skeleton3D" index="8" unique_id=1216968606]
+transform = Transform3D(1.0000001, -0.00027636497, 0.0009644035, 0.00096419617, -0.0007508992, -0.99999946, 0.0002770891, 0.9999996, -0.0007506611, -0.00723699, 0.19355012, 0.020364132)

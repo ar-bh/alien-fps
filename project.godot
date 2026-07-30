@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
+[filesystem]
+
+import/blender/enabled=false
+
 [input]
 
 left_click={
@@ -65,3 +69,4 @@ jump={
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+anti_aliasing/quality/msaa_3d=1
