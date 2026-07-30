@@ -56,7 +56,7 @@ func _physics_process(delta: float) -> void:
 	velocity = velocity.move_toward(move_direction * move_speed, acceleration * delta)
 	velocity.y = y_velocity + (_gravity * delta)
 	
-	var is_starting_jump := Input.is_action_just_pressed("jump") and is_on_floor()
+	var is_starting_jump := Input.is_action_pressed("jump") and is_on_floor()
 	if is_starting_jump:
 		velocity.y += jump_impulse
 	
