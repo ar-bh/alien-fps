@@ -1,3 +1,4 @@
 res://player/player_3d.tscn
 res://player/player_3d.gd
 res://player/character_skin_3d.gd
+res://gameplay/main_gameplay_3d.tscn

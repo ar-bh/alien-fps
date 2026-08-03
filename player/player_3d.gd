@@ -12,7 +12,7 @@ class_name Player3D extends CharacterBody3D
 #region movement exports
 @export_group("Movement")
 @export var move_speed := 8.0
-@export var acceleration := 20.0
+@export var acceleration := 50.0
 @export var rotation_speed := 12.0
 @export var jump_impulse := 12.0
 #endregion
