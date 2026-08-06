@@ -6,3 +6,6 @@ res://Gameplay/test/first_person_test.tscn
 res://gameplay/test/first_person_test.tscn
 res://Gameplay/test/fps_player_3d.tscn
 res://Gameplay/test/fps_player_3d.gd
+res://blender/axe.gd
+res://weapons/axe/axe.tscn
+res://weapons/axe/axe.gd

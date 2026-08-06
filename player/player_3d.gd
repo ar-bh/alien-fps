@@ -1,5 +1,6 @@
 extends CharacterBody3D
 
+#region movement + camera
 const SPEED := 5.0
 const JUMP_VELOCITY := 4.5
 var sensitivity := 0.01
@@ -7,30 +8,77 @@ var mouse_is_playing := false
 
 const GRAVITY := 9.8
 
-#region node variables
 @onready var _head: Node3D = %Head
 @onready var _camera_3d: Camera3D = %Camera3D
-@onready var _axe = %Axe
-@onready var _axe_animation_player = %Axe/AnimationPlayer
 #endregion
 
+
+#region weapons and animations
+
+@export var weapons_list: Dictionary = {
+	"axe": preload("uid://4bo6plflo2ug")
+}
+
+@onready var item_holder: Node3D = %ItemHolder
+var current_item: String: set = set_current_item
+var item_in_hand: Node3D
+
+
+
+func set_current_item(new_item: String) -> void:
+	if not is_node_ready():
+		current_item = new_item
+		return
+	if not weapons_list.has(new_item):
+		return
+	
+	current_item = new_item
+	
+	for child in item_holder.get_children():
+		child.queue_free()
+	
+	item_in_hand = weapons_list[current_item].instantiate()
+	item_holder.add_child(item_in_hand)
+
+#endregion
+
+
 func _input(event: InputEvent) -> void:
-	if Input.is_action_just_pressed("left_click"):
+	#region camera
+	if Input.is_action_just_pressed("attack"):
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 		mouse_is_playing = true
 	if Input.is_action_just_pressed("ui_cancel"):
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 		mouse_is_playing = false
-
-func _unhandled_input(event):
+	
 	if event is InputEventMouseMotion and mouse_is_playing:
 		_head.rotate_y(-event.relative.x * sensitivity)
 		_camera_3d.rotate_x(-event.relative.y * sensitivity)
 		_camera_3d.rotation.x = clampf(_camera_3d.rotation.x, deg_to_rad(-90), deg_to_rad(90))
+	#endregion
 
+func _unhandled_input(event: InputEvent) -> void:
+		#region animations
+	
+		#region axe
+		if current_item == "axe":
+			if Input.is_action_just_pressed("attack"):
+				item_in_hand.axe_play_attack1_hit()
+			else:
+				if not item_in_hand.animation_player.is_playing:
+					item_in_hand.axe_play_idle()
+		
+		#endregion
+	
+	#endregion
+
+		
 func _ready() -> void:
-	_axe_animation_player.play("axe_IDLE")
-
+	#region weapons
+	set_current_item("axe")
+	
+	#endregion
 
 func _physics_process(delta) -> void:
 	if not is_on_floor():
