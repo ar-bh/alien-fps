@@ -10,6 +10,8 @@ const GRAVITY := 9.8
 #region node variables
 @onready var _head: Node3D = %Head
 @onready var _camera_3d: Camera3D = %Camera3D
+@onready var _axe = %Axe
+@onready var _axe_animation_player = %Axe/AnimationPlayer
 #endregion
 
 func _input(event: InputEvent) -> void:
@@ -25,6 +27,10 @@ func _unhandled_input(event):
 		_head.rotate_y(-event.relative.x * sensitivity)
 		_camera_3d.rotate_x(-event.relative.y * sensitivity)
 		_camera_3d.rotation.x = clampf(_camera_3d.rotation.x, deg_to_rad(-90), deg_to_rad(90))
+
+func _ready() -> void:
+	_axe_animation_player.play("axe_IDLE")
+
 
 func _physics_process(delta) -> void:
 	if not is_on_floor():

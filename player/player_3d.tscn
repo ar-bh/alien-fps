@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ch3lbhgo5khsv"]
 
 [ext_resource type="Script" uid="uid://ctwvqqqr7oxax" path="res://player/player_3d.gd" id="1_nni6y"]
+[ext_resource type="PackedScene" uid="uid://b3mj2o5cmxlq8" path="res://blender/axe.glb" id="2_a5lo2"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_c3rh7"]
 
@@ -23,3 +24,10 @@ unique_name_in_owner = true
 [node name="Camera3D" type="Camera3D" parent="Head" unique_id=1564393495]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5885699, 0)
+
+[node name="Axe" parent="Head/Camera3D" unique_id=1360406046 instance=ExtResource("2_a5lo2")]
+unique_name_in_owner = true
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -0.5417665, -0.13165137)
+
+[node name="Gun" type="Node3D" parent="." unique_id=58272386]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
