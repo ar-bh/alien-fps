@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="swap circus"
-run/main_scene="uid://b8g7rtkl2teo2"
+run/main_scene="uid://xt8syun8k0vs"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 

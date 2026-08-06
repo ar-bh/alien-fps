@@ -1,39 +1,25 @@
-[gd_scene format=3 uid="uid://c44r7tlycsq3f"]
+[gd_scene format=3 uid="uid://ch3lbhgo5khsv"]
 
-[ext_resource type="Script" uid="uid://bjpghh8u56lp7" path="res://player/player_3d.gd" id="1_nni6y"]
-[ext_resource type="Script" uid="uid://b43trd85ku457" path="res://player/character_skin_3d.gd" id="2_a5lo2"]
-[ext_resource type="PackedScene" uid="uid://bmp6pyyqxxkrk" path="res://player/default character/default_character_skin.tscn" id="3_6g8ua"]
+[ext_resource type="Script" uid="uid://ctwvqqqr7oxax" path="res://player/player_3d.gd" id="1_nni6y"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_nni6y"]
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_c3rh7"]
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_nni6y"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_oyqej"]
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_6g8ua"]
-
-[node name="Player3D" type="CharacterBody3D" unique_id=1108755822]
+[node name="Player3D" type="CharacterBody3D" unique_id=850945551]
 script = ExtResource("1_nni6y")
-model = ExtResource("3_6g8ua")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=460190403]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=913911856]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-shape = SubResource("CapsuleShape3D_nni6y")
+mesh = SubResource("CapsuleMesh_c3rh7")
 
-[node name="CameraPivot" type="Node3D" parent="." unique_id=1320261923]
-unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, 1.5, 0)
-
-[node name="SpringArm3D" type="SpringArm3D" parent="CameraPivot" unique_id=1597755978]
-shape = SubResource("SphereShape3D_nni6y")
-spring_length = 8.0
-
-[node name="Camera3D" type="Camera3D" parent="CameraPivot/SpringArm3D" unique_id=196451326]
-unique_name_in_owner = true
-fov = 40.0
-
-[node name="CharacterSkin3D" type="Node3D" parent="." unique_id=300302681]
-unique_name_in_owner = true
-script = ExtResource("2_a5lo2")
-
-[node name="TemporaryMeshInstance3D" type="MeshInstance3D" parent="CharacterSkin3D" unique_id=239737805]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=993211779]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-mesh = SubResource("CapsuleMesh_6g8ua")
+shape = SubResource("CapsuleShape3D_oyqej")
+
+[node name="Head" type="Node3D" parent="." unique_id=594584254]
+unique_name_in_owner = true
+
+[node name="Camera3D" type="Camera3D" parent="Head" unique_id=1564393495]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5885699, 0)

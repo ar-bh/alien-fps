@@ -1,53 +1,52 @@
-[gd_scene format=3 uid="uid://b8g7rtkl2teo2"]
+[gd_scene format=3 uid="uid://xt8syun8k0vs"]
 
 [ext_resource type="Texture2D" uid="uid://byrl8w21p6ggc" path="res://common/checkboard.png" id="1_4da2g"]
-[ext_resource type="PackedScene" uid="uid://c44r7tlycsq3f" path="res://player/player_3d.tscn" id="2_4ssrn"]
+[ext_resource type="PackedScene" uid="uid://ch3lbhgo5khsv" path="res://player/player_3d.tscn" id="2_4ssrn"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ssrn"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4da2g"]
 albedo_color = Color(0.23159695, 0.7978776, 0, 1)
 albedo_texture = ExtResource("1_4da2g")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_52p1e"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ssrn"]
 albedo_color = Color(0.73425996, 0.56612194, 0.98300153, 1)
 albedo_texture = ExtResource("1_4da2g")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4da2g"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_52p1e"]
 albedo_color = Color(0.24607584, 0.6059327, 0.99999994, 1)
 albedo_texture = ExtResource("1_4da2g")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="Environment" id="Environment_4ssrn"]
+[sub_resource type="Environment" id="Environment_tscrs"]
 background_mode = 1
 background_color = Color(1, 1, 1, 1)
 
-[node name="MainGameplay3D" type="Node3D" unique_id=1287548790]
+[node name="MainGameplay3D" type="Node3D" unique_id=682793831]
 
-[node name="Platform" type="CSGBox3D" parent="." unique_id=127794371]
+[node name="Platform" type="CSGBox3D" parent="." unique_id=1012846297]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -19.008615, 8)
 use_collision = true
 size = Vector3(31, 38, 23)
+material = SubResource("StandardMaterial3D_4da2g")
+
+[node name="Platform3" type="CSGBox3D" parent="." unique_id=686140004]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.4913845, 18.5)
+use_collision = true
+size = Vector3(31, 11, 2)
 material = SubResource("StandardMaterial3D_4ssrn")
 
-[node name="Platform3" type="CSGBox3D" parent="." unique_id=1205363655]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.141384, 12.5)
-use_collision = true
-size = Vector3(31, 0.3, 14)
-material = SubResource("StandardMaterial3D_52p1e")
-
-[node name="Platform2" type="CSGBox3D" parent="." unique_id=116718883]
+[node name="Platform2" type="CSGBox3D" parent="." unique_id=1120142111]
 transform = Transform3D(1, 0, 0, 0, 0.9659258, -0.25881904, 0, 0.25881904, 0.9659258, 0, -12.0086155, -13)
 use_collision = true
 size = Vector3(31, 28, 13)
-material = SubResource("StandardMaterial3D_4da2g")
+material = SubResource("StandardMaterial3D_52p1e")
 
-[node name="Player3D" parent="." unique_id=1108755822 instance=ExtResource("2_4ssrn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
-camera_fov = 72.963
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=479265740]
+environment = SubResource("Environment_tscrs")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1588465670]
-environment = SubResource("Environment_4ssrn")
+[node name="Player3D" parent="." unique_id=850945551 instance=ExtResource("2_4ssrn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 12)

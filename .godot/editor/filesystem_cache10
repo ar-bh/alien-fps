@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1785431885
+::res://::1786047379
 icon.svg::CompressedTexture2D::2161755544460959011::1785346976::1785347119::1::::<><><>0<>0<>5084b3fcdd6ce8f2abaf420c2a9a3a42<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile::-1::1785346995::0::1::::<><><>0<>0<><>::
 ::res://addons/::1785346995
@@ -14,17 +14,9 @@ utils.gd::GDScript::5251015809120159908::1785346995::0::1::::<>RefCounted<><>0<>
 ::res://blender/::1785430987
 ::res://common/::1785353317
 checkboard.png::CompressedTexture2D::4106775369370201166::1784591392::1785353317::1::::<><><>0<>0<>13eb48c1fb20cf02adb0879217dbfa91<>res://.godot/imported/checkboard.png-529890cf9338e65be525f089fefc062c.s3tc.ctex::
-::res://gameplay/::1785974231
-main_gameplay_3d.tscn::PackedScene::4717013106465757999::1785452269::0::1::::<><><>0<>0<><>::uid://byrl8w21p6ggc::::res://common/checkboard.png<>uid://c44r7tlycsq3f::::res://player/player_3d.tscn
-::res://gameplay/test/::1785974187
-first_person_test.tscn::PackedScene::660034387506484797::1785974231::0::1::::<><><>0<>0<><>::uid://byrl8w21p6ggc::::res://common/checkboard.png<>uid://c44r7tlycsq3f::::res://player/player_3d.tscn
-::res://player/::1785434182
-character_skin_3d.gd::GDScript::4480883917594502864::1785433326::0::1::::CharacterSkin3D<>Node3D<><>0<>0<><>::
-player_3d.gd::GDScript::3049463164852249186::1785433427::0::1::::Player3D<>CharacterBody3D<><>0<>0<><>::
-player_3d.tscn::PackedScene::6869275138069212397::1785434182::0::1::::<><><>0<>0<><>::uid://bjpghh8u56lp7::::res://player/player_3d.gd<>uid://b43trd85ku457::::res://player/character_skin_3d.gd<>uid://bmp6pyyqxxkrk::::res://player/default character/default_character_skin.tscn
-::res://player/default character/::1785430987
-default_character.glb::PackedScene::2288702113613325428::1785430274::1785430275::1::::<><><>0<>0<>3f9140512ef7a299cd8709856617fc72<>res://.godot/imported/default_character.glb-97298ee0e2b24041bcabbb9f5afd8210.scn::uid://b35xtsn6ffw3n::::res://player/default character/default_character_default_character_face.png
-default_character_default_character_face.png::CompressedTexture2D::4415071026015785525::1785430275::1785430275::1::::<><><>0<>0<>383793f7954e6822b8abb4a1353e045b<>res://.godot/imported/default_character_default_character_face.png-c7b0fc53fe349ed17c8f542bd1b79b80.s3tc.ctex::
-default_character_skin.tscn::PackedScene::3261562785739048220::1785430535::0::1::::<><><>0<>0<><>::uid://7uwubm4ndlb5::::res://player/default character/default_character.glb
-::res://player/textures/::1785419235
-face.png::CompressedTexture2D::3339404633287845901::1785419235::1785419235::1::::<><><>0<>0<>b6268a3df26566b7a8165209690cd0c9<>res://.godot/imported/face.png-0611ff491c7ff1fee247678e89af68a8.ctex::
+::res://gameplay/::1786047382
+first_person_test.tscn::PackedScene::660034387506484797::1786047315::0::1::::<><><>0<>0<><>::uid://byrl8w21p6ggc::::res://common/checkboard.png<>uid://bomym03me1grb::::res://gameplay/third person test/game.tscn
+::res://player/::1786047359
+player_3d.gd::GDScript::519554701794912042::1785975469::0::1::::<>CharacterBody3D<><>0<>0<><>::
+player_3d.tscn::PackedScene::5322635900289303813::1786047359::0::1::::<><><>0<>0<><>::res://Gameplay/test/fps_player_3d.gd
+::res://player/textures/::1786047310
