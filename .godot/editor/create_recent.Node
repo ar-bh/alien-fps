@@ -1,9 +1,9 @@
-MeshInstance3D
 Node3D
+Camera3D
+CollisionShape3D
+MeshInstance3D
+CharacterBody3D
 AnimationPlayer
 SpringArm3D
 WorldEnvironment
-Camera3D
-CollisionShape3D
-CharacterBody3D
 CSGBox3D

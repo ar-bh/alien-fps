@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bomym03me1grb"]
+
+[ext_resource type="Script" uid="uid://hnw8wqfvjoq1" path="res://Gameplay/test/fps_player_3d.gd" id="1_oyqej"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_c3rh7"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_oyqej"]
+
+[node name="FPSPlayer3D" type="CharacterBody3D" unique_id=850945551]
+script = ExtResource("1_oyqej")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=913911856]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_c3rh7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=993211779]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_oyqej")
+
+[node name="Head" type="Node3D" parent="." unique_id=594584254]
+unique_name_in_owner = true
+
+[node name="Camera3D" type="Camera3D" parent="Head" unique_id=1564393495]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5885699, 0)
