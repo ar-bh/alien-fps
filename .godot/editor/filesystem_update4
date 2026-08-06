@@ -13,3 +13,5 @@ res://common/retrofx.gdshader
 res://common/retro_fx.tscn
 res://common/cel_shader_fx.tscn
 res://common/cel_shader_fx.gdshader
+res://enemies/eye monster/eye_alien_3d.gd
+res://enemies/eye monster/eye_monster_3d.gd

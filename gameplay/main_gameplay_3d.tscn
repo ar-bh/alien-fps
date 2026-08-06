@@ -3,15 +3,16 @@
 [ext_resource type="Texture2D" uid="uid://byrl8w21p6ggc" path="res://common/checkboard.png" id="1_4da2g"]
 [ext_resource type="PackedScene" uid="uid://ch3lbhgo5khsv" path="res://player/player_3d.tscn" id="2_4ssrn"]
 [ext_resource type="PackedScene" uid="uid://cp0g50kdmg1lm" path="res://common/cel_shader_fx.tscn" id="3_52p1e"]
+[ext_resource type="PackedScene" uid="uid://ddw2sid0bv6ua" path="res://common/retro_fx.tscn" id="4_tscrs"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4da2g"]
-albedo_color = Color(0.23159695, 0.7978776, 0, 1)
+albedo_color = Color(0.5889479, 0.6266225, 1, 1)
 albedo_texture = ExtResource("1_4da2g")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ssrn"]
-albedo_color = Color(0.73425996, 0.56612194, 0.98300153, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tscrs"]
+albedo_color = Color(0.8143217, 0.5158527, 0.9859267, 1)
 albedo_texture = ExtResource("1_4da2g")
 uv1_scale = Vector3(0.3, 0.3, 0.3)
 uv1_triplanar = true
@@ -28,28 +29,34 @@ background_color = Color(1, 1, 1, 1)
 
 [node name="MainGameplay3D" type="Node3D" unique_id=682793831]
 
-[node name="Platform" type="CSGBox3D" parent="." unique_id=1012846297]
+[node name="World" type="Node" parent="." unique_id=593962535]
+
+[node name="Platform" type="CSGBox3D" parent="World" unique_id=1012846297]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -19.008615, 8)
 use_collision = true
 size = Vector3(31, 38, 23)
 material = SubResource("StandardMaterial3D_4da2g")
 
-[node name="Platform3" type="CSGBox3D" parent="." unique_id=686140004]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.4913845, 18.5)
+[node name="Platform3" type="CSGBox3D" parent="World" unique_id=703055798]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.0086155, 24.517899)
 use_collision = true
-size = Vector3(31, 11, 2)
-material = SubResource("StandardMaterial3D_4ssrn")
+size = Vector3(31, 38, 10)
+material = SubResource("StandardMaterial3D_tscrs")
 
-[node name="Platform2" type="CSGBox3D" parent="." unique_id=1120142111]
+[node name="Platform2" type="CSGBox3D" parent="World" unique_id=1120142111]
 transform = Transform3D(1, 0, 0, 0, 0.9659258, -0.25881904, 0, 0.25881904, 0.9659258, 0, -12.0086155, -13)
 use_collision = true
 size = Vector3(31, 28, 13)
 material = SubResource("StandardMaterial3D_52p1e")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=479265740]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="World" unique_id=479265740]
 environment = SubResource("Environment_tscrs")
 
 [node name="Player3D" parent="." unique_id=850945551 instance=ExtResource("2_4ssrn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 12)
 
-[node name="CelShaderFX" parent="." unique_id=964755560 instance=ExtResource("3_52p1e")]
+[node name="FX" type="Node" parent="." unique_id=445978245]
+
+[node name="CelShaderFX" parent="FX" unique_id=964755560 instance=ExtResource("3_52p1e")]
+
+[node name="RetroFX" parent="FX" unique_id=1268121299 instance=ExtResource("4_tscrs")]

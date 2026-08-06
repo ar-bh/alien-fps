@@ -1,3 +1,5 @@
+Node
+CharacterBody3D
 ColorRect
 CanvasLayer
 Node3D
@@ -6,7 +8,6 @@ Sprite3D
 Camera3D
 CollisionShape3D
 MeshInstance3D
-CharacterBody3D
 AnimationPlayer
 SpringArm3D
 WorldEnvironment

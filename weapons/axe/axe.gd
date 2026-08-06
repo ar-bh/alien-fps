@@ -1,4 +1,4 @@
-extends Node3D
+class_name Axe3D  extends Node3D
 
 #region node variables
 @onready var animation_player: AnimationPlayer = %AnimationPlayer
