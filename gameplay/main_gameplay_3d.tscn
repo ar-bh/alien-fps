@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://byrl8w21p6ggc" path="res://common/checkboard.png" id="1_4da2g"]
 [ext_resource type="PackedScene" uid="uid://ch3lbhgo5khsv" path="res://player/player_3d.tscn" id="2_4ssrn"]
+[ext_resource type="PackedScene" uid="uid://cp0g50kdmg1lm" path="res://common/cel_shader_fx.tscn" id="3_52p1e"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4da2g"]
 albedo_color = Color(0.23159695, 0.7978776, 0, 1)
@@ -50,3 +51,5 @@ environment = SubResource("Environment_tscrs")
 
 [node name="Player3D" parent="." unique_id=850945551 instance=ExtResource("2_4ssrn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 12)
+
+[node name="CelShaderFX" parent="." unique_id=964755560 instance=ExtResource("3_52p1e")]

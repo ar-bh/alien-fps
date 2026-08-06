@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://ddw2sid0bv6ua"]
+
+[ext_resource type="Shader" uid="uid://g7i2k6e57jfy" path="res://common/retrofx.gdshader" id="1_eyv8l"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dom4k"]
+shader = ExtResource("1_eyv8l")
+shader_parameter/pixel_size = 4.0
+
+[node name="RetroFX" type="CanvasLayer" unique_id=1268121299]
+
+[node name="ScreenOverlay" type="ColorRect" parent="." unique_id=1016764621]
+material = SubResource("ShaderMaterial_dom4k")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true

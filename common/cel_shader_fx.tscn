@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cp0g50kdmg1lm"]
+
+[ext_resource type="Shader" uid="uid://cjkc3g2abw8yl" path="res://common/cel_shader_fx.gdshader" id="1_qxuog"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i705y"]
+shader = ExtResource("1_qxuog")
+shader_parameter/color_levels = 4
+shader_parameter/line_thickness = 1.0
+
+[node name="CelShaderFX" type="CanvasLayer" unique_id=964755560]
+
+[node name="ScreenOverlay" type="ColorRect" parent="." unique_id=1712119856]
+material = SubResource("ShaderMaterial_i705y")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2

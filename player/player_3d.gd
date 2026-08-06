@@ -8,7 +8,7 @@ var mouse_is_playing := false
 
 const GRAVITY := 9.8
 
-@onready var _head: Node3D = %Head
+@onready var _head: Node3D = %Head3D
 @onready var _camera_3d: Camera3D = %Camera3D
 #endregion
 
@@ -19,7 +19,7 @@ const GRAVITY := 9.8
 	"axe": preload("uid://4bo6plflo2ug")
 }
 
-@onready var item_holder: Node3D = %ItemHolder
+@onready var item_holder: Node3D = %ItemHolder3D
 var current_item: String: set = set_current_item
 var item_in_hand: Node3D
 
