@@ -31,25 +31,25 @@ func set_health(new_health: int) -> void:
 @onready var _animation_player: AnimationPlayer = $AnimationPlayer
 
 func eye_monster_play_attack() -> void:
-	_animation_player.play("ATK")
+	_animation_player.play("ATK", 0.05)
 	
 func eye_monster_play_die() -> void:
-	_animation_player.play("DEAD")
+	_animation_player.play("DEAD", 0.1)
 	
 func eye_monster_play_dead() -> void:
-	_animation_player.play("DEAD_IDLE")
+	_animation_player.play("DEAD_IDLE", 0.1)
 	
 func eye_monster_play_fall () -> void:
-	_animation_player.play("FALL")
+	_animation_player.play("FALL", 0.1)
 	
 func eye_monster_play_hit() -> void:
-	_animation_player.play("HIT")
+	_animation_player.play("HIT", 0.1)
 	
 func eye_monster_play_idle() -> void:
-	_animation_player.play("IDLE")
+	_animation_player.play("IDLE", 0.1)
 
 func eye_monster_play_run() -> void:
-	_animation_player.play("RUN")
+	_animation_player.play("RUN", 0.1)
 
 #endregion
 
