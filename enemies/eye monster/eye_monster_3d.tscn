@@ -1,5 +1,40 @@
 [gd_scene format=3 uid="uid://dyatm1x1enkuo"]
 
-[ext_resource type="PackedScene" uid="uid://hgu1esonp6sx" path="res://blender/eye_alien.glb" id="1_8bq2o"]
+[ext_resource type="PackedScene" uid="uid://hgu1esonp6sx" path="res://blender/eye_alien.glb" id="1_knd1k"]
+[ext_resource type="Script" uid="uid://btcvelotdu6vg" path="res://enemies/eye monster/eye_monster_3d.gd" id="2_kbpa6"]
 
-[node name="EyeAlien3D" unique_id=905356002 instance=ExtResource("1_8bq2o")]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_knd1k"]
+radius = 4.6049805
+height = 9.209961
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_knd1k"]
+height = 40.69214
+radius = 31.129395
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kbpa6"]
+radius = 4.6049805
+height = 9.209961
+
+[node name="EyeMonster3D" unique_id=826779260 instance=ExtResource("1_knd1k")]
+script = ExtResource("2_kbpa6")
+health_range_maximum = 2.0
+
+[node name="Armature" parent="." index="0" unique_id=404503421]
+
+[node name="AnimationPlayer" parent="." index="1" unique_id=766500624]
+
+[node name="HurtBox3D" type="Area3D" parent="." index="2" unique_id=1455950699]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HurtBox3D" index="0" unique_id=541512981]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.133667, 0)
+shape = SubResource("CapsuleShape3D_knd1k")
+
+[node name="DetectionArea3D" type="Area3D" parent="." index="3" unique_id=1127537938]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DetectionArea3D" index="0" unique_id=348234650]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.4707031, 0)
+shape = SubResource("CylinderShape3D_knd1k")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="4" unique_id=1899554042]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.133667, 0)
+shape = SubResource("CapsuleShape3D_kbpa6")

@@ -15,10 +15,6 @@ run/main_scene="uid://xt8syun8k0vs"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
-
 [filesystem]
 
 import/blender/enabled=false

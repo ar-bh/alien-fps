@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://ch3lbhgo5khsv" path="res://player/player_3d.tscn" id="2_4ssrn"]
 [ext_resource type="PackedScene" uid="uid://cp0g50kdmg1lm" path="res://common/cel_shader_fx.tscn" id="3_52p1e"]
 [ext_resource type="PackedScene" uid="uid://ddw2sid0bv6ua" path="res://common/retro_fx.tscn" id="4_tscrs"]
+[ext_resource type="PackedScene" uid="uid://dyatm1x1enkuo" path="res://enemies/eye monster/eye_monster_3d.tscn" id="5_xak5j"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4da2g"]
 albedo_color = Color(0.5889479, 0.6266225, 1, 1)
@@ -60,3 +61,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 12)
 [node name="CelShaderFX" parent="FX" unique_id=964755560 instance=ExtResource("3_52p1e")]
 
 [node name="RetroFX" parent="FX" unique_id=1268121299 instance=ExtResource("4_tscrs")]
+
+[node name="EyeMonster3D" parent="." unique_id=826779260 instance=ExtResource("5_xak5j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 2, 1)
+
+[node name="EyeMonster3D2" parent="." unique_id=1856900017 instance=ExtResource("5_xak5j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 3, 4)
+
+[node name="EyeMonster3D3" parent="." unique_id=1406749006 instance=ExtResource("5_xak5j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -7)

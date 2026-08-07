@@ -1,4 +1,4 @@
-extends CharacterBody3D
+class_name Player3D extends CharacterBody3D
 
 #region movement + camera
 const SPEED := 5.0
@@ -22,8 +22,6 @@ const GRAVITY := 9.8
 @onready var item_holder: Node3D = %ItemHolder3D
 var current_item: String: set = set_current_item
 var item_in_hand: Node3D
-
-
 
 func set_current_item(new_item: String) -> void:
 	if not is_node_ready():
@@ -64,10 +62,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		#region axe
 		if current_item == "axe":
 			if Input.is_action_just_pressed("attack"):
-				item_in_hand.axe_play_attack1_hit()
-			else:
-				if not item_in_hand.animation_player.is_playing:
-					item_in_hand.axe_play_idle()
+				item_in_hand.axe_attack()
 		
 		#endregion
 	
