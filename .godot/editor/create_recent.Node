@@ -1,9 +1,9 @@
+CanvasLayer
 Area3D
 CollisionShape3D
 CharacterBody3D
 Node
 ColorRect
-CanvasLayer
 Node3D
 Sprite2D
 Sprite3D

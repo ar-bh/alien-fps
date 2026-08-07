@@ -40,6 +40,8 @@ func axe_attack() -> void:
 	axe_play_attack1_hit()
 	_activate_hitbox_window()
 	
+	
+	
 @export var hitbox_start := 0.2
 @export var hitbox_duration := 0.1
 	
@@ -60,6 +62,10 @@ func _on_hit_box_area_entered(area: Node3D) -> void:
 	if monster is EyeMonster3D:
 		monster.health -= damage
 		disable_hitbox()
+		
+		var player: Player3D = get_parent().get_parent().get_parent().get_parent()
+		if player.has_method("add_trauma"):
+			player.add_trauma(0.4)
 	
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "axe_ATK1(hit)":

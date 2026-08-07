@@ -12,9 +12,26 @@ const GRAVITY := 9.8
 @onready var _camera_3d: Camera3D = %Camera3D
 #endregion
 
+#region screenshake
+var trauma := 0.0 
 
-#region weapons and animations
+@export_group("Screenshake")
+@export var trauma_decay := 1.2 # fading speed
+@export var max_offset := Vector2(0.2, 0.2) #h/v offset at trauma 1 which is max
+@export var max_roll := 0.05 # camera tilt in radians
+@export var trauma_power := 2.0 # 2 or 3 is "punchier falloff"
+@export var noise_frequency := 16.0
 
+var _noise := FastNoiseLite.new()
+var _noise_t := 0.0
+
+func add_trauma(amount: float) -> void:
+	trauma = clampf(trauma + amount, 0.0, 1.0)
+#endregion
+
+#region weapons
+
+@export_group("Weapons")
 @export var weapons_list: Dictionary = {
 	"axe": preload("uid://4bo6plflo2ug")
 }
@@ -40,6 +57,51 @@ func set_current_item(new_item: String) -> void:
 
 #endregion
 
+
+
+func _ready() -> void:
+	#region weapons
+	set_current_item("axe")
+	#endregion
+
+	#region screenshake
+	_noise.seed = randi()
+	_noise.frequency = noise_frequency
+	#endregion
+
+func _process(delta: float) -> void:
+	trauma = move_toward(trauma, 0.0, trauma_decay * delta)
+	_noise_t += delta
+	
+	var shake := pow(trauma, trauma_power)
+	if shake > 0.0:
+		_camera_3d.h_offset = max_offset.x * shake * _noise.get_noise_1d(_noise_t)
+		_camera_3d.v_offset = max_offset.y * shake * _noise.get_noise_1d(_noise_t + 100.0)
+		_camera_3d.rotation.z = max_roll * shake * _noise.get_noise_1d(_noise_t + 200.0)
+	else:
+		_camera_3d.h_offset = 0.0
+		_camera_3d.v_offset = 0.0
+		_camera_3d.rotation.z = 0.0
+
+func _physics_process(delta) -> void:
+	#region fps controller
+	if not is_on_floor():
+		velocity.y -= GRAVITY * delta
+		
+	if Input.is_action_just_pressed("jump") and is_on_floor():
+		velocity.y = JUMP_VELOCITY
+		
+	var input_direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
+	var direction = (_head.transform.basis * Vector3(input_direction.x, 0.0, input_direction.y)).normalized()
+	if direction:
+		velocity.x = direction.x * SPEED
+		velocity.z = direction.z * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0.0, SPEED)
+		velocity.z = move_toward(velocity.z, 0.0, SPEED)
+		
+	move_and_slide()
+	#endregion
 
 func _input(event: InputEvent) -> void:
 	#region camera
@@ -67,28 +129,3 @@ func _unhandled_input(event: InputEvent) -> void:
 		#endregion
 	
 	#endregion
-
-		
-func _ready() -> void:
-	#region weapons
-	set_current_item("axe")
-	
-	#endregion
-
-func _physics_process(delta) -> void:
-	if not is_on_floor():
-		velocity.y -= GRAVITY * delta
-		
-	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-		
-	var input_direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
-	var direction = (_head.transform.basis * Vector3(input_direction.x, 0.0, input_direction.y)).normalized()
-	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0.0, SPEED)
-		velocity.z = move_toward(velocity.z, 0.0, SPEED)
-		
-	move_and_slide()

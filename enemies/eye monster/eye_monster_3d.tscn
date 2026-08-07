@@ -19,10 +19,6 @@ height = 9.209961
 script = ExtResource("2_kbpa6")
 health_range_maximum = 2.0
 
-[node name="Armature" parent="." index="0" unique_id=404503421]
-
-[node name="AnimationPlayer" parent="." index="1" unique_id=766500624]
-
 [node name="HurtBox3D" type="Area3D" parent="." index="2" unique_id=1455950699]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="HurtBox3D" index="0" unique_id=541512981]

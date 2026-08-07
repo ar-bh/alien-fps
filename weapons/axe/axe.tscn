@@ -13,10 +13,10 @@ size = Vector3(0.9433594, 1.1728516, 2.5464013)
 script = ExtResource("2_ntw1f")
 hitbox_start = 0.35
 
-[node name="Armature" parent="." index="0" unique_id=693100741]
+[node name="Armature" parent="." index="0" unique_id=61597291]
 transform = Transform3D(-0.01, -8.7422775e-10, 3.821371e-17, 0, -4.3711387e-10, -0.01, 8.7422775e-10, -0.01, 4.3711387e-10, 0, -0.42181835, 0)
 
-[node name="Skeleton3D" parent="Armature" index="0" unique_id=285716695]
+[node name="Skeleton3D" parent="Armature" index="0" unique_id=731552614]
 bones/2/rotation = Quaternion(0.5682937, 0.63035756, -0.42166516, -0.31920257)
 bones/3/position = Vector3(-1.1679205, -4.664892, 9.044505)
 bones/3/rotation = Quaternion(0.3989436, -0.07580341, -0.09774509, 0.90859437)
@@ -121,10 +121,10 @@ bones/41/rotation = Quaternion(0.15318264, 2.2154495e-07, -8.4462835e-07, 0.9881
 bones/42/position = Vector3(-0.59170586, -0.22965461, 12.1048155)
 bones/42/scale = Vector3(1.0000263, 0.99999815, 0.99999714)
 
-[node name="Arms" parent="Armature/Skeleton3D" index="0" unique_id=550326171]
+[node name="Arms" parent="Armature/Skeleton3D" index="0" unique_id=347017837]
 material_override = SubResource("StandardMaterial3D_ntw1f")
 
-[node name="AnimationPlayer" parent="." index="1" unique_id=1330937483]
+[node name="AnimationPlayer" parent="." index="1" unique_id=1451907230]
 unique_name_in_owner = true
 
 [node name="HitBox" type="Area3D" parent="." index="2" unique_id=2013957255]

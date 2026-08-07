@@ -1,0 +1,7 @@
+res://enemies/eye monster/eye_monster_3d.tscn
+res://common/cel_shader_fx.gdshader
+res://common/retrofx.gdshader
+res://player/player_3d.gd
+res://weapons/axe/axe.gd
+res://weapons/axe/axe.tscn
+res://player/player_3d.tscn

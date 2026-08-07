@@ -8,6 +8,8 @@
 
 [node name="Player3D" type="CharacterBody3D" unique_id=850945551]
 script = ExtResource("1_nni6y")
+trauma_decay = 0.7
+max_offset = Vector2(1, 1)
 
 [node name="Skin3D" type="MeshInstance3D" parent="." unique_id=913911856]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
