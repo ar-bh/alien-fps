@@ -5,3 +5,4 @@ res://player/player_3d.gd
 res://weapons/axe/axe.gd
 res://weapons/axe/axe.tscn
 res://player/player_3d.tscn
+res://enemies/eye monster/eye_monster_3d.gd

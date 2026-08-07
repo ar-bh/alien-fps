@@ -22,6 +22,7 @@ func set_health(new_health: int) -> void:
 	elif health < previous:
 		eye_monster_play_hit()
 
+
 @export var death_animation_time: float = 0.5
 #endregion
 
@@ -51,14 +52,23 @@ func eye_monster_play_run() -> void:
 
 #endregion
 
+#region flash on hit
+@onready var _mesh: MeshInstance3D = $Armature/Skeleton3D/eye_monster
+var _flash_mat: StandardMaterial3D
+var _flash_tween: Tween
+#endregion
+
 @onready var detection_area: Area3D = $DetectionArea3D
 var player
 
 @export var gravity := 9.8
 
 func _ready() -> void:
+	#region spawn info
 	_calculate_stats()
-
+	#endregion
+	
+	#region detection area
 	detection_area.monitorable = false
 	detection_area.monitoring = true
 	detection_area.body_entered.connect(func(body: Node3D) -> void:
@@ -69,9 +79,12 @@ func _ready() -> void:
 		if body is Player3D:
 			player = null
 	)
-
+	#endregion
+	
+	#region animations
 	eye_monster_play_idle()
 	_animation_player.animation_finished.connect(_on_animation_player_animation_finished)
+	#endregion
 
 func _physics_process(delta: float) -> void:
 	

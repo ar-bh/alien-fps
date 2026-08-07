@@ -57,8 +57,6 @@ func set_current_item(new_item: String) -> void:
 
 #endregion
 
-
-
 func _ready() -> void:
 	#region weapons
 	set_current_item("axe")
@@ -70,6 +68,7 @@ func _ready() -> void:
 	#endregion
 
 func _process(delta: float) -> void:
+	#region screenshake
 	trauma = move_toward(trauma, 0.0, trauma_decay * delta)
 	_noise_t += delta
 	
@@ -82,14 +81,23 @@ func _process(delta: float) -> void:
 		_camera_3d.h_offset = 0.0
 		_camera_3d.v_offset = 0.0
 		_camera_3d.rotation.z = 0.0
+	#endregion
 
+
+var _was_on_floor := true
+var _playing_fall := false
 func _physics_process(delta) -> void:
 	#region fps controller
 	if not is_on_floor():
 		velocity.y -= GRAVITY * delta
 		
+	# jump
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		_playing_fall = false
+		if _can_play_axe_move_anim():
+			item_in_hand.axe_play_jump_start()
+			
 		
 	var input_direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	var direction = (_head.transform.basis * Vector3(input_direction.x, 0.0, input_direction.y)).normalized()
@@ -101,7 +109,26 @@ func _physics_process(delta) -> void:
 		velocity.z = move_toward(velocity.z, 0.0, SPEED)
 		
 	move_and_slide()
+	
+	
+	# fall
+	if not is_on_floor() and velocity.y < 0.0 and not _playing_fall:
+		_playing_fall = true
+		if _can_play_axe_move_anim():
+			item_in_hand.axe_play_jump_fall()
+			
+	# land
+	if not _was_on_floor and is_on_floor():
+		_playing_fall = false
+		if _can_play_axe_move_anim():
+			item_in_hand.axe_play_jump_end()
+		
+	_was_on_floor = is_on_floor()
+	
 	#endregion
+
+func _can_play_axe_move_anim() -> bool:
+	return current_item == "axe" and item_in_hand and not item_in_hand.is_attacking()
 
 func _input(event: InputEvent) -> void:
 	#region camera
@@ -125,6 +152,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		if current_item == "axe":
 			if Input.is_action_just_pressed("attack"):
 				item_in_hand.axe_attack()
+		
 		
 		#endregion
 	
