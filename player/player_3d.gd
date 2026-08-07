@@ -57,6 +57,27 @@ func set_current_item(new_item: String) -> void:
 
 #endregion
 
+#region health
+
+@export_group("Health")
+@export var health := 3:
+	set = set_new_health
+	
+func set_new_health(new_health: int) -> void:
+	var previous := health
+	health = maxi(new_health, 0)
+	if health < previous:
+		add_trauma(0.3)
+	print(health)
+	if health == 0:
+		die()
+
+
+func die() -> void:
+	get_tree().quit()
+
+#endregion
+
 func _ready() -> void:
 	#region weapons
 	set_current_item("axe")
@@ -82,7 +103,6 @@ func _process(delta: float) -> void:
 		_camera_3d.v_offset = 0.0
 		_camera_3d.rotation.z = 0.0
 	#endregion
-
 
 var _was_on_floor := true
 var _playing_fall := false

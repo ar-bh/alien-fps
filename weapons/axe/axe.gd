@@ -67,8 +67,8 @@ func _on_hit_box_area_entered(area: Node3D) -> void:
 		monster.health -= damage
 		disable_hitbox()
 		
-		if player.has_method("add_trauma"):
-			player.add_trauma(0.4)
+		#if player.has_method("add_trauma"):
+			#player.add_trauma(0.4)
 
 func enable_hitbox() -> void:
 	_hit_box.monitoring = true
