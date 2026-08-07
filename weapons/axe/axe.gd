@@ -7,19 +7,19 @@ class_name Axe3D  extends Node3D
 
 #region animation functions
 func axe_play_idle() -> void:
-	animation_player.play("axe_IDLE")
+	animation_player.play("axe_IDLE", 0.2)
 
 func axe_play_attack1_hit() -> void:
-	animation_player.play("axe_ATK1(hit)")
+	animation_player.play("axe_ATK1(hit)", 0.05)
 	
 func axe_play_jump_start() -> void:
-	animation_player.play("axe_JUMP_START")
+	animation_player.play("axe_JUMP_START", 0.15)
 	
 func axe_play_jump_fall() -> void:
-	animation_player.play("axe_JUMP_FALL")
+	animation_player.play("axe_JUMP_FALL", 0.1)
 	
 func axe_play_jump_end() -> void:
-	animation_player.play("axe_JUMP_END")
+	animation_player.play("axe_JUMP_END", 0.1)
 
 #endregion
 
