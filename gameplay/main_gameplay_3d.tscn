@@ -15,15 +15,14 @@ background_color = Color(1, 1, 1, 1)
 
 [node name="World" type="Node" parent="." unique_id=593962535]
 
+[node name="Chunk" parent="World" unique_id=785402397 instance=ExtResource("1_f0dbm")]
+ground_texture = ExtResource("1_xak5j")
+chunk_width = 50.0
+chunk_depth = 100.0
+chunk_height = 50.0
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="World" unique_id=479265740]
 environment = SubResource("Environment_tscrs")
-
-[node name="Chunk" parent="World" unique_id=785402397 instance=ExtResource("1_f0dbm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.44410515, -0.36706161, -0.087553024)
-ground_texture = ExtResource("1_xak5j")
-chunk_width = 250.0
-chunk_depth = 300.0
-chunk_height = 250.0
 
 [node name="Player3D" parent="." unique_id=850945551 instance=ExtResource("2_4ssrn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 12)

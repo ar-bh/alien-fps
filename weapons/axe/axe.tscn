@@ -3,9 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://b3mj2o5cmxlq8" path="res://blender/axe.glb" id="1_gbt7s"]
 [ext_resource type="Script" uid="uid://di3brdm21edst" path="res://weapons/axe/axe.gd" id="2_ntw1f"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ntw1f"]
-albedo_color = Color(1, 0.85882354, 0.6745098, 1)
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_ntw1f"]
 size = Vector3(0.9433594, 1.1728516, 2.5143137)
 
@@ -120,9 +117,6 @@ bones/41/position = Vector3(0.0047870874, 0.017329942, 1.9161896)
 bones/41/rotation = Quaternion(0.15318263, 1.8178864e-07, -8.0324656e-07, 0.98819786)
 bones/42/position = Vector3(-0.59171087, -0.22965604, 12.104812)
 bones/42/scale = Vector3(1.0000266, 0.99999774, 0.9999968)
-
-[node name="Arms" parent="Armature/Skeleton3D" index="0" unique_id=347017837]
-material_override = SubResource("StandardMaterial3D_ntw1f")
 
 [node name="AnimationPlayer" parent="." index="1" unique_id=1451907230]
 unique_name_in_owner = true

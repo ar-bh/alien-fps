@@ -1,19 +1,12 @@
 [gd_scene format=3 uid="uid://0tn7dopaur0g"]
 
 [ext_resource type="Script" uid="uid://dd2a2obofsawj" path="res://environment/chunk.tscn.gd" id="1_bgemg"]
-[ext_resource type="Texture2D" uid="uid://b3b856ceajext" path="res://environment/alien planet/17_diffuseOriginal.bmp" id="2_6u2bx"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6u2bx"]
-albedo_texture = ExtResource("2_6u2bx")
 
 [node name="Chunk" type="Node3D" unique_id=785402397]
 script = ExtResource("1_bgemg")
-ground_texture = ExtResource("2_6u2bx")
-chunk_depth = 500.0
 
 [node name="Ground" type="CSGBox3D" parent="." unique_id=266470058]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -250, 0)
 use_collision = true
-size = Vector3(500, 500, 500)
-material = SubResource("StandardMaterial3D_6u2bx")
+size = Vector3(100, 500, 100)
