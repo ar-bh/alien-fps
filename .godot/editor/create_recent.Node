@@ -1,8 +1,10 @@
+CSGBox3D
+RigidBody3D
+Node
 CanvasLayer
 Area3D
 CollisionShape3D
 CharacterBody3D
-Node
 ColorRect
 Node3D
 Sprite2D
@@ -11,4 +13,3 @@ Camera3D
 MeshInstance3D
 AnimationPlayer
 SpringArm3D
-WorldEnvironment

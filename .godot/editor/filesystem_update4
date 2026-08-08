@@ -1,9 +1,10 @@
-res://enemies/eye monster/eye_monster_3d.tscn
+res://environment/forest/forest_scene.tscn
 res://common/cel_shader_fx.gdshader
 res://common/retrofx.gdshader
-res://player/player_3d.gd
-res://weapons/axe/axe.gd
-res://weapons/axe/axe.tscn
-res://player/player_3d.tscn
-res://enemies/eye monster/eye_monster_3d.gd
+res://environment/forest/forest_environment.tscn
 res://gameplay/main_gameplay_3d.tscn
+res://environment/platform.tscn
+res://blender/temporary_eye_alien.gd
+res://environment/chunk.tscn.tscn
+res://environment/chunk.tscn.gd
+res://environment/chunk.tscn
