@@ -6,10 +6,11 @@
 [ext_resource type="PackedScene" uid="uid://cp0g50kdmg1lm" path="res://common/cel_shader_fx.tscn" id="3_52p1e"]
 [ext_resource type="PackedScene" uid="uid://ddw2sid0bv6ua" path="res://common/retro_fx.tscn" id="4_tscrs"]
 [ext_resource type="PackedScene" uid="uid://dyatm1x1enkuo" path="res://enemies/eye monster/eye_monster_3d.tscn" id="5_xak5j"]
+[ext_resource type="Script" uid="uid://lk44wmfglrk5" path="res://gameplay/fpscounter.gd" id="6_pm8vb"]
 
 [sub_resource type="Environment" id="Environment_tscrs"]
 background_mode = 1
-background_color = Color(1, 1, 1, 1)
+background_color = Color(0.8898266, 0.6206814, 0.53735286, 1)
 
 [node name="MainGameplay3D" type="Node3D" unique_id=682793831]
 
@@ -17,21 +18,13 @@ background_color = Color(1, 1, 1, 1)
 
 [node name="Chunk" parent="World" unique_id=785402397 instance=ExtResource("1_f0dbm")]
 ground_texture = ExtResource("1_xak5j")
-chunk_width = 50.0
-chunk_depth = 100.0
-chunk_height = 50.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="World" unique_id=479265740]
+unique_name_in_owner = true
 environment = SubResource("Environment_tscrs")
 
 [node name="Player3D" parent="." unique_id=850945551 instance=ExtResource("2_4ssrn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 12)
-
-[node name="FX" type="Node" parent="." unique_id=445978245]
-
-[node name="CelShaderFX" parent="FX" unique_id=964755560 instance=ExtResource("3_52p1e")]
-
-[node name="RetroFX" parent="FX" unique_id=1268121299 instance=ExtResource("4_tscrs")]
 
 [node name="EyeMonster3D" parent="." unique_id=826779260 instance=ExtResource("5_xak5j")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 2, 1)
@@ -41,3 +34,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 3, 4)
 
 [node name="EyeMonster3D3" parent="." unique_id=1406749006 instance=ExtResource("5_xak5j")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -7)
+
+[node name="FX" type="Node" parent="." unique_id=445978245]
+
+[node name="CelShaderFX" parent="FX" unique_id=964755560 instance=ExtResource("3_52p1e")]
+
+[node name="RetroFX" parent="FX" unique_id=1268121299 instance=ExtResource("4_tscrs")]
+visible = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=22200906]
+
+[node name="FPSCounter" type="Label" parent="CanvasLayer" unique_id=1468339585]
+offset_right = 170.0
+offset_bottom = 59.0
+script = ExtResource("6_pm8vb")

@@ -78,6 +78,6 @@ func disable_hitbox() -> void:
 #endregion
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
-	if anim_name == "axe_ATK1(hit)":
-		axe_play_idle()
+	#if anim_name == "axe_ATK1(hit)" or anim_name == "axe_":
+	axe_play_idle()
 		#_hit_box.monitoring = false

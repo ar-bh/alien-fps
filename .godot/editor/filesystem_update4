@@ -10,3 +10,5 @@ res://environment/chunk.tscn.gd
 res://environment/chunk.tscn
 res://common/cel_shader_fx.tscn
 res://weapons/axe/axe.tscn
+res://weapons/axe/axe.gd
+res://gameplay/fpscounter.gd

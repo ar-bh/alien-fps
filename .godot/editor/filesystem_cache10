@@ -18,9 +18,9 @@ axe_Fire_Axe_Albedo.png::CompressedTexture2D::4294909538893168929::1786048317::1
 eye_alien.glb::PackedScene::504969181041416319::1786059121::1786130143::1::::<><><>0<>0<>236987e94439dcf8bf6a6f7afe182a8c<>res://.godot/imported/eye_alien.glb-ed214567009d27683d840a8a6d6b6382.scn::uid://b8256hjhnics0::::res://blender/eye_alien_eye_monster_albedo.png
 eye_alien_eye_monster_albedo.png::CompressedTexture2D::4760267974404257845::1786059138::1786106667::1::::<><><>0<>0<>504df4fe818e3c54961254f505296157<>res://.godot/imported/eye_alien_eye_monster_albedo.png-340cfbb9188d4cc91491940c88e42a5e.s3tc.ctex::
 temporary_eye_alien.gd::GDScript::5320259622868815506::1786152475::0::1::::<>CharacterBody3D<><>0<>0<><>::
-::res://common/::1786150845
-cel_shader_fx.gdshader::Shader::5425356530736021439::1786150845::0::1::::<><><>0<>0<><>::
-cel_shader_fx.tscn::PackedScene::5877702670266334266::1786052846::0::1::::<><><>0<>0<><>::uid://cjkc3g2abw8yl::::res://common/cel_shader_fx.gdshader
+::res://common/::1786228748
+cel_shader_fx.gdshader::Shader::5425356530736021439::1786228748::0::1::::<><><>0<>0<><>::
+cel_shader_fx.tscn::PackedScene::5877702670266334266::1786226558::0::1::::<><><>0<>0<><>::uid://cjkc3g2abw8yl::::res://common/cel_shader_fx.gdshader
 checkboard.png::CompressedTexture2D::4106775369370201166::1784591392::1785353317::1::::<><><>0<>0<>13eb48c1fb20cf02adb0879217dbfa91<>res://.godot/imported/checkboard.png-529890cf9338e65be525f089fefc062c.s3tc.ctex::
 retrofx.gdshader::Shader::487727675681209478::1786150845::0::1::::<><><>0<>0<><>::
 retro_fx.tscn::PackedScene::7416916821636996284::1786052719::0::1::::<><><>0<>0<><>::uid://g7i2k6e57jfy::::res://common/retrofx.gdshader
@@ -28,21 +28,22 @@ retro_fx.tscn::PackedScene::7416916821636996284::1786052719::0::1::::<><><>0<>0<
 ::res://enemies/eye monster/::1786135278
 eye_monster_3d.gd::GDScript::3725420268599769340::1786134510::0::1::::EyeMonster3D<>CharacterBody3D<><>0<>0<><>::
 eye_monster_3d.tscn::PackedScene::8844970753106296838::1786135278::0::1::::<><><>0<>0<><>::uid://hgu1esonp6sx::::res://blender/eye_alien.glb<>uid://btcvelotdu6vg::::res://enemies/eye monster/eye_monster_3d.gd
-::res://environment/::1786226141
-chunk.tscn::PackedScene::1794790914468516252::1786226198::0::1::::<><><>0<>0<><>::uid://dd2a2obofsawj::::res://environment/chunk.tscn.gd<>uid://b3b856ceajext::::res://environment/alien planet/17_diffuseOriginal.bmp
-chunk.tscn.gd::GDScript::7425615735303638741::1786226198::0::1::::Chunk<>Node3D<><>0<>1<><>::
-::res://environment/alien planet/::1786224590
+::res://environment/::1786228093
+chunk.tscn::PackedScene::1794790914468516252::1786227986::0::1::::<><><>0<>0<><>::uid://dd2a2obofsawj::::res://environment/chunk.tscn.gd
+chunk.tscn.gd::GDScript::7425615735303638741::1786228093::0::1::::Chunk<>Node3D<><>0<>1<><>::
+::res://environment/alien planet/::1786226234
 1_diffuseOriginal.bmp::CompressedTexture2D::1796091931022748343::1726706384::1786224400::1::::<><><>0<>0<>9232da21c36d845be403484a00d56afa<>res://.godot/imported/1_diffuseOriginal.bmp-89e65d589ac65ae0a92053dbc73a445e.s3tc.ctex::
 12_smoothness.bmp::CompressedTexture2D::647752656314914142::1726707590::1786224449::1::::<><><>0<>0<>7d39bcf3439d1565b08646b53e96bc7c<>res://.godot/imported/12_smoothness.bmp-f68837fbbef849897ca3bd7d289e6ee6.s3tc.ctex::
 13_diffuseOriginal.bmp::CompressedTexture2D::8878903362066264003::1726707634::1786226234::1::::<><><>0<>0<>762cd71bf1363f26ac28309b91b1c930<>res://.godot/imported/13_diffuseOriginal.bmp-4eef50eddbcf5a78fd153557f3aba346.s3tc.ctex::
 17_diffuseOriginal.bmp::CompressedTexture2D::4355831549386071929::1726708114::1786224555::1::::<><><>0<>0<>9aefd43a7fbbff89c4d217359e1e6b65<>res://.godot/imported/17_diffuseOriginal.bmp-1265352b937f3a15ebb9e1dd001fb90e.s3tc.ctex::
-::res://gameplay/::1786224556
-main_gameplay_3d.tscn::PackedScene::1655603678145136064::1786224556::0::1::::<><><>0<>0<><>::uid://b3b856ceajext::::res://environment/alien planet/17_diffuseOriginal.bmp<>uid://ch3lbhgo5khsv::::res://player/player_3d.tscn<>uid://0ubmvw751tjj::::res://environment/alien planet/1_diffuseOriginal.bmp<>uid://cp0g50kdmg1lm::::res://common/cel_shader_fx.tscn<>uid://ddw2sid0bv6ua::::res://common/retro_fx.tscn<>uid://dyatm1x1enkuo::::res://enemies/eye monster/eye_monster_3d.tscn
+::res://gameplay/::1786228748
+main_gameplay_3d.tscn::PackedScene::1655603678145136064::1786228748::0::1::::<><><>0<>0<><>::uid://0tn7dopaur0g::::res://environment/chunk.tscn<>uid://jh1nkx501oju::::res://environment/alien planet/12_smoothness.bmp<>uid://ch3lbhgo5khsv::::res://player/player_3d.tscn<>uid://cp0g50kdmg1lm::::res://common/cel_shader_fx.tscn<>uid://ddw2sid0bv6ua::::res://common/retro_fx.tscn<>uid://dyatm1x1enkuo::::res://enemies/eye monster/eye_monster_3d.tscn
+label.gd::GDScript::794534812659427086::1786228844::0::1::::<>Label<><>0<>0<><>::
 ::res://player/::1786134419
 player_3d.gd::GDScript::6153150202554921347::1786134419::0::1::::Player3D<>CharacterBody3D<><>0<>0<><>::
 player_3d.tscn::PackedScene::5322635900289303813::1786133895::0::1::::<><><>0<>0<><>::uid://ctwvqqqr7oxax::::res://player/player_3d.gd
 ::res://player/textures/::1786047310
 ::res://weapons/::1786049478
-::res://weapons/axe/::1786133911
-axe.gd::GDScript::7778666630155751587::1786133895::0::1::::Axe3D<>Node3D<><>0<>0<><>::
-axe.tscn::PackedScene::2038447045852340890::1786133911::0::1::::<><><>0<>0<><>::uid://b3mj2o5cmxlq8::::res://blender/axe.glb<>uid://di3brdm21edst::::res://weapons/axe/axe.gd
+::res://weapons/axe/::1786227614
+axe.gd::GDScript::7778666630155751587::1786227594::0::1::::Axe3D<>Node3D<><>0<>0<><>::
+axe.tscn::PackedScene::2038447045852340890::1786227614::0::1::::<><><>0<>0<><>::uid://b3mj2o5cmxlq8::::res://blender/axe.glb<>uid://di3brdm21edst::::res://weapons/axe/axe.gd
