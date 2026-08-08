@@ -27,13 +27,13 @@ environment = SubResource("Environment_tscrs")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 12)
 
 [node name="EyeMonster3D" parent="." unique_id=826779260 instance=ExtResource("5_xak5j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 2, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 2, -9.384729)
 
 [node name="EyeMonster3D2" parent="." unique_id=1856900017 instance=ExtResource("5_xak5j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 3, 4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.127085, 3, 10.344429)
 
 [node name="EyeMonster3D3" parent="." unique_id=1406749006 instance=ExtResource("5_xak5j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -7)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.095548, 4, -7)
 
 [node name="FX" type="Node" parent="." unique_id=445978245]
 
