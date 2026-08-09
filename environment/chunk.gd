@@ -97,11 +97,11 @@ func _spawn_contents() -> void:
 		add_child(item)
 		if Engine.is_editor_hint():
 			item.owner = get_tree().edited_scene_root
-		item.position = _get_random_point_on_chunk()
+		item.position = get_random_point_on_chunk()
 		var s := randf_range(biome.content_size_range[0], biome.content_size_range[1])
 		item.scale = Vector3(s, s, s)
 
-func _get_random_point_on_chunk() -> Vector3:
+func get_random_point_on_chunk() -> Vector3:
 	var x := randf_range(-chunk_width * 0.5, chunk_width * 0.5)
 	var z := randf_range(-chunk_depth * 0.5, chunk_depth * 0.5)
 	return Vector3(x, chunk_height, z)

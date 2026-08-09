@@ -11,8 +11,11 @@
 [ext_resource type="PackedScene" uid="uid://cnramwjnwhmku" path="res://environment/desert/cactus.tscn" id="4_skbmb"]
 [ext_resource type="PackedScene" uid="uid://ddw2sid0bv6ua" path="res://common/retro_fx.tscn" id="4_tscrs"]
 [ext_resource type="PackedScene" uid="uid://bnpwtrhwl34bs" path="res://environment/wasteland/rock_cluster.tscn" id="5_27dgl"]
+[ext_resource type="PackedScene" uid="uid://bit6q3c80jx3j" path="res://environment/wasteland/burned_tree_2.tscn" id="5_dbcxa"]
 [ext_resource type="PackedScene" uid="uid://dyatm1x1enkuo" path="res://enemies/eye monster/eye_monster_3d.tscn" id="5_xak5j"]
+[ext_resource type="PackedScene" uid="uid://dkitb677t41ly" path="res://environment/wasteland/burned_tree_1.tscn" id="6_cwjni"]
 [ext_resource type="Script" uid="uid://lk44wmfglrk5" path="res://gameplay/fpscounter.gd" id="6_pm8vb"]
+[ext_resource type="PackedScene" uid="uid://q5wr20h35o3u" path="res://environment/wasteland/burned_grass.tscn" id="10_lhmax"]
 
 [sub_resource type="Environment" id="Environment_tscrs"]
 background_mode = 1
@@ -32,11 +35,26 @@ chunk_depth = 50.0
 chunk_height = 100.0
 show_spawns_in_editor = true
 
-[node name="RockCluster" type="Node3D" parent="World/Chunk" unique_id=763971342 instance=ExtResource("5_27dgl")]
-transform = Transform3D(0.6933249, 0, 0, 0, 0.6933249, 0, 0, 0, 0.6933249, 18.785627, 100, 4.5419245)
+[node name="BurnedGrass" type="Node3D" parent="World/Chunk" unique_id=2064401388 instance=ExtResource("10_lhmax")]
+transform = Transform3D(1.3836775, 0, 0, 0, 1.3836775, 0, 0, 0, 1.3836775, 10.126232, 100, 8.553946)
 
-[node name="@Node3D@306402" type="Node3D" parent="World/Chunk" unique_id=627276108 instance=ExtResource("5_27dgl")]
-transform = Transform3D(1.2959127, 0, 0, 0, 1.2959127, 0, 0, 0, 1.2959127, 23.303473, 100, -2.6505039)
+[node name="@Node3D@335978" type="Node3D" parent="World/Chunk" unique_id=1242414472 instance=ExtResource("10_lhmax")]
+transform = Transform3D(0.8439478, 0, 0, 0, 0.8439478, 0, 0, 0, 0.8439478, 1.8181081, 100, 1.7343929)
+
+[node name="RockCluster" type="Node3D" parent="World/Chunk" unique_id=763971342 instance=ExtResource("5_27dgl")]
+transform = Transform3D(0.82260114, 0, 0, 0, 0.82260114, 0, 0, 0, 0.82260114, -21.23778, 100, 0.497438)
+
+[node name="BurnedTree2" type="Node3D" parent="World/Chunk" unique_id=1740468335 instance=ExtResource("5_dbcxa")]
+transform = Transform3D(0.72100043, 0, 0, 0, 0.72100043, 0, 0, 0, 0.72100043, -8.231542, 100, -16.415508)
+
+[node name="@Node3D@335979" type="Node3D" parent="World/Chunk" unique_id=1142685379 instance=ExtResource("5_27dgl")]
+transform = Transform3D(0.85879916, 0, 0, 0, 0.85879916, 0, 0, 0, 0.85879916, 3.503757, 100, -23.794153)
+
+[node name="@Node3D@335980" type="Node3D" parent="World/Chunk" unique_id=672394889 instance=ExtResource("10_lhmax")]
+transform = Transform3D(1.0286454, 0, 0, 0, 1.0286454, 0, 0, 0, 1.0286454, -3.4705172, 100, -21.788782)
+
+[node name="BurnedTree1" type="Node3D" parent="World/Chunk" unique_id=1968041232 instance=ExtResource("6_cwjni")]
+transform = Transform3D(1.1886567, 0, 0, 0, 1.1886567, 0, 0, 0, 1.1886567, 5.5132313, 100, 5.496099)
 
 [node name="Chunk2" parent="World" unique_id=1344688085 instance=ExtResource("1_f0dbm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, -100, 0)
@@ -47,10 +65,7 @@ chunk_height = 100.0
 show_spawns_in_editor = true
 
 [node name="Cactus" type="Node3D" parent="World/Chunk2" unique_id=318992543 instance=ExtResource("4_skbmb")]
-transform = Transform3D(1.3679663, 0, 0, 0, 1.3679663, 0, 0, 0, 1.3679663, -11.895796, 100, -2.3795774)
-
-[node name="@Node3D@305592" type="Node3D" parent="World/Chunk2" unique_id=844285440 instance=ExtResource("4_skbmb")]
-transform = Transform3D(1.3108156, 0, 0, 0, 1.3108156, 0, 0, 0, 1.3108156, -17.955362, 100, 15.593165)
+transform = Transform3D(0.71979314, 0, 0, 0, 0.71979314, 0, 0, 0, 0.71979314, 23.4717, 100, -24.465157)
 
 [node name="Chunk3" parent="World" unique_id=1379645990 instance=ExtResource("1_f0dbm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50, -100, 0)
@@ -61,23 +76,14 @@ chunk_height = 100.0
 show_spawns_in_editor = true
 
 [node name="Icicles" type="Node3D" parent="World/Chunk3" unique_id=351126994 instance=ExtResource("3_skbmb")]
-transform = Transform3D(2.42027, 0, 0, 0, 2.42027, 0, 0, 0, 2.42027, -7.24256, 100, 16.690369)
+transform = Transform3D(3.7686033, 0, 0, 0, 3.7686033, 0, 0, 0, 3.7686033, -15.409458, 100, -4.956696)
 
-[node name="@Node3D@304845" type="Node3D" parent="World/Chunk3" unique_id=915617821 instance=ExtResource("3_skbmb")]
-transform = Transform3D(3.3489907, 0, 0, 0, 3.3489907, 0, 0, 0, 3.3489907, 19.009369, 100, -16.413244)
+[node name="@Node3D@335981" type="Node3D" parent="World/Chunk3" unique_id=547408694 instance=ExtResource("3_skbmb")]
+transform = Transform3D(2.8393707, 0, 0, 0, 2.8393707, 0, 0, 0, 2.8393707, -16.315414, 100, 9.045558)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="World" unique_id=479265740]
 unique_name_in_owner = true
 environment = SubResource("Environment_tscrs")
-
-[node name="EyeMonster3D" parent="." unique_id=73780667 instance=ExtResource("5_xak5j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 2, -9.384729)
-
-[node name="EyeMonster3D2" parent="." unique_id=1506975555 instance=ExtResource("5_xak5j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.127085, 3, 10.344429)
-
-[node name="EyeMonster3D3" parent="." unique_id=513429551 instance=ExtResource("5_xak5j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.095548, 4, -7)
 
 [node name="FX" type="Node" parent="." unique_id=445978245]
 
@@ -96,3 +102,12 @@ script = ExtResource("6_pm8vb")
 [node name="Player3D" parent="." unique_id=850945551 instance=ExtResource("2_4ssrn")]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 0, 12)
+
+[node name="EyeMonster3D" parent="." unique_id=335777878 instance=ExtResource("5_xak5j")]
+transform = Transform3D(-0.5194096, 0, 0.8545254, 0, 1, 0, -0.8545254, 0, -0.5194096, -48.30835, 2.4716163, 14.363861)
+
+[node name="EyeMonster3D2" parent="." unique_id=85328178 instance=ExtResource("5_xak5j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 3, 12)
+
+[node name="EyeMonster3D3" parent="." unique_id=652305456 instance=ExtResource("5_xak5j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 3, 12)

@@ -2,6 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://hgu1esonp6sx" path="res://enemies/eye monster/eye_alien.glb" id="1_knd1k"]
 [ext_resource type="Script" uid="uid://btcvelotdu6vg" path="res://enemies/eye monster/eye_monster_3d.gd" id="2_kbpa6"]
+[ext_resource type="Texture2D" uid="uid://b8256hjhnics0" path="res://enemies/eye monster/eye_alien_eye_monster_albedo.png" id="3_kbpa6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kbpa6"]
+albedo_texture = ExtResource("3_kbpa6")
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_knd1k"]
 radius = 4.6049805
@@ -83,6 +87,10 @@ bones/21/scale = Vector3(1.000003, 0.9999987, 1.0000004)
 bones/22/position = Vector3(0, 53.440247, 66.75151)
 bones/23/position = Vector3(0, 53.408234, 66.8)
 bones/24/position = Vector3(0, 53.408234, 66.8)
+
+[node name="eye_monster" parent="Armature/Skeleton3D" index="0" unique_id=1585715751]
+unique_name_in_owner = true
+material_override = SubResource("StandardMaterial3D_kbpa6")
 
 [node name="HurtBox3D" type="Area3D" parent="." index="2" unique_id=1455950699]
 

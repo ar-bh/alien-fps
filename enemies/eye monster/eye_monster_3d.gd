@@ -123,11 +123,24 @@ var player
 @export var wander_wait := 1.0
 #endregion
 
+#region biome variation
+@onready var mesh: MeshInstance3D = %eye_monster
+@export var biome_colors: Dictionary = {
+	"wasteland": Color(1.0, 1.0, 1.0),
+	"glacier": Color("3fc4ff"),
+	"dessert": Color("d5b04d")
+}
+
+#endregion
 
 func _ready() -> void:
 	#region spawn info
+		
 	set_current_state(State.IDLE)
 	_calculate_stats()
+	
+	_select_variation()
+	
 	_pick_wander_target()
 	wait_left = wander_wait
 	#endregion
@@ -201,13 +214,40 @@ func _physics_process(delta: float) -> void:
 	
 	move_and_slide()
 
+#region chunk funcs
+func _select_variation() -> void:
+	var biome: BiomeData = _get_current_biome()
+	var biome_name = biome.biome_name
+	if biome_colors.has(biome_name):
+		var mat = mesh.material_override
+		if mat == null:
+			mat = mesh.get_active_material(0)
+			
+		mat = mat.duplicate()
+		mesh.material_override = mat
+		
+		if mat is StandardMaterial3D:
+			mat.albedo_color = biome_colors[biome_name]
+
+
+func _get_current_chunk() -> Chunk:
+	for chunk in get_tree().get_nodes_in_group("chunks"):
+		var local = chunk.to_local(global_position)
+		if absf(local.x) <= chunk.chunk_width * 0.5 \
+		and absf(local.z) <= chunk.chunk_depth * 0.5:
+			return chunk
+	return null
+	
+func _get_current_biome() -> BiomeData:
+	var chunk := _get_current_chunk()
+	return chunk.biome if chunk else null
+#endregion
+
 func _pick_wander_target() -> void:
-	var offset := Vector3(
-		randf_range(-wander_radius, wander_radius),
-		0.0,
-		randf_range(-wander_radius, wander_radius)
-	)
-	wander_target = home_position + offset
+	var chunk = _get_current_chunk()
+	if chunk == null:
+		return
+	wander_target = chunk.to_global(chunk.get_random_point_on_chunk())
 	
 func _move_toward_point(point: Vector3, delta: float) -> void:
 	var target := point
