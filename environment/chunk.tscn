@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://0tn7dopaur0g"]
 
-[ext_resource type="Script" uid="uid://dd2a2obofsawj" path="res://environment/chunk.tscn.gd" id="1_bgemg"]
+[ext_resource type="Script" uid="uid://dd2a2obofsawj" path="res://environment/chunk.gd" id="1_bgemg"]
 
 [node name="Chunk" type="Node3D" unique_id=785402397]
 script = ExtResource("1_bgemg")
-biome_details = null
-ground_uv1_scale = null
+chunk_width = null
+chunk_depth = null
+chunk_height = null
 
 [node name="Ground" type="CSGBox3D" parent="." unique_id=266470058]
 unique_name_in_owner = true

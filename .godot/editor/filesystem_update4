@@ -15,3 +15,7 @@ res://gameplay/fpscounter.gd
 res://enemies/eye monster/eye_monster_3d.tscn
 res://enemies/eye monster/eye_monster_3d.gd
 res://environment/wasteland/burned_tree_1.tscn
+res://environment/biome_data.gd
+res://environment/wasteland/wasteland_biome.tres
+res://environment/chunk.gd
+res://environment/wasteland/burned_tree_2.tscn

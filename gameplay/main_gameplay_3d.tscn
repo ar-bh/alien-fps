@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://xt8syun8k0vs"]
 
 [ext_resource type="PackedScene" uid="uid://0tn7dopaur0g" path="res://environment/chunk.tscn" id="1_f0dbm"]
-[ext_resource type="Texture2D" uid="uid://jh1nkx501oju" path="res://environment/wasteland/12_smoothness.bmp" id="1_xak5j"]
 [ext_resource type="PackedScene" uid="uid://ch3lbhgo5khsv" path="res://player/player_3d.tscn" id="2_4ssrn"]
 [ext_resource type="PackedScene" uid="uid://cp0g50kdmg1lm" path="res://common/cel_shader_fx.tscn" id="3_52p1e"]
 [ext_resource type="PackedScene" uid="uid://ddw2sid0bv6ua" path="res://common/retro_fx.tscn" id="4_tscrs"]
@@ -17,15 +16,10 @@ background_color = Color(0.8898266, 0.6206814, 0.53735286, 1)
 [node name="World" type="Node" parent="." unique_id=593962535]
 
 [node name="Chunk" parent="World" unique_id=785402397 instance=ExtResource("1_f0dbm")]
-biome_details = {
-"wasteland": {
-"content": [],
-"texture": "res://environment/alien planet/12_smoothness.bmp",
-"uv1_scale": Vector3(2, 2, 1)
-}
-}
-ground_texture = ExtResource("1_xak5j")
-ground_uv1_scale = Vector3(2, 2, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -100, 0)
+chunk_width = 50.0
+chunk_depth = 50.0
+chunk_height = 100.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="World" unique_id=479265740]
 unique_name_in_owner = true

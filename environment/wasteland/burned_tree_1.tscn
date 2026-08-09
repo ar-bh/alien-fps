@@ -5,7 +5,8 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eofkr"]
 albedo_color = Color(0, 0, 0, 1)
 
-[node name="BurnedTree1" unique_id=1278722176 instance=ExtResource("1_06xqd")]
+[node name="BurnedTree1" unique_id=1968041232 instance=ExtResource("1_06xqd")]
 
-[node name="Object_2" parent="Sketchfab_model/Burned Tree 1_obj_cleaner_materialmerger_gles" parent_id_path=PackedInt32Array(1164640203) index="0" unique_id=1800172520]
+[node name="Object_2" parent="Sketchfab_model/Burned Tree 1_obj_cleaner_materialmerger_gles" parent_id_path=PackedInt32Array(1404921124) index="0" unique_id=1625501463]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1125947e-16, 0.5010681)
 material_override = SubResource("StandardMaterial3D_eofkr")

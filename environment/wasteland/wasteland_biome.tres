@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="BiomeData" format=3 uid="uid://bpqccjoaxia36"]
+
+[ext_resource type="Script" uid="uid://cceitt32vdi31" path="res://environment/biome_data.gd" id="1_oocw5"]
+[ext_resource type="PackedScene" uid="uid://dkitb677t41ly" path="res://environment/wasteland/burned_tree_1.tscn" id="1_xx6r6"]
+[ext_resource type="PackedScene" uid="uid://bit6q3c80jx3j" path="res://environment/wasteland/burned_tree_2.tscn" id="2_4o6ge"]
+[ext_resource type="Texture2D" uid="uid://jh1nkx501oju" path="res://environment/wasteland/12_smoothness.bmp" id="4_e5vil"]
+
+[resource]
+script = ExtResource("1_oocw5")
+biome_name = "\"wasteland\""
+texture = ExtResource("4_e5vil")
+content = Array[PackedScene]([ExtResource("1_xx6r6"), ExtResource("2_4o6ge")])
+metadata/_custom_type_script = "uid://cceitt32vdi31"
