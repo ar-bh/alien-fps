@@ -4,7 +4,7 @@ uniform sampler2D screen_texture : hint_screen_texture, filter_nearest;
 uniform int color_levels : hint_range(2, 16) = 8;
 uniform float line_thickness : hint_range(0.0, 6.0) = 0.5;
 uniform float edge_threshold : hint_range(0.01, 1.0) = 0.15;
-uniform float brightness : hint_range(0.5, 2.0) = 1.15;
+uniform float brightness : hint_range(0.5, 2.0) = 1.25;
 
 float edge_at(vec2 uv, vec2 pixel) {
 	vec3 c1 = texture(screen_texture, uv + vec2(-pixel.x, 0.0)).rgb;

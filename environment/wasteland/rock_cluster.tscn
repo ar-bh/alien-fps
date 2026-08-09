@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://d1gurqbet8pmo" path="res://environment/wasteland/rock_cluster.glb" id="1_iemxv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pdkxj"]
-albedo_color = Color(0.23921569, 0.24705882, 0.23921569, 1)
+albedo_color = Color(0.0744976, 0.07806101, 0.074498005, 1)
 
 [node name="RockCluster" unique_id=763971342 instance=ExtResource("1_iemxv")]
 

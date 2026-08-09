@@ -27,3 +27,4 @@ res://environment/wasteland/rock_cluster.tscn
 res://environment/wasteland/burned_grass.tscn
 res://environment/desert/desert.tres
 res://player/player_3d.tscn
+res://common/notes.gd

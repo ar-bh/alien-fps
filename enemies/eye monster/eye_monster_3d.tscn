@@ -24,7 +24,7 @@ script = ExtResource("2_kbpa6")
 health_range_maximum = 2.0
 hitbox_start = 0.5
 
-[node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(367703103) index="0" unique_id=468392840]
+[node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(1243162860) index="0" unique_id=4363173]
 bones/2/position = Vector3(-414.724, -229.03152, 234.1773)
 bones/2/rotation = Quaternion(0.1449578, -0.07626489, 0.21337466, 0.9631418)
 bones/3/position = Vector3(-33.786404, 54.411804, 240.60052)

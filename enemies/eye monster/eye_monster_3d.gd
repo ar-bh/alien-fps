@@ -58,9 +58,16 @@ enum State {
 	RUN_AT_PLAYER,
 	ATTACK,
 	IDLE,
+	WANDER,
 	HIT,
 	DEAD,
 }
+
+
+
+var home_position: Vector3
+var wander_target: Vector3
+var wait_left := 0.0
 
 var current_state: State:
 	set = set_current_state
@@ -74,6 +81,9 @@ func set_current_state(new_state: State) -> void:
 	match current_state:
 		State.IDLE:
 			eye_monster_play_idle()
+			hit_box.monitoring = false
+		State.WANDER:
+			eye_monster_play_run()
 			hit_box.monitoring = false
 		State.RUN_AT_PLAYER:
 			eye_monster_play_run()
@@ -108,6 +118,9 @@ var player
 @export var move_speed := 3.0
 @export var acceleration := 5.0
 @export var deceleration := 6.0
+
+@export var wander_radius := 10.0
+@export var wander_wait := 1.0
 #endregion
 
 
@@ -115,6 +128,8 @@ func _ready() -> void:
 	#region spawn info
 	set_current_state(State.IDLE)
 	_calculate_stats()
+	_pick_wander_target()
+	wait_left = wander_wait
 	#endregion
 	
 	#region hitbox
@@ -151,13 +166,26 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 		return
 		
-	if player == null:
-		current_state = State.IDLE
-		velocity.x = move_toward(velocity.x, 0.0, deceleration)
-		velocity.z = move_toward(velocity.z, 0.0, deceleration)
+	if player == null: # cant see player
+		if current_state != State.IDLE and current_state != State.WANDER:
+			current_state = State.IDLE
+			wait_left = wander_wait
+		
+		if current_state == State.IDLE:
+			velocity.x = move_toward(velocity.x, 0.0, deceleration)
+			velocity.z = move_toward(velocity.z, 0.0, deceleration)
+			wait_left -= delta
+			if wait_left <= 0.0:
+				_pick_wander_target()
+				current_state = State.WANDER
+		elif current_state == State.WANDER:
+			_move_toward_point(wander_target, delta)
+			if global_position.distance_to(Vector3(wander_target.x, global_position.y, wander_target.z)) < 1.0:
+				current_state = State.IDLE
+				wait_left = wander_wait
+				
 		move_and_slide()
 		return
-		
 		
 	current_state = State.RUN_AT_PLAYER
 	
@@ -172,6 +200,24 @@ func _physics_process(delta: float) -> void:
 	velocity.z = move_toward(velocity.z, direction.z * move_speed, acceleration)
 	
 	move_and_slide()
+
+func _pick_wander_target() -> void:
+	var offset := Vector3(
+		randf_range(-wander_radius, wander_radius),
+		0.0,
+		randf_range(-wander_radius, wander_radius)
+	)
+	wander_target = home_position + offset
+	
+func _move_toward_point(point: Vector3, delta: float) -> void:
+	var target := point
+	target.y = global_position.y
+	if global_position.distance_squared_to(target) > 0.001:
+		look_at(target, Vector3.UP)
+		rotate_y(PI)
+	var direction := (target - global_position).normalized()
+	velocity.x = move_toward(velocity.x, direction.x * move_speed, acceleration)
+	velocity.z = move_toward(velocity.z, direction.z * move_speed, acceleration)
 
 func _on_hit_box_body_entered(body: Node3D) -> void:
 	if body is not Player3D:
