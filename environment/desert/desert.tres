@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="BiomeData" format=3 uid="uid://650wt70dnxt5"]
+
+[ext_resource type="Script" uid="uid://cceitt32vdi31" path="res://environment/biome_data.gd" id="1_6jl1t"]
+[ext_resource type="PackedScene" uid="uid://cnramwjnwhmku" path="res://environment/desert/cactus.tscn" id="1_qgbj3"]
+[ext_resource type="Texture2D" uid="uid://cdb644716fxx1" path="res://environment/desert/1_diffuseOriginal.bmp" id="2_vsh7j"]
+
+[resource]
+script = ExtResource("1_6jl1t")
+biome_name = "\"desert\""
+texture = ExtResource("2_vsh7j")
+amount_of_content = [1, 3]
+content = Array[PackedScene]([ExtResource("1_qgbj3")])
+environment_color = Color(0.8787619, 0.57400596, 0.33230308, 1)
+metadata/_custom_type_script = "uid://cceitt32vdi31"

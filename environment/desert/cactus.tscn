@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cnramwjnwhmku"]
+
+[ext_resource type="PackedScene" uid="uid://vb3q6itrlgvh" path="res://environment/desert/Cactus.glb" id="1_wy7bt"]
+
+[node name="Cactus" unique_id=318992543 instance=ExtResource("1_wy7bt")]
+
+[node name="cactus_1" parent="RootNode_0" parent_id_path=PackedInt32Array(1087610443) index="0" unique_id=997579891]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
