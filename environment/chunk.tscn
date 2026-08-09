@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dd2a2obofsawj" path="res://environment/chunk.gd" id="1_bgemg"]
 
-[node name="Chunk" type="Node3D" unique_id=785402397]
+[node name="Chunk" type="Node3D" unique_id=785402397 groups=["chunks"]]
 script = ExtResource("1_bgemg")
 chunk_width = null
 chunk_depth = null

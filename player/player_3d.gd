@@ -104,6 +104,11 @@ func _process(delta: float) -> void:
 		_camera_3d.rotation.z = 0.0
 	#endregion
 
+	var biome := get_current_biome()
+	if gameplay and gameplay.current_biome != biome:
+		gameplay.current_biome = biome
+
+
 var _was_on_floor := true
 var _playing_fall := false
 func _physics_process(delta) -> void:
@@ -177,3 +182,19 @@ func _unhandled_input(event: InputEvent) -> void:
 		#endregion
 	
 	#endregion
+
+
+var gameplay: Node3D
+
+func get_current_chunk() -> Chunk:
+	for chunk in get_tree().get_nodes_in_group("chunks"):
+		var local = chunk.to_local(global_position)
+		if absf(local.x) <= chunk.chunk_width * 0.5 \
+		and absf(local.z) <= chunk.chunk_depth * 0.5:
+			return chunk
+	return null
+	
+func get_current_biome() -> BiomeData:
+	var chunk := get_current_chunk()
+	return chunk.biome if chunk else null
+		

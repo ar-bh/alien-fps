@@ -3,17 +3,22 @@ class_name Chunk extends Node3D
 
 @export var biome: BiomeData: set = _set_biome
 
+#region export size
 @export_group("Size")
 @export var chunk_width := 50.0: set = _set_chunk_width
 @export var chunk_depth := 50.0: set = _set_chunk_depth
 @export var chunk_height := 100.0: set = _set_chunk_height
+#endregion
 
+#region export debug
 @export_group("Debug")
 @export var show_spawns_in_editor := true: set = _set_show_spawns_in_editor
+#endregion
 
 @onready var ground: CSGBox3D = %Ground
 
 func _ready() -> void:
+	add_to_group("chunks")
 	_update_chunk()
 
 func _set_biome(new_biome: BiomeData) -> void:

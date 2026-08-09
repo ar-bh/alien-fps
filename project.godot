@@ -24,6 +24,10 @@ window/size/mode=4
 
 import/blender/enabled=false
 
+[global_group]
+
+chunks=""
+
 [input]
 
 attack={
