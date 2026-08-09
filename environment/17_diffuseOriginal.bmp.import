@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyraig1em34x8"
-path.s3tc="res://.godot/imported/13_diffuseOriginal.bmp-4eef50eddbcf5a78fd153557f3aba346.s3tc.ctex"
+uid="uid://b3b856ceajext"
+path.s3tc="res://.godot/imported/17_diffuseOriginal.bmp-b205da0c4a1a4d02f32720f8f489c130.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://environment/alien planet/13_diffuseOriginal.bmp"
-dest_files=["res://.godot/imported/13_diffuseOriginal.bmp-4eef50eddbcf5a78fd153557f3aba346.s3tc.ctex"]
+source_file="res://environment/17_diffuseOriginal.bmp"
+dest_files=["res://.godot/imported/17_diffuseOriginal.bmp-b205da0c4a1a4d02f32720f8f489c130.s3tc.ctex"]
 
 [params]
 

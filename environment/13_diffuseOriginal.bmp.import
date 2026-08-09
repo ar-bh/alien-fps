@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lkbj5o4lc4fm"
-path.s3tc="res://.godot/imported/axe_Arms_Diffuse.png-40360311703d458cc1311ae42eef8f78.s3tc.ctex"
+uid="uid://dyraig1em34x8"
+path.s3tc="res://.godot/imported/13_diffuseOriginal.bmp-1d77109334139325b0f1cfa508a2ff90.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "e1c10bad63993fc4836d595927feec0f"
-}
 
 [deps]
 
-source_file="res://blender/axe_Arms_Diffuse.png"
-dest_files=["res://.godot/imported/axe_Arms_Diffuse.png-40360311703d458cc1311ae42eef8f78.s3tc.ctex"]
+source_file="res://environment/13_diffuseOriginal.bmp"
+dest_files=["res://.godot/imported/13_diffuseOriginal.bmp-1d77109334139325b0f1cfa508a2ff90.s3tc.ctex"]
 
 [params]
 

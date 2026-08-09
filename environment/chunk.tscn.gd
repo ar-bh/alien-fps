@@ -2,11 +2,28 @@
 class_name Chunk
 extends Node3D
 
+#region biome details
+@export_group("Biome")
+@export var biome_details: Dictionary = {
+	"wasteland": {
+		"texture": "res://environment/alien planet/12_smoothness.bmp",
+		"uv1_scale": Vector3(2.0, 2.0, 1.0),
+		"content": [],
+	}
+	
+	
+}
+
+
+#endregion
+#region chunk details
+@export_group("Physical Details")
 @export var ground_texture: Texture2D: set = _set_ground_texture
 @export var ground_uv1_scale: Vector3 = Vector3(2.0, 2.0, 1.0): set = _set_ground_uv1_scale
 @export var chunk_width := 50.0: set = _set_chunk_width
 @export var chunk_depth := 50.0: set = _set_chunk_depth
 @export var chunk_height := 100.0: set = _set_chunk_height
+#endregion
 
 @onready var ground: CSGBox3D = %Ground
 

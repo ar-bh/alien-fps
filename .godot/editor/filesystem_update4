@@ -12,3 +12,6 @@ res://common/cel_shader_fx.tscn
 res://weapons/axe/axe.tscn
 res://weapons/axe/axe.gd
 res://gameplay/fpscounter.gd
+res://enemies/eye monster/eye_monster_3d.tscn
+res://enemies/eye monster/eye_monster_3d.gd
+res://environment/wasteland/burned_tree_1.tscn

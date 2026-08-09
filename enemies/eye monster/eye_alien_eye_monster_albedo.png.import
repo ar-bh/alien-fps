@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3b856ceajext"
-path.s3tc="res://.godot/imported/17_diffuseOriginal.bmp-1265352b937f3a15ebb9e1dd001fb90e.s3tc.ctex"
+uid="uid://b8256hjhnics0"
+path.s3tc="res://.godot/imported/eye_alien_eye_monster_albedo.png-151209f8d3b7f8542d11c644c6e2c0ec.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "fb617644e2a56982012a44e83dc94f57"
+}
 
 [deps]
 
-source_file="res://environment/alien planet/17_diffuseOriginal.bmp"
-dest_files=["res://.godot/imported/17_diffuseOriginal.bmp-1265352b937f3a15ebb9e1dd001fb90e.s3tc.ctex"]
+source_file="res://enemies/eye monster/eye_alien_eye_monster_albedo.png"
+dest_files=["res://.godot/imported/eye_alien_eye_monster_albedo.png-151209f8d3b7f8542d11c644c6e2c0ec.s3tc.ctex"]
 
 [params]
 

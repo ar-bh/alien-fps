@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8256hjhnics0"
-path.s3tc="res://.godot/imported/eye_alien_eye_monster_albedo.png-340cfbb9188d4cc91491940c88e42a5e.s3tc.ctex"
+uid="uid://lkbj5o4lc4fm"
+path.s3tc="res://.godot/imported/axe_Arms_Diffuse.png-57f8e26346f1e6aeb1ace20c22f5bff7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "fb617644e2a56982012a44e83dc94f57"
+"md5": "e1c10bad63993fc4836d595927feec0f"
 }
 
 [deps]
 
-source_file="res://blender/eye_alien_eye_monster_albedo.png"
-dest_files=["res://.godot/imported/eye_alien_eye_monster_albedo.png-340cfbb9188d4cc91491940c88e42a5e.s3tc.ctex"]
+source_file="res://weapons/axe/axe_Arms_Diffuse.png"
+dest_files=["res://.godot/imported/axe_Arms_Diffuse.png-57f8e26346f1e6aeb1ace20c22f5bff7.s3tc.ctex"]
 
 [params]
 

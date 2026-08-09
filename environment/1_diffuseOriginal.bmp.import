@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://0ubmvw751tjj"
-path.s3tc="res://.godot/imported/1_diffuseOriginal.bmp-89e65d589ac65ae0a92053dbc73a445e.s3tc.ctex"
+path.s3tc="res://.godot/imported/1_diffuseOriginal.bmp-8c679b03856097e9b7a29979a92d1fb1.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://environment/alien planet/1_diffuseOriginal.bmp"
-dest_files=["res://.godot/imported/1_diffuseOriginal.bmp-89e65d589ac65ae0a92053dbc73a445e.s3tc.ctex"]
+source_file="res://environment/1_diffuseOriginal.bmp"
+dest_files=["res://.godot/imported/1_diffuseOriginal.bmp-8c679b03856097e9b7a29979a92d1fb1.s3tc.ctex"]
 
 [params]
 

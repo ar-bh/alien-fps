@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dyatm1x1enkuo"]
 
-[ext_resource type="PackedScene" uid="uid://hgu1esonp6sx" path="res://blender/eye_alien.glb" id="1_knd1k"]
+[ext_resource type="PackedScene" uid="uid://hgu1esonp6sx" path="res://enemies/eye monster/eye_alien.glb" id="1_knd1k"]
 [ext_resource type="Script" uid="uid://btcvelotdu6vg" path="res://enemies/eye monster/eye_monster_3d.gd" id="2_kbpa6"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_knd1k"]

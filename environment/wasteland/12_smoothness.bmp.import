@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://jh1nkx501oju"
-path.s3tc="res://.godot/imported/12_smoothness.bmp-f68837fbbef849897ca3bd7d289e6ee6.s3tc.ctex"
+path.s3tc="res://.godot/imported/12_smoothness.bmp-db8691ba70b36aa3c33f847116180f09.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://environment/alien planet/12_smoothness.bmp"
-dest_files=["res://.godot/imported/12_smoothness.bmp-f68837fbbef849897ca3bd7d289e6ee6.s3tc.ctex"]
+source_file="res://environment/wasteland/12_smoothness.bmp"
+dest_files=["res://.godot/imported/12_smoothness.bmp-db8691ba70b36aa3c33f847116180f09.s3tc.ctex"]
 
 [params]
 

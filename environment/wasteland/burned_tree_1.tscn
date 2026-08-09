@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dkitb677t41ly"]
+
+[ext_resource type="PackedScene" uid="uid://6scq6n6sy7su" path="res://environment/wasteland/burned_tree_1.glb" id="1_06xqd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eofkr"]
+albedo_color = Color(0, 0, 0, 1)
+
+[node name="BurnedTree1" unique_id=1278722176 instance=ExtResource("1_06xqd")]
+
+[node name="Object_2" parent="Sketchfab_model/Burned Tree 1_obj_cleaner_materialmerger_gles" parent_id_path=PackedInt32Array(1164640203) index="0" unique_id=1800172520]
+material_override = SubResource("StandardMaterial3D_eofkr")

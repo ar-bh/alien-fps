@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://hgu1esonp6sx"
-path="res://.godot/imported/eye_alien.glb-ed214567009d27683d840a8a6d6b6382.scn"
+path="res://.godot/imported/eye_alien.glb-7cb6dc76c81312e8b3e5968cd476aa8a.scn"
 
 [deps]
 
-source_file="res://blender/eye_alien.glb"
-dest_files=["res://.godot/imported/eye_alien.glb-ed214567009d27683d840a8a6d6b6382.scn"]
+source_file="res://enemies/eye monster/eye_alien.glb"
+dest_files=["res://.godot/imported/eye_alien.glb-7cb6dc76c81312e8b3e5968cd476aa8a.scn"]
 
 [params]
 

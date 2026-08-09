@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://4bo6plflo2ug"]
 
-[ext_resource type="PackedScene" uid="uid://b3mj2o5cmxlq8" path="res://blender/axe.glb" id="1_gbt7s"]
+[ext_resource type="PackedScene" uid="uid://b3mj2o5cmxlq8" path="res://weapons/axe/axe.glb" id="1_gbt7s"]
 [ext_resource type="Script" uid="uid://di3brdm21edst" path="res://weapons/axe/axe.gd" id="2_ntw1f"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ntw1f"]

@@ -158,6 +158,7 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 		return
 		
+		
 	current_state = State.RUN_AT_PLAYER
 	
 	var target: Vector3 = player.get_node("Head3D/Camera3D").global_position
