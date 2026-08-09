@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://q5wr20h35o3u"]
+
+[ext_resource type="PackedScene" uid="uid://cemvbeml0etfg" path="res://environment/wasteland/wooden_spikes.glb" id="1_xofsp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_80bwy"]
+albedo_color = Color(0, 0, 0, 1)
+
+[node name="BurnedGrass" unique_id=2064401388 instance=ExtResource("1_xofsp")]
+
+[node name="Object_2" parent="Sketchfab_model/Wooden Spikes_obj_cleaner_materialmerger_gles" parent_id_path=PackedInt32Array(538343341) index="0" unique_id=30221011]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.4617153e-17, -0.1108658)
+material_override = SubResource("StandardMaterial3D_80bwy")

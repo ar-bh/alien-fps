@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bnpwtrhwl34bs"]
+
+[ext_resource type="PackedScene" uid="uid://d1gurqbet8pmo" path="res://environment/wasteland/rock_cluster.glb" id="1_iemxv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pdkxj"]
+albedo_color = Color(0.23921569, 0.24705882, 0.23921569, 1)
+
+[node name="RockCluster" unique_id=763971342 instance=ExtResource("1_iemxv")]
+
+[node name="Object_2" parent="Sketchfab_model/Rock Cluster_obj_cleaner_materialmerger_gles" parent_id_path=PackedInt32Array(1233272823) index="0" unique_id=512086132]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4102523e-16, 0.63512117)
+material_override = SubResource("StandardMaterial3D_pdkxj")

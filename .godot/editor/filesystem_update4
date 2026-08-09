@@ -23,3 +23,5 @@ res://environment/glacier/glacier_biome.tres
 res://environment/glacier/icicles.tscn
 res://gameplay/main_gameplay_3d.gd
 res://player/player_3d.gd
+res://environment/wasteland/rock_cluster.tscn
+res://environment/wasteland/burned_grass.tscn
