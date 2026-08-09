@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://ba2omj1b8cmpk"]
+
+[ext_resource type="PackedScene" uid="uid://c21wer7etw6ar" path="res://environment/glacier/stylized-icicles.........glb" id="1_a70vf"]
+
+[node name="Icicles" unique_id=351126994 instance=ExtResource("1_a70vf")]
+
+[node name="Object_5" parent="Sketchfab_model/root/GLTF_SceneRootNode/world_0/geometry_0_1" parent_id_path=PackedInt32Array(336166518) index="0" unique_id=2145864734]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 3.2438211, 0)
+
+[node name="Object_6" parent="Sketchfab_model/root/GLTF_SceneRootNode/world_0/geometry_0_1" parent_id_path=PackedInt32Array(336166518) index="1" unique_id=145122162]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 3.2438211, 0)

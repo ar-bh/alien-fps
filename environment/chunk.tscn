@@ -7,8 +7,9 @@ script = ExtResource("1_bgemg")
 chunk_width = null
 chunk_depth = null
 chunk_height = null
+show_spawns_in_editor = null
 
-[node name="Ground" type="CSGBox3D" parent="." unique_id=266470058]
+[node name="Ground" type="CSGBox3D" parent="." unique_id=1799746793]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -50, 0)
 use_collision = true

@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1786233758
+::res://::1786239467
 icon.svg::CompressedTexture2D::2161755544460959011::1785346976::1785347119::1::::<><><>0<>0<>5084b3fcdd6ce8f2abaf420c2a9a3a42<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile::-1::1785346995::0::1::::<><><>0<>0<><>::
 ::res://addons/::1785346995
@@ -24,23 +24,26 @@ eye_alien.glb::PackedScene::504969181041416319::1786059121::1786233759::1::::<><
 eye_alien_eye_monster_albedo.png::CompressedTexture2D::4760267974404257845::1786059138::1786233759::1::::<><><>0<>0<>9b1b50f05d1224ae991d25c65297a59d<>res://.godot/imported/eye_alien_eye_monster_albedo.png-151209f8d3b7f8542d11c644c6e2c0ec.s3tc.ctex::
 eye_monster_3d.gd::GDScript::3725420268599769340::1786229366::0::1::::EyeMonster3D<>CharacterBody3D<><>0<>0<><>::
 eye_monster_3d.tscn::PackedScene::8844970753106296838::1786233758::0::1::::<><><>0<>0<><>::uid://hgu1esonp6sx::::res://enemies/eye monster/eye_alien.glb<>uid://btcvelotdu6vg::::res://enemies/eye monster/eye_monster_3d.gd
-::res://environment/::1786235985
-1_diffuseOriginal.bmp::CompressedTexture2D::1796091931022748343::1726706384::1786233566::1::::<><><>0<>0<>96f8d19c762d10ab74ee391e22490b33<>res://.godot/imported/1_diffuseOriginal.bmp-8c679b03856097e9b7a29979a92d1fb1.s3tc.ctex::
-13_diffuseOriginal.bmp::CompressedTexture2D::8878903362066264003::1726707634::1786233566::1::::<><><>0<>0<>c0786cf90ec62e785c5da1cc9d75edbd<>res://.godot/imported/13_diffuseOriginal.bmp-1d77109334139325b0f1cfa508a2ff90.s3tc.ctex::
-17_diffuseOriginal.bmp::CompressedTexture2D::4355831549386071929::1726708114::1786233566::1::::<><><>0<>0<>b5b7ae1fb6b51c678be583617e13aa63<>res://.godot/imported/17_diffuseOriginal.bmp-b205da0c4a1a4d02f32720f8f489c130.s3tc.ctex::
-chunk.tscn::PackedScene::1794790914468516252::1786236267::0::1::::<><><>0<>0<><>::uid://dd2a2obofsawj::::res://environment/chunk.tscn.gd
-chunk.tscn.gd::GDScript::7425615735303638741::1786236254::0::1::::Chunk<>Node3D<><>0<>1<><>::
+::res://environment/::1786241489
 biome_data.gd::GDScript::4921997274157954746::1786236190::0::1::::BiomeData<>Resource<><>0<>0<><>::
-::res://environment/wasteland/::1786233853
+chunk.gd::GDScript::7425615735303638741::1786241489::0::1::::Chunk<>Node3D<><>0<>1<><>::
+chunk.tscn::PackedScene::1794790914468516252::1786241403::0::1::::<><><>0<>0<><>::uid://dd2a2obofsawj::::res://environment/chunk.gd
+::res://environment/glacier/::1786241755
+4_diffuseOriginal.bmp::CompressedTexture2D::9122605112630417292::1696796454::1786239786::1::::<><><>0<>0<>3096086dad60ff1d836c49a9f67c8309<>res://.godot/imported/4_diffuseOriginal.bmp-b360e9e3d1c1bd00520389ad8ed424fd.s3tc.ctex::
+glacier_biome.tres::Resource/BiomeData::4520096908033325927::1786241395::0::1::::<><><>0<>0<><>::uid://cceitt32vdi31::::res://environment/biome_data.gd<>uid://d28b8dhtbi4mq::::res://environment/glacier/4_diffuseOriginal.bmp
+stylized-icicles......._1.png::CompressedTexture2D::3547341360975654051::1786241755::1786241757::1::::<><><>0<>0<>6819be1929bb61f4299f4ad591bbb054<>res://.godot/imported/stylized-icicles......._1.png-abf36a364c01dc1fd3700450a1bec7b9.s3tc.ctex::
+stylized-icicles......._0.png::CompressedTexture2D::4801394308116500572::1786241755::1786241757::1::::<><><>0<>0<>74de30e33626d288b4b869997994854b<>res://.godot/imported/stylized-icicles......._0.png-e59a850c219188ffafa897fc8d24e7b0.s3tc.ctex::
+stylized-icicles.........glb::PackedScene::6722957826773838829::1786241755::1786241756::1::::<><><>0<>0<>ebc2aee4faed789886143dd891b07759<>res://.godot/imported/stylized-icicles.........glb-e069b3b38cdef09caa8be1d4c9753918.scn::uid://can3i60uttji7::::res://environment/glacier/stylized-icicles......._0.png<>uid://bqsmgugx7sphj::::res://environment/glacier/stylized-icicles......._1.png
+::res://environment/wasteland/::1786241395
 12_smoothness.bmp::CompressedTexture2D::647752656314914142::1726707590::1786233570::1::::<><><>0<>0<>e160f64786fe961acc427d57a8267b08<>res://.godot/imported/12_smoothness.bmp-db8691ba70b36aa3c33f847116180f09.s3tc.ctex::
 burned_tree_1.glb::PackedScene::2213164608779936120::1786233273::1786233740::1::::<><><>0<>0<>5ee2dcbe228cd9b34784ff12c5cd2a4c<>res://.godot/imported/burned_tree_1.glb-3c246455bbd8171f4371ff103024d31e.scn::
-burned_tree_1.tscn::PackedScene::7878822597286662926::1786233740::0::1::::<><><>0<>0<><>::uid://6scq6n6sy7su::::res://environment/wasteland/burned_tree_1.glb
+burned_tree_1.tscn::PackedScene::7878822597286662926::1786237240::0::1::::<><><>0<>0<><>::uid://6scq6n6sy7su::::res://environment/wasteland/burned_tree_1.glb
 burned_tree_2.glb::PackedScene::7590259424323417250::1786233619::1786233740::1::::<><><>0<>0<>c50e5ecc81a4eb8ab0ff84d78cd53758<>res://.godot/imported/burned_tree_2.glb-3f752c03bf80b63375f573f718e78c82.scn::
-burned_tree_2.tscn::PackedScene::2989066884879306133::1786233853::0::1::::<><><>0<>0<><>::uid://dge1p1d6v3any::::res://environment/wasteland/burned_tree_2.glb
-wasteland_biome.tres::Resource/BiomeData::3472408882270350215::1786236230::0::1::::<><><>0<>0<><>::uid://cceitt32vdi31::::res://environment/biome_data.gd<>uid://dkitb677t41ly::::res://environment/wasteland/burned_tree_1.tscn<>uid://bit6q3c80jx3j::::res://environment/wasteland/burned_tree_2.tscn<>uid://jh1nkx501oju::::res://environment/wasteland/12_smoothness.bmp
-::res://gameplay/::1786233759
+burned_tree_2.tscn::PackedScene::2989066884879306133::1786236769::0::1::::<><><>0<>0<><>::uid://dge1p1d6v3any::::res://environment/wasteland/burned_tree_2.glb
+wasteland_biome.tres::Resource/BiomeData::3472408882270350215::1786241395::0::1::::<><><>0<>0<><>::uid://cceitt32vdi31::::res://environment/biome_data.gd<>uid://dkitb677t41ly::::res://environment/wasteland/burned_tree_1.tscn<>uid://bit6q3c80jx3j::::res://environment/wasteland/burned_tree_2.tscn<>uid://jh1nkx501oju::::res://environment/wasteland/12_smoothness.bmp
+::res://gameplay/::1786241489
 fpscounter.gd::GDScript::794534812659427086::1786228946::0::1::::<>Label<><>0<>0<><>::
-main_gameplay_3d.tscn::PackedScene::1655603678145136064::1786233759::0::1::::<><><>0<>0<><>::uid://0tn7dopaur0g::::res://environment/chunk.tscn<>uid://jh1nkx501oju::::res://environment/wasteland/12_smoothness.bmp<>uid://ch3lbhgo5khsv::::res://player/player_3d.tscn<>uid://cp0g50kdmg1lm::::res://common/cel_shader_fx.tscn<>uid://ddw2sid0bv6ua::::res://common/retro_fx.tscn<>uid://dyatm1x1enkuo::::res://enemies/eye monster/eye_monster_3d.tscn<>uid://lk44wmfglrk5::::res://gameplay/fpscounter.gd
+main_gameplay_3d.tscn::PackedScene::1655603678145136064::1786241489::0::1::::<><><>0<>0<><>::uid://0tn7dopaur0g::::res://environment/chunk.tscn<>uid://ch3lbhgo5khsv::::res://player/player_3d.tscn<>uid://cp0g50kdmg1lm::::res://common/cel_shader_fx.tscn<>uid://ddw2sid0bv6ua::::res://common/retro_fx.tscn<>uid://dyatm1x1enkuo::::res://enemies/eye monster/eye_monster_3d.tscn<>uid://lk44wmfglrk5::::res://gameplay/fpscounter.gd
 ::res://player/::1786134419
 player_3d.gd::GDScript::6153150202554921347::1786134419::0::1::::Player3D<>CharacterBody3D<><>0<>0<><>::
 player_3d.tscn::PackedScene::5322635900289303813::1786133895::0::1::::<><><>0<>0<><>::uid://ctwvqqqr7oxax::::res://player/player_3d.gd

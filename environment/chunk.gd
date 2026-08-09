@@ -8,6 +8,9 @@ class_name Chunk extends Node3D
 @export var chunk_depth := 50.0: set = _set_chunk_depth
 @export var chunk_height := 100.0: set = _set_chunk_height
 
+@export_group("Debug")
+@export var show_spawns_in_editor := true: set = _set_show_spawns_in_editor
+
 @onready var ground: CSGBox3D = %Ground
 
 func _ready() -> void:
@@ -30,6 +33,11 @@ func _set_chunk_height(new_height: float) -> void:
 
 func _set_chunk_depth(new_depth: float) -> void:
 	chunk_depth = new_depth
+	if is_node_ready():
+		_update_chunk()
+
+func _set_show_spawns_in_editor(value: bool) -> void:
+	show_spawns_in_editor = value
 	if is_node_ready():
 		_update_chunk()
 
@@ -67,6 +75,9 @@ func _update_chunk() -> void:
 	_spawn_contents()
 
 func _spawn_contents() -> void:
+	if Engine.is_editor_hint() and not show_spawns_in_editor:
+		_clear_contents()
+		return
 	if biome == null or biome.content.is_empty():
 		_clear_contents()
 		return
@@ -82,7 +93,7 @@ func _spawn_contents() -> void:
 		if Engine.is_editor_hint():
 			item.owner = get_tree().edited_scene_root
 		item.position = _get_random_point_on_chunk()
-		var s := randf_range(0.5, 1.5)
+		var s := randf_range(biome.content_size_range[0], biome.content_size_range[1])
 		item.scale = Vector3(s, s, s)
 
 func _get_random_point_on_chunk() -> Vector3:

@@ -2,9 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://0tn7dopaur0g" path="res://environment/chunk.tscn" id="1_f0dbm"]
 [ext_resource type="PackedScene" uid="uid://ch3lbhgo5khsv" path="res://player/player_3d.tscn" id="2_4ssrn"]
+[ext_resource type="Resource" uid="uid://bpqccjoaxia36" path="res://environment/wasteland/wasteland_biome.tres" id="2_pm8vb"]
+[ext_resource type="Resource" uid="uid://b5ntlobupmyhj" path="res://environment/glacier/glacier_biome.tres" id="2_tr57x"]
 [ext_resource type="PackedScene" uid="uid://cp0g50kdmg1lm" path="res://common/cel_shader_fx.tscn" id="3_52p1e"]
+[ext_resource type="PackedScene" uid="uid://ba2omj1b8cmpk" path="res://environment/glacier/icicles.tscn" id="3_skbmb"]
 [ext_resource type="PackedScene" uid="uid://ddw2sid0bv6ua" path="res://common/retro_fx.tscn" id="4_tscrs"]
+[ext_resource type="PackedScene" uid="uid://bit6q3c80jx3j" path="res://environment/wasteland/burned_tree_2.tscn" id="5_dbcxa"]
 [ext_resource type="PackedScene" uid="uid://dyatm1x1enkuo" path="res://enemies/eye monster/eye_monster_3d.tscn" id="5_xak5j"]
+[ext_resource type="PackedScene" uid="uid://dkitb677t41ly" path="res://environment/wasteland/burned_tree_1.tscn" id="6_cwjni"]
 [ext_resource type="Script" uid="uid://lk44wmfglrk5" path="res://gameplay/fpscounter.gd" id="6_pm8vb"]
 
 [sub_resource type="Environment" id="Environment_tscrs"]
@@ -17,11 +22,45 @@ background_color = Color(0.8898266, 0.6206814, 0.53735286, 1)
 
 [node name="Chunk" parent="World" unique_id=785402397 instance=ExtResource("1_f0dbm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -100, 0)
+biome = ExtResource("2_pm8vb")
 chunk_width = 50.0
 chunk_depth = 50.0
 chunk_height = 100.0
+show_spawns_in_editor = true
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="World" unique_id=479265740]
+[node name="BurnedTree2" type="Node3D" parent="World/Chunk" unique_id=1740468335 instance=ExtResource("5_dbcxa")]
+transform = Transform3D(1.2882328, 0, 0, 0, 1.2882328, 0, 0, 0, 1.2882328, -19.012846, 100, 10.900581)
+
+[node name="BurnedTree1" type="Node3D" parent="World/Chunk" unique_id=1968041232 instance=ExtResource("6_cwjni")]
+transform = Transform3D(1.0986912, 0, 0, 0, 1.0986912, 0, 0, 0, 1.0986912, -23.349285, 100, -14.734031)
+
+[node name="@Node3D@213530" type="Node3D" parent="World/Chunk" unique_id=375370627 instance=ExtResource("5_dbcxa")]
+transform = Transform3D(1.1735237, 0, 0, 0, 1.1735237, 0, 0, 0, 1.1735237, -2.3522959, 100, -5.790564)
+
+[node name="@Node3D@213531" type="Node3D" parent="World/Chunk" unique_id=1072748026 instance=ExtResource("6_cwjni")]
+transform = Transform3D(0.95282185, 0, 0, 0, 0.95282185, 0, 0, 0, 0.95282185, 1.1766254, 100, -21.65169)
+
+[node name="@Node3D@213532" type="Node3D" parent="World/Chunk" unique_id=1688474486 instance=ExtResource("6_cwjni")]
+transform = Transform3D(1.1249989, 0, 0, 0, 1.1249989, 0, 0, 0, 1.1249989, -20.238499, 100, 17.024921)
+
+[node name="@Node3D@213533" type="Node3D" parent="World/Chunk" unique_id=1000571234 instance=ExtResource("6_cwjni")]
+transform = Transform3D(0.68474334, 0, 0, 0, 0.68474334, 0, 0, 0, 0.68474334, -1.8612188, 100, 7.357695)
+
+[node name="@Node3D@213534" type="Node3D" parent="World/Chunk" unique_id=1413624459 instance=ExtResource("5_dbcxa")]
+transform = Transform3D(1.2961287, 0, 0, 0, 1.2961287, 0, 0, 0, 1.2961287, -10.8785515, 100, -10.119285)
+
+[node name="Chunk2" parent="World" unique_id=1344688085 instance=ExtResource("1_f0dbm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.58583, -100, 0)
+biome = ExtResource("2_tr57x")
+chunk_width = 50.0
+chunk_depth = 50.0
+chunk_height = 100.0
+show_spawns_in_editor = true
+
+[node name="Icicles" type="Node3D" parent="World/Chunk2" unique_id=351126994 instance=ExtResource("3_skbmb")]
+transform = Transform3D(2.6199696, 0, 0, 0, 2.6199696, 0, 0, 0, 2.6199696, 20.023783, 100, -7.994787)
+
+[node name="WastelandWorldEnvironment" type="WorldEnvironment" parent="World" unique_id=479265740]
 unique_name_in_owner = true
 environment = SubResource("Environment_tscrs")
 

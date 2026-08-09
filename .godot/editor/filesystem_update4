@@ -19,3 +19,5 @@ res://environment/biome_data.gd
 res://environment/wasteland/wasteland_biome.tres
 res://environment/chunk.gd
 res://environment/wasteland/burned_tree_2.tscn
+res://environment/glacier/glacier_biome.tres
+res://environment/glacier/icicles.tscn

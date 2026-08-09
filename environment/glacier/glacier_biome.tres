@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="BiomeData" format=3 uid="uid://b5ntlobupmyhj"]
+
+[ext_resource type="Script" uid="uid://cceitt32vdi31" path="res://environment/biome_data.gd" id="1_ehxbm"]
+[ext_resource type="PackedScene" uid="uid://ba2omj1b8cmpk" path="res://environment/glacier/icicles.tscn" id="1_t0kox"]
+[ext_resource type="Texture2D" uid="uid://d28b8dhtbi4mq" path="res://environment/glacier/4_diffuseOriginal.bmp" id="2_8rvnn"]
+
+[resource]
+script = ExtResource("1_ehxbm")
+biome_name = "glacier"
+texture = ExtResource("2_8rvnn")
+amount_of_content = [1, 2]
+content = Array[PackedScene]([ExtResource("1_t0kox")])
+content_size_range = [2.0, 4.0]
+metadata/_custom_type_script = "uid://cceitt32vdi31"
