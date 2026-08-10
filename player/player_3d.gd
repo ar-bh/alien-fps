@@ -1,9 +1,10 @@
 class_name Player3D extends CharacterBody3D
 
 #region movement + camera
-const SPEED := 5.0
+@export_group("Movement and Camera")
+@export var speed := 5.0
 const JUMP_VELOCITY := 4.5
-var sensitivity := 0.01
+@export var sensitivity := 0.01
 var mouse_is_playing := false
 
 const GRAVITY := 9.8
@@ -128,11 +129,11 @@ func _physics_process(delta) -> void:
 	var input_direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	var direction = (_head.transform.basis * Vector3(input_direction.x, 0.0, input_direction.y)).normalized()
 	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
+		velocity.x = direction.x * speed
+		velocity.z = direction.z * speed
 	else:
-		velocity.x = move_toward(velocity.x, 0.0, SPEED)
-		velocity.z = move_toward(velocity.z, 0.0, SPEED)
+		velocity.x = move_toward(velocity.x, 0.0, speed)
+		velocity.z = move_toward(velocity.z, 0.0, speed)
 		
 	move_and_slide()
 	
