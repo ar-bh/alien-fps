@@ -74,7 +74,8 @@ func set_new_health(new_health: int) -> void:
 
 
 func die() -> void:
-	get_tree().quit()
+	#get_tree().quit()
+	pass
 
 #endregion
 

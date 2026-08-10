@@ -6,6 +6,7 @@
 [ext_resource type="Resource" uid="uid://bpqccjoaxia36" path="res://environment/wasteland/wasteland_biome.tres" id="2_pm8vb"]
 [ext_resource type="PackedScene" uid="uid://cp0g50kdmg1lm" path="res://common/cel_shader_fx.tscn" id="3_52p1e"]
 [ext_resource type="PackedScene" uid="uid://ddw2sid0bv6ua" path="res://common/retro_fx.tscn" id="4_tscrs"]
+[ext_resource type="PackedScene" uid="uid://dyatm1x1enkuo" path="res://enemies/eye monster/eye_monster_3d.tscn" id="5_xak5j"]
 [ext_resource type="Script" uid="uid://lk44wmfglrk5" path="res://gameplay/fpscounter.gd" id="6_pm8vb"]
 
 [sub_resource type="Environment" id="Environment_tscrs"]
@@ -41,3 +42,6 @@ script = ExtResource("6_pm8vb")
 [node name="Player3D" parent="." unique_id=850945551 instance=ExtResource("2_4ssrn")]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 12)
+
+[node name="EyeMonster3D" parent="." unique_id=335777878 instance=ExtResource("5_xak5j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 0, 20)
