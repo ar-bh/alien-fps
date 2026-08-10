@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="BiomeData" format=3 uid="uid://bn5m88kr3mxon"]
+
+[ext_resource type="Script" uid="uid://cceitt32vdi31" path="res://environment/biome_data.gd" id="1_58on8"]
+[ext_resource type="Texture2D" uid="uid://d1hlvp03hhjug" path="res://environment/snowy/6_diffuseOriginal.bmp" id="2_28b45"]
+
+[resource]
+script = ExtResource("1_58on8")
+biome_name = "snowy"
+texture = ExtResource("2_28b45")
+metadata/_custom_type_script = "uid://cceitt32vdi31"

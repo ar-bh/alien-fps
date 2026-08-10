@@ -4,3 +4,5 @@ res://common/cel_shader_fx.gdshader
 res://common/retrofx.gdshader
 res://environment/biome_data.gd
 res://player/player_3d.gd
+res://environment/giant_blend_chunk.tscn
+res://environment/snowy/snowy.tres

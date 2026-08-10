@@ -7,7 +7,7 @@
 [node name="BlendChunk" parent="." unique_id=195745641 instance=ExtResource("1_5epq7")]
 
 [node name="BlendChunk2" parent="." unique_id=1920590656 instance=ExtResource("1_5epq7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -50)
 
 [node name="BlendChunk3" parent="." unique_id=1488404954 instance=ExtResource("1_5epq7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 50)

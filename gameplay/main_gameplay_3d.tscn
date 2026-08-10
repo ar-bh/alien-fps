@@ -3,9 +3,14 @@
 [ext_resource type="Script" uid="uid://b5ktx1vmy478b" path="res://gameplay/main_gameplay_3d.gd" id="1_pm8vb"]
 [ext_resource type="PackedScene" uid="uid://ch3lbhgo5khsv" path="res://player/player_3d.tscn" id="2_4ssrn"]
 [ext_resource type="PackedScene" uid="uid://cp0g50kdmg1lm" path="res://common/cel_shader_fx.tscn" id="3_52p1e"]
+[ext_resource type="Resource" uid="uid://650wt70dnxt5" path="res://environment/desert/desert.tres" id="3_skbmb"]
 [ext_resource type="PackedScene" uid="uid://cya6n4jovlner" path="res://environment/giant_chunk.tscn" id="4_f0dbm"]
+[ext_resource type="Resource" uid="uid://b5ntlobupmyhj" path="res://environment/glacier/glacier_biome.tres" id="4_skbmb"]
 [ext_resource type="PackedScene" uid="uid://ddw2sid0bv6ua" path="res://common/retro_fx.tscn" id="4_tscrs"]
+[ext_resource type="PackedScene" uid="uid://xbkel4ngq8iv" path="res://environment/giant_blend_chunk.tscn" id="5_27dgl"]
+[ext_resource type="Resource" uid="uid://bn5m88kr3mxon" path="res://environment/snowy/snowy.tres" id="6_27dgl"]
 [ext_resource type="Script" uid="uid://lk44wmfglrk5" path="res://gameplay/fpscounter.gd" id="6_pm8vb"]
+[ext_resource type="PackedScene" uid="uid://bb6eirildbf0i" path="res://environment/blend_chunk.tscn" id="8_faqv3"]
 
 [sub_resource type="Environment" id="Environment_tscrs"]
 background_mode = 1
@@ -17,17 +22,38 @@ environment_switching_duration = 1.0
 
 [node name="World" type="Node" parent="." unique_id=593962535]
 
+[node name="BlendChunk" parent="World" unique_id=195745641 instance=ExtResource("8_faqv3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 100)
+
+[node name="BlendChunk2" parent="World" unique_id=156113315 instance=ExtResource("8_faqv3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 50, 0, 100)
+
+[node name="BlendChunk3" parent="World" unique_id=1334102762 instance=ExtResource("8_faqv3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -50, 0, 100)
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="World" unique_id=479265740]
 unique_name_in_owner = true
 environment = SubResource("Environment_tscrs")
+
+[node name="GiantChunk" parent="World" unique_id=633164688 instance=ExtResource("4_f0dbm")]
+biome = ExtResource("3_skbmb")
+
+[node name="GiantBlendChunk" parent="World" unique_id=1975840459 instance=ExtResource("5_27dgl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100, 0, 0)
+
+[node name="GiantChunk2" parent="World" unique_id=971467276 instance=ExtResource("4_f0dbm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 200, 0, 0)
+biome = ExtResource("4_skbmb")
+
+[node name="GiantChunk3" parent="World" unique_id=659909635 instance=ExtResource("4_f0dbm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 200)
+biome = ExtResource("6_27dgl")
 
 [node name="FX" type="Node" parent="." unique_id=445978245]
 
 [node name="CelShaderFX" parent="FX" unique_id=964755560 instance=ExtResource("3_52p1e")]
 
 [node name="RetroFX" parent="FX" unique_id=1268121299 instance=ExtResource("4_tscrs")]
-
-[node name="GiantChunk" parent="FX" unique_id=633164688 instance=ExtResource("4_f0dbm")]
 
 [node name="FPSCanvasLayer" type="CanvasLayer" parent="." unique_id=22200906]
 

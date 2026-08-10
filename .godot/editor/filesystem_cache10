@@ -13,12 +13,12 @@ plugin.cfg::TextFile::-1::1785346995::0::1::::<><><>0<>0<><>::
 README.md::TextFile::-1::1785346995::0::1::::<><><>0<>0<><>::
 utils.gd::GDScript::5251015809120159908::1785346995::0::1::::<>RefCounted<><>0<>0<><>::
 ::res://blender/::1786233752
-::res://common/::1786393891
-cel_shader_fx.gdshader::Shader::5425356530736021439::1786393891::0::1::::<><><>0<>0<><>::
+::res://common/::1786398449
+cel_shader_fx.gdshader::Shader::5425356530736021439::1786398449::0::1::::<><><>0<>0<><>::
 cel_shader_fx.tscn::PackedScene::5877702670266334266::1786226558::0::1::::<><><>0<>0<><>::uid://cjkc3g2abw8yl::::res://common/cel_shader_fx.gdshader
 checkboard.png::CompressedTexture2D::4106775369370201166::1784591392::1785353317::1::::<><><>0<>0<>13eb48c1fb20cf02adb0879217dbfa91<>res://.godot/imported/checkboard.png-529890cf9338e65be525f089fefc062c.s3tc.ctex::
 notes.gd::GDScript::8583372512465771349::1786293332::0::1::::<>RefCounted<><>0<>0<><>::
-retrofx.gdshader::Shader::487727675681209478::1786393891::0::1::::<><><>0<>0<><>::
+retrofx.gdshader::Shader::487727675681209478::1786398449::0::1::::<><><>0<>0<><>::
 retro_fx.tscn::PackedScene::7416916821636996284::1786052719::0::1::::<><><>0<>0<><>::uid://g7i2k6e57jfy::::res://common/retrofx.gdshader
 ::res://enemies/::1786233758
 ::res://enemies/eye monster/::1786301040
@@ -26,13 +26,13 @@ eye_alien.glb::PackedScene::504969181041416319::1786059121::1786233759::1::::<><
 eye_alien_eye_monster_albedo.png::CompressedTexture2D::4760267974404257845::1786059138::1786233759::1::::<><><>0<>0<>9b1b50f05d1224ae991d25c65297a59d<>res://.godot/imported/eye_alien_eye_monster_albedo.png-151209f8d3b7f8542d11c644c6e2c0ec.s3tc.ctex::
 eye_monster_3d.gd::GDScript::3725420268599769340::1786301040::0::1::::EyeMonster3D<>CharacterBody3D<><>0<>0<><>::
 eye_monster_3d.tscn::PackedScene::8844970753106296838::1786301040::0::1::::<><><>0<>0<><>::uid://hgu1esonp6sx::::res://enemies/eye monster/eye_alien.glb<>uid://btcvelotdu6vg::::res://enemies/eye monster/eye_monster_3d.gd<>uid://b8256hjhnics0::::res://enemies/eye monster/eye_alien_eye_monster_albedo.png
-::res://environment/::1786398126
-biome_data.gd::GDScript::4921997274157954746::1786385169::0::1::::BiomeData<>Resource<><>0<>0<><>::
+::res://environment/::1786399214
+biome_data.gd::GDScript::4921997274157954746::1786398449::0::1::::BiomeData<>Resource<><>0<>0<><>::
 blend_chunk.tscn::PackedScene::2520863297788523910::1786397636::0::1::::<><><>0<>0<><>::uid://brc13qe6xjny7::::res://blend_chunk.gd<>uid://0tn7dopaur0g::::res://environment/chunk.tscn
 blend_ground.gdshader::Shader::1910973591546468328::1786395476::0::1::::<><><>0<>0<><>::
 chunk.gd::GDScript::7425615735303638741::1786398126::0::1::::Chunk<>Node3D<><>0<>1<><>::
 chunk.tscn::PackedScene::1794790914468516252::1786398099::0::1::::<><><>0<>0<><>::uid://dd2a2obofsawj::::res://environment/chunk.gd
-giant_blend_chunk.tscn::PackedScene::1617022717687614313::1786397557::0::1::::<><><>0<>0<><>::uid://bb6eirildbf0i::::res://environment/blend_chunk.tscn
+giant_blend_chunk.tscn::PackedScene::1617022717687614313::1786398913::0::1::::<><><>0<>0<><>::uid://bb6eirildbf0i::::res://environment/blend_chunk.tscn
 giant_chunk.gd::GDScript::1995810239441139047::1786385173::0::1::::GiantChunk<>Node3D<><>0<>1<><>::
 giant_chunk.tscn::PackedScene::6459280594540503797::1786378841::0::1::::<><><>0<>0<><>::uid://3o1x5y0155jn::::res://environment/giant_chunk.gd<>uid://0tn7dopaur0g::::res://environment/chunk.tscn
 sunflowers_puresky_4k.hdr::CompressedTexture2D::7154013134401591865::1786292067::1786292092::1::::<><><>0<>0<>e2d72bae62704aae0b5436be73edce52<>res://.godot/imported/sunflowers_puresky_4k.hdr-1d39b4623226f7c5fe1c9d46bb0e11f2.ctex::
@@ -45,11 +45,11 @@ Cactus_1.png::CompressedTexture2D::9182519549052518063::1786291491::1786291492::
 Cactus_2.png::CompressedTexture2D::2045063690104973189::1786291492::1786291496::1::::<><><>0<>0<>3a9f6d9bdbf3ec4188860fd363b58238<>res://.godot/imported/Cactus_2.png-ca793b40a2217c648865fc395cce2bfd.s3tc.ctex::
 Cactus_3.png::CompressedTexture2D::7552355085016536125::1786291493::1786291496::1::::<><><>0<>0<>ecbb4e8d7715699853d5b49d4fc28b9e<>res://.godot/imported/Cactus_3.png-01027dc3de39f3890d2a06cd28913a08.s3tc.ctex::
 desert.tres::Resource/BiomeData::2239343746203693368::1786301187::0::1::::<><><>0<>0<><>::uid://cceitt32vdi31::::res://environment/biome_data.gd<>uid://cnramwjnwhmku::::res://environment/desert/cactus.tscn<>uid://cdb644716fxx1::::res://environment/desert/1_diffuseOriginal.bmp
-::res://environment/field/::1786393891
+::res://environment/field/::1786398449
 5_diffuseOriginal.png::CompressedTexture2D::1992356590492922224::1696212732::1786308773::1::::<><><>0<>0<>ed008a9ef5c5f955aa622a1cdbb65969<>res://.godot/imported/5_diffuseOriginal.png-5d79a5fef39a078db8f14a930768fd86.s3tc.ctex::
 13_diffuseOriginal.bmp::CompressedTexture2D::3963519959948772906::1726430562::1786301455::1::::<><><>0<>0<>51db3380de2444c1d94d16b15ec4cec6<>res://.godot/imported/13_diffuseOriginal.bmp-b1c730ba77fe1e936e74143aca18af12.s3tc.ctex::
 field.tres::Resource/BiomeData::2504293573142973879::1786321931::0::1::::<><><>0<>0<><>::uid://cxpp7s8mhdamr::::res://environment/field/tree_1.tscn<>uid://cceitt32vdi31::::res://environment/biome_data.gd<>uid://3nd27gix68ae::::res://environment/field/5_diffuseOriginal.png
-grass.gdshader::Shader::5190961226373562112::1786393891::0::1::::<><><>0<>0<><>::
+grass.gdshader::Shader::5190961226373562112::1786398449::0::1::::<><><>0<>0<><>::
 grass.glb::PackedScene::3812846151947870236::1786301724::1786307556::1::::<><><>0<>0<>8efdf3e4acbabe2ecb558650d0673f60<>res://.godot/imported/grass.glb-9d66d8d633b5b8aa1e28a502a67b819a.scn::
 grass.res::ArrayMesh::8583559269031302198::1786385169::0::1::::<><><>0<>0<><>::uid://cf7smxf8hvfhg::::res://environment/field/grass.gdshader
 grass_plane.tscn::PackedScene::4902063493550903705::1786327570::0::1::::<><><>0<>0<><>::uid://duj6747nq4qsk::::res://environment/field/grass.res
@@ -65,6 +65,9 @@ icicles.tscn::PackedScene::2443030863442997880::1786242399::0::1::::<><><>0<>0<>
 stylized-icicles.........glb::PackedScene::6722957826773838829::1786241755::1786241756::1::::<><><>0<>0<>ebc2aee4faed789886143dd891b07759<>res://.godot/imported/stylized-icicles.........glb-e069b3b38cdef09caa8be1d4c9753918.scn::uid://can3i60uttji7::::res://environment/glacier/stylized-icicles......._0.png<>uid://bqsmgugx7sphj::::res://environment/glacier/stylized-icicles......._1.png
 stylized-icicles......._0.png::CompressedTexture2D::4801394308116500572::1786241755::1786241757::1::::<><><>0<>0<>74de30e33626d288b4b869997994854b<>res://.godot/imported/stylized-icicles......._0.png-e59a850c219188ffafa897fc8d24e7b0.s3tc.ctex::
 stylized-icicles......._1.png::CompressedTexture2D::3547341360975654051::1786241755::1786241757::1::::<><><>0<>0<>6819be1929bb61f4299f4ad591bbb054<>res://.godot/imported/stylized-icicles......._1.png-abf36a364c01dc1fd3700450a1bec7b9.s3tc.ctex::
+::res://environment/snowy/::1786399282
+6_diffuseOriginal.bmp::CompressedTexture2D::8999328846291192506::1696722804::1786399396::1::::<><><>0<>0<>6918233340a367e7501e300fc338f7c2<>res://.godot/imported/6_diffuseOriginal.bmp-c29557026b3df139c3145330f286c1dc.s3tc.ctex::
+snowy.tres::Resource/BiomeData::3361596268250291717::1786399381::0::1::::<><><>0<>0<><>::uid://cceitt32vdi31::::res://environment/biome_data.gd
 ::res://environment/wasteland/::1786306845
 3_diffuseOriginal.bmp::CompressedTexture2D::2265186113874248882::1696722990::1786301425::1::::<><><>0<>0<>5b326e10884bcb5f8ed65db3e7f63ad1<>res://.godot/imported/3_diffuseOriginal.bmp-a66bca90f4ca16f93e9fc59b76268798.s3tc.ctex::
 12_smoothness.bmp::CompressedTexture2D::647752656314914142::1726707590::1786233570::1::::<><><>0<>0<>e160f64786fe961acc427d57a8267b08<>res://.godot/imported/12_smoothness.bmp-db8691ba70b36aa3c33f847116180f09.s3tc.ctex::
@@ -77,12 +80,12 @@ rock_cluster.glb::PackedScene::8997803792671069914::1786290697::1786290697::1:::
 rock_cluster.tscn::PackedScene::3331211925949470392::1786299320::0::1::::<><><>0<>0<><>::uid://d1gurqbet8pmo::::res://environment/wasteland/rock_cluster.glb
 wasteland_biome.tres::Resource/BiomeData::3472408882270350215::1786306845::0::1::::<><><>0<>0<><>::uid://cceitt32vdi31::::res://environment/biome_data.gd<>uid://dkitb677t41ly::::res://environment/wasteland/burned_tree_1.tscn<>uid://bit6q3c80jx3j::::res://environment/wasteland/burned_tree_2.tscn<>uid://bnpwtrhwl34bs::::res://environment/wasteland/rock_cluster.tscn<>uid://q5wr20h35o3u::::res://environment/wasteland/burned_grass.tscn<>uid://7jjjwyabhkfy::::res://environment/wasteland/3_diffuseOriginal.bmp
 wooden_spikes.glb::PackedScene::5079646346793480588::1786291016::1786291016::1::::<><><>0<>0<>a72d7ebfa317438dbf67a0fc15be23f6<>res://.godot/imported/wooden_spikes.glb-705e1bd5fabc191ae1374ef675825ee2.scn::
-::res://gameplay/::1786398301
+::res://gameplay/::1786398931
 fpscounter.gd::GDScript::794534812659427086::1786228946::0::1::::<>Label<><>0<>0<><>::
 main_gameplay_3d.gd::GDScript::4513925865123517323::1786290560::0::1::::<>Node3D<><>0<>0<><>::
-main_gameplay_3d.tscn::PackedScene::1655603678145136064::1786398301::0::1::::<><><>0<>0<><>::uid://b5ktx1vmy478b::::res://gameplay/main_gameplay_3d.gd<>uid://ch3lbhgo5khsv::::res://player/player_3d.tscn<>uid://0tn7dopaur0g::::res://environment/chunk.tscn<>uid://cp0g50kdmg1lm::::res://common/cel_shader_fx.tscn<>uid://ddw2sid0bv6ua::::res://common/retro_fx.tscn<>uid://lk44wmfglrk5::::res://gameplay/fpscounter.gd<>uid://bb6eirildbf0i::::res://environment/blend_chunk.tscn
-::res://player/::1786379089
-player_3d.gd::GDScript::6153150202554921347::1786379089::0::1::::Player3D<>CharacterBody3D<><>0<>0<><>::
+main_gameplay_3d.tscn::PackedScene::1655603678145136064::1786399346::0::1::::<><><>0<>0<><>::uid://b5ktx1vmy478b::::res://gameplay/main_gameplay_3d.gd<>uid://ch3lbhgo5khsv::::res://player/player_3d.tscn<>uid://cp0g50kdmg1lm::::res://common/cel_shader_fx.tscn<>uid://650wt70dnxt5::::res://environment/desert/desert.tres<>uid://cya6n4jovlner::::res://environment/giant_chunk.tscn<>uid://b5ntlobupmyhj::::res://environment/glacier/glacier_biome.tres<>uid://ddw2sid0bv6ua::::res://common/retro_fx.tscn<>uid://xbkel4ngq8iv::::res://environment/giant_blend_chunk.tscn<>uid://lk44wmfglrk5::::res://gameplay/fpscounter.gd
+::res://player/::1786398645
+player_3d.gd::GDScript::6153150202554921347::1786398645::0::1::::Player3D<>CharacterBody3D<><>0<>0<><>::
 player_3d.tscn::PackedScene::5322635900289303813::1786379089::0::1::::<><><>0<>0<><>::uid://ctwvqqqr7oxax::::res://player/player_3d.gd
 ::res://player/textures/::1786047310
 ::res://weapons/::1786049478
