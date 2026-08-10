@@ -53,12 +53,21 @@ func _set_chunk_transforms() -> void:
 	ground.position.y = chunk_height / 2.0
 
 func _apply_material_texture() -> void:
+	
+	if get_parent() is BlendChunk:
+		return
+	
 	if not ground:
 		return
-	if biome == null or biome.texture == null:
-		ground.material = null
-		return
+		
 	var mat := StandardMaterial3D.new()
+	
+	if biome == null or biome.texture == null:
+		mat.albedo_color = Color("ff33cc")
+		ground.material = mat
+		return
+
+	mat.albedo_color = Color(1.0, 1.0, 1.0)
 	mat.albedo_texture = biome.texture
 	mat.uv1_scale = biome.uv1_scale
 	ground.material = mat

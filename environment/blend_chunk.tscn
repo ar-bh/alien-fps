@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bb6eirildbf0i"]
+
+[ext_resource type="Script" uid="uid://brc13qe6xjny7" path="res://blend_chunk.gd" id="1_p6tth"]
+[ext_resource type="PackedScene" uid="uid://0tn7dopaur0g" path="res://environment/chunk.tscn" id="2_64bpe"]
+
+[node name="BlendChunk" type="Node3D" unique_id=195745641]
+script = ExtResource("1_p6tth")
+
+[node name="Chunk" parent="." unique_id=785402397 instance=ExtResource("2_64bpe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -100, 0)
+
+[node name="Ground" parent="Chunk" index="0" unique_id=1799746793]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 50, 0)
+
+[editable path="Chunk"]

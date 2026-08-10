@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://xbkel4ngq8iv"]
+
+[ext_resource type="PackedScene" uid="uid://bb6eirildbf0i" path="res://environment/blend_chunk.tscn" id="1_5epq7"]
+
+[node name="GiantBlendChunk" type="Node3D" unique_id=1975840459]
+
+[node name="BlendChunk" parent="." unique_id=195745641 instance=ExtResource("1_5epq7")]
+
+[node name="BlendChunk2" parent="." unique_id=1920590656 instance=ExtResource("1_5epq7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 0, 0)
+
+[node name="BlendChunk3" parent="." unique_id=1488404954 instance=ExtResource("1_5epq7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 0, 0)

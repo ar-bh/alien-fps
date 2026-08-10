@@ -2,12 +2,11 @@
 
 [ext_resource type="Script" uid="uid://b5ktx1vmy478b" path="res://gameplay/main_gameplay_3d.gd" id="1_pm8vb"]
 [ext_resource type="PackedScene" uid="uid://ch3lbhgo5khsv" path="res://player/player_3d.tscn" id="2_4ssrn"]
-[ext_resource type="PackedScene" uid="uid://cya6n4jovlner" path="res://environment/giant_chunk.tscn" id="2_f0dbm"]
-[ext_resource type="Resource" uid="uid://bpqccjoaxia36" path="res://environment/wasteland/wasteland_biome.tres" id="2_pm8vb"]
+[ext_resource type="PackedScene" uid="uid://0tn7dopaur0g" path="res://environment/chunk.tscn" id="2_33lee"]
 [ext_resource type="PackedScene" uid="uid://cp0g50kdmg1lm" path="res://common/cel_shader_fx.tscn" id="3_52p1e"]
 [ext_resource type="PackedScene" uid="uid://ddw2sid0bv6ua" path="res://common/retro_fx.tscn" id="4_tscrs"]
-[ext_resource type="PackedScene" uid="uid://dyatm1x1enkuo" path="res://enemies/eye monster/eye_monster_3d.tscn" id="5_xak5j"]
 [ext_resource type="Script" uid="uid://lk44wmfglrk5" path="res://gameplay/fpscounter.gd" id="6_pm8vb"]
+[ext_resource type="PackedScene" uid="uid://bb6eirildbf0i" path="res://environment/blend_chunk.tscn" id="8_faqv3"]
 
 [sub_resource type="Environment" id="Environment_tscrs"]
 background_mode = 1
@@ -23,8 +22,20 @@ environment_switching_duration = 1.0
 unique_name_in_owner = true
 environment = SubResource("Environment_tscrs")
 
-[node name="GiantChunk" parent="World" unique_id=633164688 instance=ExtResource("2_f0dbm")]
-biome = ExtResource("2_pm8vb")
+[node name="Chunk" parent="World" unique_id=785402397 instance=ExtResource("2_33lee")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, -100, 0)
+
+[node name="Chunk3" parent="World" unique_id=988375390 instance=ExtResource("2_33lee")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, -100, -100)
+
+[node name="BlendChunk" parent="World" unique_id=195745641 instance=ExtResource("8_faqv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 0, 0)
+
+[node name="Chunk2" parent="World" unique_id=63142802 instance=ExtResource("2_33lee")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100, -100, 0)
+
+[node name="BlendChunk2" parent="World" unique_id=1480149989 instance=ExtResource("8_faqv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -50)
 
 [node name="FX" type="Node" parent="." unique_id=445978245]
 
@@ -42,6 +53,3 @@ script = ExtResource("6_pm8vb")
 [node name="Player3D" parent="." unique_id=850945551 instance=ExtResource("2_4ssrn")]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 12)
-
-[node name="EyeMonster3D" parent="." unique_id=335777878 instance=ExtResource("5_xak5j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 0, 20)

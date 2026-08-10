@@ -7,3 +7,4 @@ class_name BiomeData extends Resource
 @export var content: Array[PackedScene] = []
 @export var content_size_range := [0.5, 1.5]
 @export var environment_color := Color(1.0, 1.0, 1.0)
+@export var enemies: Array[PackedScene]
