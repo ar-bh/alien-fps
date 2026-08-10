@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://cxpp7s8mhdamr"]
+
+[ext_resource type="PackedScene" uid="uid://dxtvudqy46x2q" path="res://environment/field/realistic_tree_models_for_games.glb" id="1_dyvk4"]
+
+[node name="Tree1" unique_id=877064691 instance=ExtResource("1_dyvk4")]

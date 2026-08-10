@@ -5,12 +5,12 @@
 [ext_resource type="PackedScene" uid="uid://bit6q3c80jx3j" path="res://environment/wasteland/burned_tree_2.tscn" id="2_4o6ge"]
 [ext_resource type="PackedScene" uid="uid://bnpwtrhwl34bs" path="res://environment/wasteland/rock_cluster.tscn" id="3_4o6ge"]
 [ext_resource type="PackedScene" uid="uid://q5wr20h35o3u" path="res://environment/wasteland/burned_grass.tscn" id="4_074bb"]
-[ext_resource type="Texture2D" uid="uid://jh1nkx501oju" path="res://environment/wasteland/12_smoothness.bmp" id="4_e5vil"]
+[ext_resource type="Texture2D" uid="uid://7jjjwyabhkfy" path="res://environment/wasteland/3_diffuseOriginal.bmp" id="6_e5vil"]
 
 [resource]
 script = ExtResource("1_oocw5")
 biome_name = "\"wasteland\""
-texture = ExtResource("4_e5vil")
+texture = ExtResource("6_e5vil")
 content = Array[PackedScene]([ExtResource("1_xx6r6"), ExtResource("2_4o6ge"), ExtResource("3_4o6ge"), ExtResource("4_074bb")])
-environment_color = Color(0.8506954, 0.7230569, 0.67414474, 1)
+environment_color = Color(0.6942758, 0.5189226, 0.4547277, 1)
 metadata/_custom_type_script = "uid://cceitt32vdi31"

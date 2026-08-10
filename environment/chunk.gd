@@ -78,11 +78,13 @@ func _update_chunk() -> void:
 		_clear_contents()
 		return
 	_spawn_contents()
+	_spawn_extras()
 
 func _spawn_contents() -> void:
 	if Engine.is_editor_hint() and not show_spawns_in_editor:
 		_clear_contents()
 		return
+		
 	if biome == null or biome.content.is_empty():
 		_clear_contents()
 		return
@@ -100,6 +102,24 @@ func _spawn_contents() -> void:
 		item.position = get_random_point_on_chunk()
 		var s := randf_range(biome.content_size_range[0], biome.content_size_range[1])
 		item.scale = Vector3(s, s, s)
+		item.rotate_y(randf_range(-PI/2, PI/2))
+
+
+const GRASS_PLANE = preload("res://environment/field/grass_plane.tscn")
+
+func _spawn_extras() -> void:
+	if Engine.is_editor_hint():
+		return
+	if biome == null:
+		return
+	if biome.biome_name == "field":
+		print("extras biome: ", biome.biome_name)
+		
+		var grass := GRASS_PLANE.instantiate()
+		print(grass)
+		add_child(grass)
+		grass.position = Vector3(0.0, chunk_height, 0.0)
+
 
 func get_random_point_on_chunk() -> Vector3:
 	var x := randf_range(-chunk_width * 0.5, chunk_width * 0.5)

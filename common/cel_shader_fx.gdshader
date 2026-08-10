@@ -2,8 +2,9 @@ shader_type canvas_item;
 
 uniform sampler2D screen_texture : hint_screen_texture, filter_nearest;
 uniform int color_levels : hint_range(2, 16) = 8;
-uniform float line_thickness : hint_range(0.0, 6.0) = 0.5;
-uniform float edge_threshold : hint_range(0.01, 1.0) = 0.15;
+uniform bool enable_outlines = true;
+uniform float line_thickness : hint_range(0.0, 6.0) = 0.15;
+uniform float edge_threshold : hint_range(0.01, 1.0) = 0.3;
 uniform float brightness : hint_range(0.5, 2.0) = 1.25;
 
 float edge_at(vec2 uv, vec2 pixel) {
@@ -15,7 +16,6 @@ float edge_at(vec2 uv, vec2 pixel) {
 }
 
 void fragment() {
-	vec2 pixel = 1.0 / vec2(textureSize(screen_texture, 0));
 	vec4 color = texture(screen_texture, SCREEN_UV);
 
 	float luma = dot(color.rgb, vec3(0.299, 0.587, 0.114));
@@ -24,23 +24,28 @@ void fragment() {
 	q = clamp(q, 0.0, 1.0);
 	vec3 cel_color = color.rgb / max(luma, 1e-5) * q;
 
-	bool outline = false;
-	int radius = int(ceil(line_thickness));
-	for (int x = -6; x <= 6; x++) {
-		for (int y = -6; y <= 6; y++) {
-			if (abs(x) > radius || abs(y) > radius) {
-				continue;
-			}
-			vec2 uv = SCREEN_UV + vec2(float(x), float(y)) * pixel;
-			if (edge_at(uv, pixel) > edge_threshold) {
-				outline = true;
+	if (!enable_outlines) {
+		COLOR = vec4(cel_color, color.a);
+	} else {
+		vec2 pixel = 1.0 / vec2(textureSize(screen_texture, 0));
+		bool outline = false;
+		int radius = int(ceil(max(line_thickness, 1.0)));
+		for (int x = -6; x <= 6; x++) {
+			for (int y = -6; y <= 6; y++) {
+				if (abs(x) > radius || abs(y) > radius) {
+					continue;
+				}
+				vec2 uv = SCREEN_UV + vec2(float(x), float(y)) * pixel;
+				if (edge_at(uv, pixel) > edge_threshold) {
+					outline = true;
+				}
 			}
 		}
-	}
 
-	if (outline) {
-		COLOR = vec4(0.0, 0.0, 0.0, 1.0);
-	} else {
-		COLOR = vec4(cel_color, color.a);
+		if (outline) {
+			COLOR = vec4(0.0, 0.0, 0.0, 1.0);
+		} else {
+			COLOR = vec4(cel_color, color.a);
+		}
 	}
 }

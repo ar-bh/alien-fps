@@ -28,3 +28,11 @@ res://environment/wasteland/burned_grass.tscn
 res://environment/desert/desert.tres
 res://player/player_3d.tscn
 res://common/notes.gd
+res://environment/field/field.tres
+res://environment/field/stylizedGrassMeshes/grass.res
+res://environment/field/grass.gdshader
+res://environment/field/grass_plane.tscn
+res://environment/field/grass.res
+res://environment/field/tree_1.tscn
+res://environment/giant_chunk.tscn
+res://environment/giant_chunk.gd
