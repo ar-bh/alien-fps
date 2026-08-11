@@ -51,7 +51,6 @@ func setup_health() -> void:
 func _on_timer_timeout() -> void:
 	_update_damage_bar()
 
-
 func _update_damage_bar() -> void:
 	var damage_tween := create_tween()
 	damage_tween.tween_property(_damage_bar, "value", health, damage_bar_update_time)

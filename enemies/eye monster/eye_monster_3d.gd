@@ -229,7 +229,6 @@ func _select_variation() -> void:
 		if mat is StandardMaterial3D:
 			mat.albedo_color = biome_colors[biome_name]
 
-
 func _get_current_chunk() -> Chunk:
 	for chunk in get_tree().get_nodes_in_group("chunks"):
 		var local = chunk.to_local(global_position)

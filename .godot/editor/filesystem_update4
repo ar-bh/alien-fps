@@ -10,3 +10,6 @@ res://player/health_bar.tscn
 res://player/health_bar.gd
 res://player/player_3d.tscn
 res://weapons/axe/axe.gd
+res://gameplay/main_gameplay_3d.gd
+res://enemies/eye monster/eye_monster_3d.gd
+res://environment/chunk.gd

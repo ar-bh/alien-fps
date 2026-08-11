@@ -32,6 +32,7 @@ offset_right = 375.0
 offset_bottom = -76.0
 grow_horizontal = 2
 grow_vertical = 0
+scale = Vector2(1.0349648, 2.5062313)
 theme_override_styles/background = SubResource("StyleBoxEmpty_7vsbq")
 theme_override_styles/fill = SubResource("StyleBoxFlat_rpplc")
 value = 60.0

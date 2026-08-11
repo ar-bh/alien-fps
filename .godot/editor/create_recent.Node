@@ -1,6 +1,7 @@
+HBoxContainer
+CanvasLayer
 SubViewport
 SubViewportContainer
-CanvasLayer
 Timer
 ProgressBar
 RichTextLabel
@@ -12,4 +13,3 @@ Label
 RigidBody3D
 Node
 Area3D
-CollisionShape3D

@@ -21,7 +21,5 @@ func _set_current_biome(new_biome: BiomeData) -> void:
 	var env_tween := create_tween()
 	env_tween.tween_property(environment, "background_color", current_biome.environment_color, environment_switching_duration)
 
-
-
 func _ready() -> void:
 	player.gameplay = self

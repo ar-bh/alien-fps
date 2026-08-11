@@ -34,18 +34,21 @@ func add_trauma(amount: float) -> void:
 
 @export_group("Weapons")
 @export var weapons_list: Dictionary = {
+	"none": null,
 	"axe": preload("uid://4bo6plflo2ug")
 }
 
 @onready var item_holder: Node3D = %ItemHolder3D
-var current_item: String: set = set_current_item
+var current_item: int: set = set_current_item
+var inventory: Array = ["axe", "none", "none", "none", "none", "none", "none", "none", "none", "none"]
 var item_in_hand: Node3D
 
-func set_current_item(new_item: String) -> void:
+func set_current_item(new_item: int) -> void:
+	print(new_item)
 	if not is_node_ready():
 		current_item = new_item
 		return
-	if not weapons_list.has(new_item):
+	if (not weapons_list.has(inventory[new_item])):
 		return
 	
 	current_item = new_item
@@ -53,7 +56,8 @@ func set_current_item(new_item: String) -> void:
 	for child in item_holder.get_children():
 		child.queue_free()
 	
-	item_in_hand = weapons_list[current_item].instantiate()
+	if weapons_list[inventory[new_item]]:
+		item_in_hand = weapons_list[inventory[current_item]].instantiate()
 	item_holder.add_child(item_in_hand)
 
 #endregion
@@ -77,15 +81,14 @@ func set_new_health(new_health: int) -> void:
 
 
 func die() -> void:
-	#get_tree().quit()
-	pass
+	get_tree().quit()
 
 @onready var _health_bar: HealthBar = %HealthBar
 #endregion
 
 func _ready() -> void:
 	#region weapons
-	set_current_item("axe")
+	set_current_item(2)
 	#endregion
 
 	#region screenshake
@@ -117,7 +120,6 @@ func _process(delta: float) -> void:
 	var biome := get_current_biome()
 	if gameplay and gameplay.current_biome != biome:
 		gameplay.current_biome = biome
-
 
 var _was_on_floor := true
 var _playing_fall := false
@@ -163,7 +165,7 @@ func _physics_process(delta) -> void:
 	#endregion
 
 func _can_play_axe_move_anim() -> bool:
-	return current_item == "axe" and item_in_hand and not item_in_hand.is_attacking()
+	return inventory[current_item] == "axe" and item_in_hand and not item_in_hand.is_attacking()
 
 func _input(event: InputEvent) -> void:
 	#region camera
@@ -181,16 +183,34 @@ func _input(event: InputEvent) -> void:
 	#endregion
 
 func _unhandled_input(event: InputEvent) -> void:
-		#region animations
+	#region weapons
+	#region axe
+	if inventory[current_item] == "axe":
+		if Input.is_action_just_pressed("attack"):
+			item_in_hand.axe_attack()
 	
-		#region axe
-		if current_item == "axe":
-			if Input.is_action_just_pressed("attack"):
-				item_in_hand.axe_attack()
-		
-		
-		#endregion
 	
+	#endregion
+	#endregion
+	
+	#region inventory
+	if event.is_action_pressed("inventory1"):
+		set_current_item(1-1)
+	
+	if event.is_action_pressed("inventory2"):
+		set_current_item(2-1)
+	
+	if event.is_action_pressed("inventory3"):
+		set_current_item(3-1)
+	
+	if event.is_action_pressed("inventory4"):
+		set_current_item(4-1)
+		
+	if event.is_action_pressed("inventory5"):
+		set_current_item(5-1)
+		
+	if event.is_action_pressed("inventory6"):
+		set_current_item(6-1)
 	#endregion
 
 var gameplay: Node3D

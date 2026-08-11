@@ -113,7 +113,6 @@ func _spawn_contents() -> void:
 		item.scale = Vector3(s, s, s)
 		item.rotate_y(randf_range(-PI/2, PI/2))
 
-
 const GRASS_PLANE = preload("res://environment/field/grass_plane.tscn")
 
 func _spawn_extras() -> void:
@@ -128,7 +127,6 @@ func _spawn_extras() -> void:
 		print(grass)
 		add_child(grass)
 		grass.position = Vector3(0.0, chunk_height, 0.0)
-
 
 func get_random_point_on_chunk() -> Vector3:
 	var x := randf_range(-chunk_width * 0.5, chunk_width * 0.5)
