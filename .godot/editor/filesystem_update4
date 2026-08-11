@@ -18,3 +18,4 @@ res://player/inventory_display.gd
 res://environment/giant_chunk.gd
 res://environment/field/tree_1.tscn
 res://environment/desert/cactus.tscn
+res://environment/glacier/icicles.tscn

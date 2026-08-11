@@ -1,6 +1,6 @@
+StaticBody3D
 CollisionShape3D
 Node3D
-StaticBody3D
 TextureRect
 TextEdit
 Panel
