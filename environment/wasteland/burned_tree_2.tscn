@@ -5,8 +5,16 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0m04y"]
 albedo_color = Color(0, 0, 0, 1)
 
-[node name="BurnedTree2" unique_id=1740468335 instance=ExtResource("1_y1k46")]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_y1k46"]
+height = 6.5004883
+radius = 0.7529297
 
-[node name="Object_2" parent="Sketchfab_model/Burned Tree 2_obj_cleaner_materialmerger_gles" parent_id_path=PackedInt32Array(222931835) index="0" unique_id=1243390134]
+[node name="BurnedTree2" unique_id=1839849368 instance=ExtResource("1_y1k46")]
+
+[node name="Object_2" parent="Sketchfab_model/Burned Tree 2_obj_cleaner_materialmerger_gles" parent_id_path=PackedInt32Array(934898347) index="0" unique_id=506366299]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2822885e-16, 0.5774914)
 material_override = SubResource("StandardMaterial3D_0m04y")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model" parent_id_path=PackedInt32Array(671361477) index="1" unique_id=1363898826]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, -1.3929804e-07, 3.1867676)
+shape = SubResource("CylinderShape3D_y1k46")
