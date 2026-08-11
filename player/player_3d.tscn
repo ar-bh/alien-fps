@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ch3lbhgo5khsv"]
 
 [ext_resource type="Script" uid="uid://ctwvqqqr7oxax" path="res://player/player_3d.gd" id="1_nni6y"]
+[ext_resource type="PackedScene" uid="uid://b3jddq8fv2qcs" path="res://player/health_bar.tscn" id="2_a5lo2"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_c3rh7"]
 
@@ -29,3 +30,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5885699, 0)
 [node name="ItemHolder3D" type="Node3D" parent="Head3D/Camera3D" unique_id=1601375636]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.18223214, -0.10068807)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1667253696]
+
+[node name="HealthBar" parent="CanvasLayer" unique_id=2105761663 instance=ExtResource("2_a5lo2")]
+unique_name_in_owner = true

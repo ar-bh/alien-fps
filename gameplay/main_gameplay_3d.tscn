@@ -11,6 +11,7 @@
 [ext_resource type="Resource" uid="uid://bn5m88kr3mxon" path="res://environment/snowy/snowy.tres" id="6_27dgl"]
 [ext_resource type="Script" uid="uid://lk44wmfglrk5" path="res://gameplay/fpscounter.gd" id="6_pm8vb"]
 [ext_resource type="PackedScene" uid="uid://bb6eirildbf0i" path="res://environment/blend_chunk.tscn" id="8_faqv3"]
+[ext_resource type="PackedScene" uid="uid://dyatm1x1enkuo" path="res://enemies/eye monster/eye_monster_3d.tscn" id="12_cwjni"]
 
 [sub_resource type="Environment" id="Environment_tscrs"]
 background_mode = 1
@@ -23,13 +24,13 @@ environment_switching_duration = 1.0
 [node name="World" type="Node" parent="." unique_id=593962535]
 
 [node name="BlendChunk" parent="World" unique_id=195745641 instance=ExtResource("8_faqv3")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 100)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 100)
 
 [node name="BlendChunk2" parent="World" unique_id=156113315 instance=ExtResource("8_faqv3")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 50, 0, 100)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 0, 100)
 
 [node name="BlendChunk3" parent="World" unique_id=1334102762 instance=ExtResource("8_faqv3")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -50, 0, 100)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 0, 100)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="World" unique_id=479265740]
 unique_name_in_owner = true
@@ -62,7 +63,19 @@ offset_right = 170.0
 offset_bottom = 59.0
 script = ExtResource("6_pm8vb")
 
-[node name="Player3D" parent="." unique_id=850945551 instance=ExtResource("2_4ssrn")]
+[node name="EyeMonster3D" parent="." unique_id=335777878 instance=ExtResource("12_cwjni")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 0, -2)
+
+[node name="EyeMonster3D2" parent="." unique_id=1078112375 instance=ExtResource("12_cwjni")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -5)
+
+[node name="EyeMonster3D3" parent="." unique_id=1006490440 instance=ExtResource("12_cwjni")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 9)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=603229771]
+layer = 10
+
+[node name="Player3D" parent="CanvasLayer" unique_id=850945551 instance=ExtResource("2_4ssrn")]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 12)
 speed = 15.0

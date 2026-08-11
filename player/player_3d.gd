@@ -61,7 +61,8 @@ func set_current_item(new_item: String) -> void:
 #region health
 
 @export_group("Health")
-@export var health := 3:
+@export var max_health := 5
+@export var health := max_health:
 	set = set_new_health
 	
 func set_new_health(new_health: int) -> void:
@@ -69,6 +70,7 @@ func set_new_health(new_health: int) -> void:
 	health = maxi(new_health, 0)
 	if health < previous:
 		add_trauma(0.3)
+		_health_bar.health = health
 	print(health)
 	if health == 0:
 		die()
@@ -78,6 +80,7 @@ func die() -> void:
 	#get_tree().quit()
 	pass
 
+@onready var _health_bar: HealthBar = %HealthBar
 #endregion
 
 func _ready() -> void:
@@ -88,6 +91,11 @@ func _ready() -> void:
 	#region screenshake
 	_noise.seed = randi()
 	_noise.frequency = noise_frequency
+	#endregion
+
+	#region health
+	set_new_health(health)
+	_health_bar.setup_health()
 	#endregion
 
 func _process(delta: float) -> void:
@@ -184,7 +192,6 @@ func _unhandled_input(event: InputEvent) -> void:
 		#endregion
 	
 	#endregion
-
 
 var gameplay: Node3D
 
