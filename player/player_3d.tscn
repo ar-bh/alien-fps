@@ -8,6 +8,11 @@
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_c3rh7"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6g8ua"]
+bg_color = Color(0, 0, 0, 0.75)
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+
 [node name="Player3D" type="CharacterBody3D" unique_id=850945551 groups=["player"]]
 script = ExtResource("1_nni6y")
 speed = 3.0
@@ -46,10 +51,182 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -20.0
-offset_top = -77.0
-offset_right = 20.0
-offset_bottom = -37.0
+offset_left = -347.0
+offset_top = -92.0
+offset_right = 347.0
+offset_bottom = -28.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_constants/separation = 6
+alignment = 1
 script = ExtResource("3_6g8ua")
+
+[node name="Slot0" type="Panel" parent="UI/InventoryDisplay" unique_id=869118904]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_6g8ua")
+
+[node name="Icon" type="TextureRect" parent="UI/InventoryDisplay/Slot0" unique_id=1613803068]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Slot1" type="Panel" parent="UI/InventoryDisplay" unique_id=326766829]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_6g8ua")
+
+[node name="Icon" type="TextureRect" parent="UI/InventoryDisplay/Slot1" unique_id=1115187961]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Slot2" type="Panel" parent="UI/InventoryDisplay" unique_id=1782719978]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_6g8ua")
+
+[node name="Icon" type="TextureRect" parent="UI/InventoryDisplay/Slot2" unique_id=1527236505]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Slot3" type="Panel" parent="UI/InventoryDisplay" unique_id=1731732898]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_6g8ua")
+
+[node name="Icon" type="TextureRect" parent="UI/InventoryDisplay/Slot3" unique_id=1745500021]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Slot4" type="Panel" parent="UI/InventoryDisplay" unique_id=578541350]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_6g8ua")
+
+[node name="Icon" type="TextureRect" parent="UI/InventoryDisplay/Slot4" unique_id=273341368]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Slot5" type="Panel" parent="UI/InventoryDisplay" unique_id=1276889671]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_6g8ua")
+
+[node name="Icon" type="TextureRect" parent="UI/InventoryDisplay/Slot5" unique_id=1650337650]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Slot6" type="Panel" parent="UI/InventoryDisplay" unique_id=2129495228]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_6g8ua")
+
+[node name="Icon" type="TextureRect" parent="UI/InventoryDisplay/Slot6" unique_id=1191807625]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Slot7" type="Panel" parent="UI/InventoryDisplay" unique_id=29197257]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_6g8ua")
+
+[node name="Icon" type="TextureRect" parent="UI/InventoryDisplay/Slot7" unique_id=47880865]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Slot8" type="Panel" parent="UI/InventoryDisplay" unique_id=2088843522]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_6g8ua")
+
+[node name="Icon" type="TextureRect" parent="UI/InventoryDisplay/Slot8" unique_id=367759582]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Slot9" type="Panel" parent="UI/InventoryDisplay" unique_id=707023931]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_6g8ua")
+
+[node name="Icon" type="TextureRect" parent="UI/InventoryDisplay/Slot9" unique_id=196327690]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5

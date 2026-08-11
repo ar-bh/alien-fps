@@ -16,3 +16,4 @@ res://environment/chunk.gd
 res://weapons/axe/axe.tscn
 res://player/inventory_display.gd
 res://environment/giant_chunk.gd
+res://environment/field/tree_1.tscn

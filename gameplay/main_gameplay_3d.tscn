@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://b5ktx1vmy478b" path="res://gameplay/main_gameplay_3d.gd" id="1_pm8vb"]
 [ext_resource type="PackedScene" uid="uid://ch3lbhgo5khsv" path="res://player/player_3d.tscn" id="2_4ssrn"]
 [ext_resource type="PackedScene" uid="uid://cp0g50kdmg1lm" path="res://common/cel_shader_fx.tscn" id="3_52p1e"]
-[ext_resource type="Resource" uid="uid://650wt70dnxt5" path="res://environment/desert/desert.tres" id="3_skbmb"]
+[ext_resource type="Resource" uid="uid://bbxdl40velwv4" path="res://environment/field/field.tres" id="3_tr57x"]
 [ext_resource type="PackedScene" uid="uid://cya6n4jovlner" path="res://environment/giant_chunk.tscn" id="4_f0dbm"]
 [ext_resource type="Resource" uid="uid://b5ntlobupmyhj" path="res://environment/glacier/glacier_biome.tres" id="4_skbmb"]
 [ext_resource type="PackedScene" uid="uid://ddw2sid0bv6ua" path="res://common/retro_fx.tscn" id="4_tscrs"]
@@ -37,7 +37,7 @@ unique_name_in_owner = true
 environment = SubResource("Environment_tscrs")
 
 [node name="GiantChunk" parent="World" unique_id=633164688 instance=ExtResource("4_f0dbm")]
-biome = ExtResource("3_skbmb")
+biome = ExtResource("3_tr57x")
 
 [node name="GiantBlendChunk" parent="World" unique_id=1975840459 instance=ExtResource("5_27dgl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100, 0, 0)

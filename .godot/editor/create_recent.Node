@@ -1,3 +1,7 @@
+StaticBody3D
+TextureRect
+TextEdit
+Panel
 Sprite2D
 HBoxContainer
 CanvasLayer
@@ -9,7 +13,3 @@ RichTextLabel
 MeshInstance3D
 Node3D
 MultiMeshInstance3D
-CSGBox3D
-Label
-RigidBody3D
-Node
