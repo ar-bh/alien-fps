@@ -2,7 +2,15 @@
 
 [ext_resource type="PackedScene" uid="uid://vb3q6itrlgvh" path="res://environment/desert/Cactus.glb" id="1_wy7bt"]
 
-[node name="Cactus" unique_id=318992543 instance=ExtResource("1_wy7bt")]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_wy7bt"]
+height = 6.919211
+radius = 0.5395508
 
-[node name="cactus_1" parent="RootNode_0" parent_id_path=PackedInt32Array(1087610443) index="0" unique_id=997579891]
+[node name="Cactus" unique_id=1543322378 instance=ExtResource("1_wy7bt")]
+
+[node name="cactus_1" parent="RootNode_0" parent_id_path=PackedInt32Array(989296083) index="0" unique_id=77355882]
 transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RootNode_0" parent_id_path=PackedInt32Array(989296083) index="1" unique_id=806386307]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 349.38943, 0)
+shape = SubResource("CylinderShape3D_wy7bt")

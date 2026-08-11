@@ -1,3 +1,5 @@
+CollisionShape3D
+Node3D
 StaticBody3D
 TextureRect
 TextEdit
@@ -10,6 +12,3 @@ SubViewportContainer
 Timer
 ProgressBar
 RichTextLabel
-MeshInstance3D
-Node3D
-MultiMeshInstance3D
