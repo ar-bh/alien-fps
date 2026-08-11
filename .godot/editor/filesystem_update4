@@ -13,3 +13,6 @@ res://weapons/axe/axe.gd
 res://gameplay/main_gameplay_3d.gd
 res://enemies/eye monster/eye_monster_3d.gd
 res://environment/chunk.gd
+res://weapons/axe/axe.tscn
+res://player/inventory_display.gd
+res://environment/giant_chunk.gd

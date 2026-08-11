@@ -37,6 +37,11 @@ func add_trauma(amount: float) -> void:
 	"none": null,
 	"axe": preload("uid://4bo6plflo2ug")
 }
+@export var switch_time := 0.12
+@export var holder_offset := Vector3(0, -0.45, 0)
+
+var _rest := Vector3.ZERO
+var _is_switching := false
 
 @onready var item_holder: Node3D = %ItemHolder3D
 var current_item: int: set = set_current_item
@@ -45,20 +50,48 @@ var item_in_hand: Node3D
 
 func set_current_item(new_item: int) -> void:
 	print(new_item)
+	
 	if not is_node_ready():
 		current_item = new_item
 		return
-	if (not weapons_list.has(inventory[new_item])):
+	if _is_switching:
 		return
+	if new_item != -1 and (new_item < 0 or new_item >= inventory.size()): # when new_item index is wrong
+		return
+	if new_item != -1 and (not weapons_list.has(inventory[new_item])):
+		return
+		
+	_is_switching = true
 	
+	# put a way current weapon
+	if item_in_hand:
+		var weapon_tween_down := create_tween()
+		weapon_tween_down.tween_property(item_holder, "position", _rest + holder_offset, switch_time)
+		weapon_tween_down.set_trans(Tween.TRANS_QUAD)
+		weapon_tween_down.set_ease(Tween.EASE_IN)
+		await weapon_tween_down.finished
+		for child in item_holder.get_children():
+			child.queue_free()
+		item_in_hand = null
+		
+	# set current weapon
 	current_item = new_item
 	
-	for child in item_holder.get_children():
-		child.queue_free()
-	
-	if weapons_list[inventory[new_item]]:
-		item_in_hand = weapons_list[inventory[current_item]].instantiate()
+	# empty hands
+	if new_item == -1 or inventory[new_item] == "none" or weapons_list[inventory[new_item]] == null:
+		item_holder.position = _rest
+		_is_switching = false
+		return
+		
+	# bring out new weapon
+	item_holder.position = _rest + holder_offset
+	item_in_hand = weapons_list[inventory[new_item]].instantiate()
 	item_holder.add_child(item_in_hand)
+	
+	var weapon_tween_up := create_tween()
+	weapon_tween_up.tween_property(item_holder, "position", _rest, switch_time)
+	await weapon_tween_up.finished
+	_is_switching = false
 
 #endregion
 
@@ -88,7 +121,8 @@ func die() -> void:
 
 func _ready() -> void:
 	#region weapons
-	set_current_item(2)
+	_rest = item_holder.position
+	set_current_item(0)
 	#endregion
 
 	#region screenshake
@@ -195,22 +229,58 @@ func _unhandled_input(event: InputEvent) -> void:
 	
 	#region inventory
 	if event.is_action_pressed("inventory1"):
-		set_current_item(1-1)
-	
+		if current_item == 0:
+			set_current_item(-1)
+		else:
+			set_current_item(0)
+			
 	if event.is_action_pressed("inventory2"):
-		set_current_item(2-1)
-	
+		if current_item == 1:
+			set_current_item(-1)
+		else:
+			set_current_item(1)
+			
 	if event.is_action_pressed("inventory3"):
-		set_current_item(3-1)
-	
+		if current_item == 2:
+			set_current_item(-1)
+		else:
+			set_current_item(2)
+			
 	if event.is_action_pressed("inventory4"):
-		set_current_item(4-1)
-		
+		if current_item == 3:
+			set_current_item(-1)
+		else:
+			set_current_item(3)
+			
 	if event.is_action_pressed("inventory5"):
-		set_current_item(5-1)
-		
+		if current_item == 4:
+			set_current_item(-1)
+		else:
+			set_current_item(4)
+			
 	if event.is_action_pressed("inventory6"):
-		set_current_item(6-1)
+		if current_item == 5:
+			set_current_item(-1)
+		else:
+			set_current_item(5)
+		
+	if event.is_action_pressed("inventory7"):
+		if current_item == 6:
+			set_current_item(-1)
+		else:
+			set_current_item(6)
+			
+	if event.is_action_pressed("inventory8"):
+		if current_item == 7:
+			set_current_item(-1)
+		else:
+			set_current_item(7)
+			
+	if event.is_action_pressed("inventory9"):
+		if current_item == 8:
+			set_current_item(-1)
+		else:
+			set_current_item(8)
 	#endregion
 
 var gameplay: Node3D
@@ -226,4 +296,3 @@ func get_current_chunk() -> Chunk:
 func get_current_biome() -> BiomeData:
 	var chunk := get_current_chunk()
 	return chunk.biome if chunk else null
-		

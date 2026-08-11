@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ctwvqqqr7oxax" path="res://player/player_3d.gd" id="1_nni6y"]
 [ext_resource type="PackedScene" uid="uid://b3jddq8fv2qcs" path="res://player/health_bar.tscn" id="2_a5lo2"]
+[ext_resource type="Script" uid="uid://bkx355bvrlhfq" path="res://player/inventory_display.gd" id="3_6g8ua"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_oyqej"]
 
@@ -36,16 +37,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.18223214, -0.10068807)
 
 [node name="HealthBar" parent="UI" unique_id=2105761663 instance=ExtResource("2_a5lo2")]
 unique_name_in_owner = true
+offset_top = -170.0
+offset_bottom = -150.0
 
-[node name="Inventory" type="HBoxContainer" parent="UI" unique_id=466517212]
+[node name="InventoryDisplay" type="HBoxContainer" parent="UI" unique_id=466517212]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -20.0
-offset_top = -64.0
+offset_top = -77.0
 offset_right = 20.0
-offset_bottom = -24.0
+offset_bottom = -37.0
 grow_horizontal = 2
 grow_vertical = 0
+script = ExtResource("3_6g8ua")

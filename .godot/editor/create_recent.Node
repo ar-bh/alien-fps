@@ -1,3 +1,4 @@
+Sprite2D
 HBoxContainer
 CanvasLayer
 SubViewport
@@ -12,4 +13,3 @@ CSGBox3D
 Label
 RigidBody3D
 Node
-Area3D
