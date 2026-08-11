@@ -2,23 +2,24 @@
 
 [ext_resource type="Script" uid="uid://ctwvqqqr7oxax" path="res://player/player_3d.gd" id="1_nni6y"]
 [ext_resource type="PackedScene" uid="uid://b3jddq8fv2qcs" path="res://player/health_bar.tscn" id="2_a5lo2"]
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_c3rh7"]
+[ext_resource type="PackedScene" uid="uid://cfu2sx3i2jl05" path="res://common/unshaded_layer.tscn" id="3_6g8ua"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_oyqej"]
 
-[node name="Player3D" type="CharacterBody3D" unique_id=850945551]
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_c3rh7"]
+
+[node name="Player3D" type="CharacterBody3D" unique_id=850945551 groups=["player"]]
 script = ExtResource("1_nni6y")
 trauma_decay = 0.7
 max_offset = Vector2(1, 1)
 
-[node name="Skin3D" type="MeshInstance3D" parent="." unique_id=913911856]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-mesh = SubResource("CapsuleMesh_c3rh7")
-
 [node name="HurtBox3D" type="CollisionShape3D" parent="." unique_id=993211779]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_oyqej")
+
+[node name="Skin3D" type="MeshInstance3D" parent="." unique_id=913911856]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_c3rh7")
 
 [node name="Head3D" type="Node3D" parent="." unique_id=594584254]
 unique_name_in_owner = true
@@ -27,11 +28,19 @@ unique_name_in_owner = true
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5885699, 0)
 
-[node name="ItemHolder3D" type="Node3D" parent="Head3D/Camera3D" unique_id=1601375636]
+[node name="UnshadedLayer" parent="Head3D/Camera3D" unique_id=1412566481 instance=ExtResource("3_6g8ua")]
+
+[node name="SubViewport" parent="Head3D/Camera3D/UnshadedLayer/SubViewportContainer" parent_id_path=PackedInt32Array(1412566481, 1487096267) index="0" unique_id=1284194751]
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="ItemHolder3D" type="Node3D" parent="Head3D/Camera3D/UnshadedLayer/SubViewportContainer/SubViewport" index="0" unique_id=1601375636]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.18223214, -0.10068807)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4063377, -0.10068807)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1667253696]
 
 [node name="HealthBar" parent="CanvasLayer" unique_id=2105761663 instance=ExtResource("2_a5lo2")]
 unique_name_in_owner = true
+
+[editable path="Head3D/Camera3D/UnshadedLayer"]

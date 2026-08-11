@@ -9,3 +9,4 @@ res://environment/snowy/snowy.tres
 res://player/health_bar.tscn
 res://player/health_bar.gd
 res://player/player_3d.tscn
+res://weapons/axe/axe.gd

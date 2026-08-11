@@ -26,7 +26,7 @@ func axe_play_jump_end() -> void:
 
 @export var damage := 1
 
-@onready var player: Player3D = get_parent().get_parent().get_parent().get_parent()
+@onready var player: Player3D = get_tree().get_first_node_in_group("player")
 
 func _ready() -> void:
 	disable_hitbox()

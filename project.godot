@@ -27,6 +27,7 @@ import/blender/enabled=false
 [global_group]
 
 chunks=""
+player=""
 
 [input]
 

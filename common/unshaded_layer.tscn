@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cfu2sx3i2jl05"]
+
+[node name="UnshadedLayer" type="CanvasLayer" unique_id=1412566481]
+layer = 100
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1487096267]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=1284194751]
+transparent_bg = true
+size = Vector2i(1152, 648)

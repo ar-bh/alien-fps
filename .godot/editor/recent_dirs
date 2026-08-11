@@ -1,3 +1,4 @@
+res://common/
 res://player/
 res://environment/snowy/
 res://environment/
@@ -6,7 +7,6 @@ res://environment/desert/
 res://environment/wasteland/
 res://environment/glacier/
 res://enemies/eye monster/
-res://common/
 res://weapons/axe/
 res://gameplay/
 res://Gameplay/
