@@ -110,6 +110,20 @@ func set_current_item(new_item: int) -> void:
 
 	_is_switching = false
 
+
+@onready var melee_hitbox: Area3D = $MeleeHitbox
+
+func enable_melee_hitbox() -> void:
+	melee_hitbox.monitoring = true
+	
+func disable_melee_hitbox() -> void:
+	melee_hitbox.monitoring = false
+
+func _on_melee_hitbox_area_entered(area: Node3D) -> void:
+	var monster := area.get_parent()
+	if monster is EyeMonster3D:
+		monster.health -= item_in_hand.damage
+	
 #endregion
 
 #region health
@@ -138,6 +152,10 @@ func die() -> void:
 
 func _ready() -> void:
 	#region weapons
+	melee_hitbox.monitorable = false
+	disable_melee_hitbox()
+	melee_hitbox.area_entered.connect(_on_melee_hitbox_area_entered)
+	
 	_rest = item_holder.position
 	set_current_item(0)
 	#endregion

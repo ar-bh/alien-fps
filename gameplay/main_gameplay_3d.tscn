@@ -14,10 +14,8 @@
 [ext_resource type="Resource" uid="uid://b5ntlobupmyhj" path="res://environment/environment resources/glacier_biome.tres" id="7_wbhvp"]
 [ext_resource type="PackedScene" uid="uid://ba2omj1b8cmpk" path="res://environment/glacier/icicles.tscn" id="8_jipko"]
 [ext_resource type="Resource" uid="uid://bpqccjoaxia36" path="res://environment/environment resources/wasteland_biome.tres" id="10_wbhvp"]
-[ext_resource type="PackedScene" uid="uid://bnpwtrhwl34bs" path="res://environment/wasteland/rock_cluster.tscn" id="11_faqv3"]
 [ext_resource type="PackedScene" uid="uid://q5wr20h35o3u" path="res://environment/wasteland/burned_grass.tscn" id="12_jipko"]
 [ext_resource type="PackedScene" uid="uid://dkitb677t41ly" path="res://environment/wasteland/burned_tree_1.tscn" id="13_njmjw"]
-[ext_resource type="PackedScene" uid="uid://bit6q3c80jx3j" path="res://environment/wasteland/burned_tree_2.tscn" id="13_wbhvp"]
 
 [sub_resource type="Environment" id="Environment_tscrs"]
 background_mode = 1
@@ -39,31 +37,19 @@ biome = ExtResource("3_skbmb")
 spawn_timer_range = [1.0, 20.0]
 
 [node name="Cactus" type="Node3D" parent="World/Chunk" unique_id=1543322378 instance=ExtResource("5_vnmfx")]
-transform = Transform3D(1.2135817, 0, -0.5188258, 0, 1.3198335, 0, 0.5188258, 0, 1.2135817, -13.294262, 100, 17.927633)
+transform = Transform3D(0.76513857, 0, -0.87560594, 0, 1.1628082, 0, 0.87560594, 0, 0.76513857, 6.9668436, 100, -4.2849174)
 
-[node name="@Node3D@189931" type="Node3D" parent="World/Chunk" unique_id=303542704 instance=ExtResource("5_vnmfx")]
-transform = Transform3D(0.52671117, 0, -1.3087566, 0, 1.4107687, 0, 1.3087566, 0, 0.52671117, 12.999522, 100, 14.507453)
+[node name="@Node3D@195971" type="Node3D" parent="World/Chunk" unique_id=257157948 instance=ExtResource("5_vnmfx")]
+transform = Transform3D(0.90619445, 0, 1.0837483, 0, 1.4126921, 0, -1.0837483, 0, 0.90619445, 22.504011, 100, -3.4504883)
 
-[node name="@Node3D@189932" type="Node3D" parent="World/Chunk" unique_id=913459486 instance=ExtResource("5_vnmfx")]
-transform = Transform3D(0.3961619, 0, 1.387135, 0, 1.4425976, 0, -1.387135, 0, 0.3961619, 19.594875, 100, 17.438877)
+[node name="@Node3D@195972" type="Node3D" parent="World/Chunk" unique_id=1253155468 instance=ExtResource("5_vnmfx")]
+transform = Transform3D(0.89008296, 0, -0.36765122, 0, 0.9630239, 0, 0.36765122, 0, 0.89008296, -2.1212912, 100, -15.728402)
 
-[node name="@Node3D@189933" type="Node3D" parent="World/Chunk" unique_id=1970179027 instance=ExtResource("5_vnmfx")]
-transform = Transform3D(0.22319058, 0, -0.5116327, 0, 0.55819535, 0, 0.5116327, 0, 0.22319058, 18.764238, 100, 4.703103)
+[node name="@Node3D@195973" type="Node3D" parent="World/Chunk" unique_id=756414784 instance=ExtResource("5_vnmfx")]
+transform = Transform3D(0.9425579, 0, 0.9437149, 0, 1.3337965, 0, -0.9437149, 0, 0.9425579, 5.939103, 100, 5.5208144)
 
-[node name="@Node3D@189934" type="Node3D" parent="World/Chunk" unique_id=369801746 instance=ExtResource("5_vnmfx")]
-transform = Transform3D(0.28187004, 0, -0.68086475, 0, 0.736904, 0, 0.68086475, 0, 0.28187004, 19.045385, 100, -9.700418)
-
-[node name="@Node3D@189935" type="Node3D" parent="World/Chunk" unique_id=1725237348 instance=ExtResource("5_vnmfx")]
-transform = Transform3D(0.613959, 0, -1.1980647, 0, 1.3462186, 0, 1.1980647, 0, 0.613959, -16.49936, 100, 8.0536995)
-
-[node name="@Node3D@189936" type="Node3D" parent="World/Chunk" unique_id=466523337 instance=ExtResource("5_vnmfx")]
-transform = Transform3D(0.3039042, 0, 0.7061686, 0, 0.76878595, 0, -0.7061686, 0, 0.3039042, 5.7820926, 100, 19.009523)
-
-[node name="@Node3D@189937" type="Node3D" parent="World/Chunk" unique_id=990504559 instance=ExtResource("5_vnmfx")]
-transform = Transform3D(0.34210184, 0, -0.55247325, 0, 0.6498156, 0, 0.55247325, 0, 0.34210184, 13.808036, 100, -20.221708)
-
-[node name="@Node3D@189938" type="Node3D" parent="World/Chunk" unique_id=105493848 instance=ExtResource("5_vnmfx")]
-transform = Transform3D(1.0587213, 0, 0.38401932, 0, 1.1262156, 0, -0.38401932, 0, 1.0587213, -20.715752, 100, -5.9226685)
+[node name="@Node3D@195974" type="Node3D" parent="World/Chunk" unique_id=2005954510 instance=ExtResource("5_vnmfx")]
+transform = Transform3D(1.1015717, 0, -0.18274783, 0, 1.1166275, 0, 0.18274783, 0, 1.1015717, -1.2506541, 100, -9.091727)
 
 [node name="Chunk2" parent="World" unique_id=1791471982 instance=ExtResource("2_33lee")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, -100, 0)
@@ -71,7 +57,7 @@ biome = ExtResource("3_tr57x")
 spawn_timer_range = [1.0, 20.0]
 
 [node name="Tree1" type="Node3D" parent="World/Chunk2" unique_id=968166954 instance=ExtResource("7_jipko")]
-transform = Transform3D(1.0620533, 0, 1.7034284, 0, 2.0073926, 0, -1.7034284, 0, 1.0620533, -3.001417, 100, 3.778308)
+transform = Transform3D(0.6202234, 0, -0.53549224, 0, 0.81940776, 0, 0.53549224, 0, 0.6202234, 2.262881, 100, 17.348356)
 
 [node name="Chunk3" parent="World" unique_id=451613470 instance=ExtResource("2_33lee")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50, -100, 0)
@@ -79,7 +65,10 @@ biome = ExtResource("7_wbhvp")
 spawn_timer_range = [1.0, 20.0]
 
 [node name="Icicles" type="Node3D" parent="World/Chunk3" unique_id=1734624783 instance=ExtResource("8_jipko")]
-transform = Transform3D(2.55456, 0, 2.6981378, 0, 3.7156055, 0, -2.6981378, 0, 2.55456, -17.857912, 100, 20.666431)
+transform = Transform3D(1.8817365, 0, -1.3397374, 0, 2.3099413, 0, 1.3397374, 0, 1.8817365, -15.931647, 100, -10.74787)
+
+[node name="@Node3D@195975" type="Node3D" parent="World/Chunk3" unique_id=1555360080 instance=ExtResource("8_jipko")]
+transform = Transform3D(1.2480725, 0, 1.8615329, 0, 2.2412028, 0, -1.8615329, 0, 1.2480725, -12.927471, 100, -6.8418303)
 
 [node name="Chunk7" parent="World" unique_id=236593602 instance=ExtResource("2_33lee")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -100, 50)
@@ -91,23 +80,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, -100, 50)
 biome = ExtResource("10_wbhvp")
 spawn_timer_range = [1.0, 20.0]
 
-[node name="BurnedGrass" type="Node3D" parent="World/Chunk8" unique_id=2064401388 instance=ExtResource("12_jipko")]
-transform = Transform3D(0.96256334, 0, -0.33341616, 0, 1.018673, 0, 0.33341616, 0, 0.96256334, -19.995201, 100, 18.237925)
-
-[node name="BurnedTree2" type="Node3D" parent="World/Chunk8" unique_id=1839849368 instance=ExtResource("13_wbhvp")]
-transform = Transform3D(0.8816935, 0, -0.40260646, 0, 0.96926534, 0, 0.40260646, 0, 0.8816935, 4.6684594, 100, -12.394079)
-
 [node name="BurnedTree1" type="Node3D" parent="World/Chunk8" unique_id=1320431447 instance=ExtResource("13_njmjw")]
-transform = Transform3D(0.81280845, 0, 0.30827343, 0, 0.86930436, 0, -0.30827343, 0, 0.81280845, -0.165685, 100, -9.108883)
+transform = Transform3D(0.3061083, 0, -1.2289433, 0, 1.2664928, 0, 1.2289433, 0, 0.3061083, 20.624226, 100, 2.9675167)
 
-[node name="RockCluster" type="Node3D" parent="World/Chunk8" unique_id=166219037 instance=ExtResource("11_faqv3")]
-transform = Transform3D(0.054105826, 0, 0.6219741, 0, 0.624323, 0, -0.6219741, 0, 0.054105826, -7.2427135, 100, -7.708466)
-
-[node name="@Node3D@189939" type="Node3D" parent="World/Chunk8" unique_id=157827568 instance=ExtResource("13_njmjw")]
-transform = Transform3D(0.20768419, 0, -0.52118224, 0, 0.561038, 0, 0.52118224, 0, 0.20768419, 19.464485, 100, -14.562216)
-
-[node name="@Node3D@189940" type="Node3D" parent="World/Chunk8" unique_id=1385843325 instance=ExtResource("12_jipko")]
-transform = Transform3D(0.7195795, 0, -0.24788283, 0, 0.7610786, 0, 0.24788283, 0, 0.7195795, 23.985592, 100, -11.165779)
+[node name="BurnedGrass" type="Node3D" parent="World/Chunk8" unique_id=2064401388 instance=ExtResource("12_jipko")]
+transform = Transform3D(0.7749197, 0, -0.10494115, 0, 0.78199303, 0, 0.10494115, 0, 0.7749197, -7.6848383, 100, -3.5616984)
 
 [node name="FX" type="Node" parent="." unique_id=204154210]
 

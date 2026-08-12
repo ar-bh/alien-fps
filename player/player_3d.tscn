@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://bkx355bvrlhfq" path="res://player/inventory_display.gd" id="3_6g8ua"]
 [ext_resource type="PackedScene" uid="uid://2gqkth17exiv" path="res://common/weapon_outline_fx.tscn" id="5_wxf5c"]
 [ext_resource type="PackedScene" uid="uid://ddw2sid0bv6ua" path="res://common/retro_fx.tscn" id="6_1obgi"]
+[ext_resource type="PackedScene" uid="uid://8yxarf86f5uj" path="res://player/crosshair.tscn" id="7_jeexd"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_oyqej"]
 
@@ -15,6 +16,9 @@
 bg_color = Color(0, 0, 0, 0.75)
 border_color = Color(1, 1, 1, 1)
 border_blend = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jeexd"]
+size = Vector3(0.9433594, 1.1728516, 2.5143137)
 
 [node name="Player3D" type="CharacterBody3D" unique_id=850945551 groups=["player"]]
 script = ExtResource("1_nni6y")
@@ -39,7 +43,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5885699, 0)
 
 [node name="UnshadedLayer" parent="Head3D/Camera3D" unique_id=1412566481 instance=ExtResource("2_nrofp")]
 
-[node name="SubViewport" parent="Head3D/Camera3D/UnshadedLayer/SubViewportContainer" parent_id_path=PackedInt32Array(1412566481, 1487096267) index="0" unique_id=1284194751]
+[node name="SubViewportContainer" parent="Head3D/Camera3D/UnshadedLayer" index="0" unique_id=1487096267]
+mouse_filter = 2
+
+[node name="SubViewport" parent="Head3D/Camera3D/UnshadedLayer/SubViewportContainer" index="0" unique_id=1284194751]
 own_world_3d = true
 handle_input_locally = false
 render_target_update_mode = 4
@@ -246,9 +253,17 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="WeaponOutlineFX" parent="Head3D/Camera3D/UnshadedLayer/SubViewportContainer/SubViewport" index="3" unique_id=72610807 instance=ExtResource("5_wxf5c")]
-visible = false
 
 [node name="RetroFX" parent="Head3D/Camera3D/UnshadedLayer/SubViewportContainer/SubViewport" index="4" unique_id=1268121299 instance=ExtResource("6_1obgi")]
 visible = false
+
+[node name="Crosshair" parent="Head3D/Camera3D/UnshadedLayer/SubViewportContainer/SubViewport" index="5" unique_id=1698889571 instance=ExtResource("7_jeexd")]
+
+[node name="MeleeHitbox" type="Area3D" parent="." unique_id=1293954741]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5885699, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeleeHitbox" unique_id=1366041042]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11310771, -0.08642578, -1.3026417)
+shape = SubResource("BoxShape3D_jeexd")
 
 [editable path="Head3D/Camera3D/UnshadedLayer"]

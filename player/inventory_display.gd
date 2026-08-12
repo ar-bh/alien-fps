@@ -4,6 +4,7 @@ extends HBoxContainer
 @export var icons: Dictionary = {
 	"none": null,
 	"axe": preload("res://weapons/axe/axe_icon.png"),
+	"pistol": preload("uid://cmklcupf7m72l"),
 }
 
 @onready var player: Player3D = get_tree().get_first_node_in_group("player")

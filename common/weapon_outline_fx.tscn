@@ -5,10 +5,11 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xjvw0"]
 shader = ExtResource("1_7u7yq")
 shader_parameter/line_thickness = 1.5
-shader_parameter/alpha_threshold = 0.1
+shader_parameter/edge_threshold = 0.1
 shader_parameter/outline_color = Color(0, 0, 0, 1)
 
 [node name="WeaponOutlineFX" type="CanvasLayer" unique_id=72610807]
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1709916704]
 material = SubResource("ShaderMaterial_xjvw0")

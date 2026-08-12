@@ -1,3 +1,4 @@
+@icon("res://weapons/pistol/pistol_icon.png")
 class_name Pistol3D extends Node3D
 
 #region node variables

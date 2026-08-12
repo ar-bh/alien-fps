@@ -3,7 +3,6 @@ class_name Axe3D  extends Node3D
 
 #region node variables
 @onready var animation_player: AnimationPlayer = %AnimationPlayer
-@onready var _hit_box: Area3D = %HitBox
 #endregion
 
 #region animation functions
@@ -27,14 +26,12 @@ func axe_play_jump_end() -> void:
 
 @export var damage := 1
 
-@onready var player: Player3D = get_parent().get_parent().get_parent().get_parent().get_parent().get_parent().get_parent()
+@onready var player: Player3D = get_tree().get_first_node_in_group("player")
 
 func _ready() -> void:
-	disable_hitbox()
 	axe_play_idle()
 	
 	animation_player.animation_finished.connect(_on_animation_player_animation_finished)
-	_hit_box.area_entered.connect(_on_hit_box_area_entered)
 
 func is_attacking() -> bool:
 	var anim := String(animation_player.current_animation)
@@ -52,30 +49,25 @@ func axe_attack() -> void:
 	
 #region hitbox
 func _activate_hitbox_window() -> void:
-	disable_hitbox()
+	player.disable_melee_hitbox()
 	await get_tree().create_timer(hitbox_start).timeout
 	
 	if animation_player.current_animation != "axe_ATK1(hit)":
 		return
 		
-	enable_hitbox()
+	player.enable_melee_hitbox()
 	await get_tree().create_timer(hitbox_duration).timeout
-	_hit_box.monitoring = false
+	player.disable_melee_hitbox()
 
-func _on_hit_box_area_entered(area: Node3D) -> void:
-	var monster := area.get_parent()
-	if monster is EyeMonster3D:
-		monster.health -= damage
-		disable_hitbox()
+#func _on_hit_box_area_entered(area: Node3D) -> void:
+	#var monster := area.get_parent()
+	#if monster is EyeMonster3D:
+		#monster.health -= damage
+		#disable_hitbox()
 		
 		#if player.has_method("add_trauma"):
 			#player.add_trauma(0.4)
 
-func enable_hitbox() -> void:
-	_hit_box.monitoring = true
-
-func disable_hitbox() -> void:
-	_hit_box.monitoring = false
 #endregion
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
