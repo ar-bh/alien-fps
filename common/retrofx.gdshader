@@ -1,6 +1,6 @@
 shader_type canvas_item;
 
-uniform float pixel_size : hint_range(1.0, 16.0) = 4.0;
+uniform float pixel_size : hint_range(1.0, 16.0) = 8.0;
 uniform sampler2D SCREEN_TEXTURE : hint_screen_texture, filter_nearest;
 
 void fragment() {

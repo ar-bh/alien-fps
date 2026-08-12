@@ -76,6 +76,7 @@ func set_current_item(new_item: int) -> void:
 		await weapon_tween_down.finished
 		
 	for child in item_holder.get_children():
+		child.visible = false
 		child.queue_free()
 	item_in_hand = null
 		
@@ -91,14 +92,17 @@ func set_current_item(new_item: int) -> void:
 	# bring out new weapon	
 
 	item_in_hand = weapons_list[inventory[new_item]].instantiate()
+	item_in_hand.visible = false
 	item_holder.add_child(item_in_hand)
 	
 	if item_in_hand is Pistol3D:
 		item_holder.position = _rest
 		item_in_hand.pistol_play_up()
+		item_in_hand.visible = true
 		
 		await item_in_hand.animation_player.animation_finished
 	else:
+		item_in_hand.visible = true
 		item_holder.position = _rest + holder_offset
 		var weapon_tween_up := create_tween()
 		weapon_tween_up.tween_property(item_holder, "position", _rest, switch_time)

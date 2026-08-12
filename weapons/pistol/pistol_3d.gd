@@ -16,7 +16,8 @@ func pistol_play_reload() -> void:
 	animation_player.play("RELOAD", 0.05)
 
 func pistol_play_up() -> void:
-	animation_player.play("UP", 0.05)
+	animation_player.play("UP", 0)
+	animation_player.seek(0.0, true)
 	
 func pistol_play_down() -> void:
 	animation_player.play("DOWN", 0.05)
@@ -31,6 +32,9 @@ func pistol_play_inspection() -> void:
 
 func _ready() -> void:
 	animation_player.animation_finished.connect(_on_animation_player_animation_finished)
+	
+	
+	
 	
 func is_attacking() -> bool:
 	var animation := String(animation_player.current_animation)
