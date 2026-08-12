@@ -11,7 +11,7 @@ albedo_texture = ExtResource("3_82tqe")
 script = ExtResource("2_pistol")
 
 [node name="Arms" parent="." index="0" unique_id=2097262845]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0.2, 0.125)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.041048408, 0.15059315, 0.17176378)
 
 [node name="Skeleton3D" parent="Arms" index="0" unique_id=991021374]
 bones/1/rotation = Quaternion(0.09201373, -0.10668929, -0.70216376, 0.6979376)
@@ -29,13 +29,13 @@ bones/40/rotation = Quaternion(0.038012523, -0.0009547501, -0.025093196, 0.99896
 material_override = SubResource("StandardMaterial3D_8dnsd")
 
 [node name="Gun" parent="." index="1" unique_id=526144919]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0.2, 0.125)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.041048408, 0.15059315, 0.17176378)
 
 [node name="Skeleton3D" parent="Gun" index="0" unique_id=1004128673]
-bones/0/position = Vector3(0.17343535, -0.15753427, 0.19985518)
-bones/0/rotation = Quaternion(0.57270014, 0.30556607, -0.68944997, 0.32140756)
-bones/1/rotation = Quaternion(0.63514256, -9.262063e-08, -2.1915156e-07, 0.7723949)
-bones/2/position = Vector3(-3.0339926e-08, -0.024918167, -0.010044876)
-bones/3/rotation = Quaternion(-0.99943644, 1.8392457e-05, 0.0002028987, -0.03356932)
-bones/4/position = Vector3(1.3468835e-09, -0.05358996, 0.087680526)
-bones/4/rotation = Quaternion(-0.60505366, -1.6438495e-08, 1.3686281e-07, 0.7961847)
+bones/0/position = Vector3(-0.03631883, 0.030683052, 0.2917782)
+bones/0/rotation = Quaternion(0.7297673, -0.04258805, -0.10214487, 0.67467946)
+bones/1/rotation = Quaternion(0.6351425, -9.248405e-08, -2.2115852e-07, 0.77239496)
+bones/2/position = Vector3(-1.7595358e-08, -0.024918143, -0.010044893)
+bones/3/rotation = Quaternion(-0.99943644, 1.8392719e-05, 0.000202898, -0.03356932)
+bones/4/position = Vector3(6.409028e-09, -0.05358996, 0.08768052)
+bones/4/rotation = Quaternion(-0.60505366, -1.488988e-08, 1.4190108e-07, 0.7961847)

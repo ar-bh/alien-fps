@@ -112,12 +112,14 @@ func set_current_item(new_item: int) -> void:
 
 
 @onready var melee_hitbox: Area3D = %MeleeHitbox
+@onready var shoot_ray: RayCast3D = %ShootRay
 
 func enable_melee_hitbox() -> void:
 	melee_hitbox.monitoring = true
 	
 func disable_melee_hitbox() -> void:
 	melee_hitbox.monitoring = false
+
 
 func _on_melee_hitbox_area_entered(area: Node3D) -> void:
 	var monster := area.get_parent()
