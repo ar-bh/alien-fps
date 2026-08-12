@@ -111,7 +111,7 @@ func set_current_item(new_item: int) -> void:
 	_is_switching = false
 
 
-@onready var melee_hitbox: Area3D = $MeleeHitbox
+@onready var melee_hitbox: Area3D = %MeleeHitbox
 
 func enable_melee_hitbox() -> void:
 	melee_hitbox.monitoring = true
@@ -122,7 +122,8 @@ func disable_melee_hitbox() -> void:
 func _on_melee_hitbox_area_entered(area: Node3D) -> void:
 	var monster := area.get_parent()
 	if monster is EyeMonster3D:
-		monster.health -= item_in_hand.damage
+		if "damage" in item_in_hand:
+			monster.health -= item_in_hand.damage
 	
 #endregion
 

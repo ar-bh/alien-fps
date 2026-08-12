@@ -259,10 +259,10 @@ visible = false
 
 [node name="Crosshair" parent="Head3D/Camera3D/UnshadedLayer/SubViewportContainer/SubViewport" index="5" unique_id=1698889571 instance=ExtResource("7_jeexd")]
 
-[node name="MeleeHitbox" type="Area3D" parent="." unique_id=1293954741]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5885699, 0)
+[node name="MeleeHitbox" type="Area3D" parent="Head3D/Camera3D" unique_id=1293954741]
+unique_name_in_owner = true
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeleeHitbox" unique_id=1366041042]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Head3D/Camera3D/MeleeHitbox" unique_id=1366041042]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11310771, -0.08642578, -1.3026417)
 shape = SubResource("BoxShape3D_jeexd")
 
