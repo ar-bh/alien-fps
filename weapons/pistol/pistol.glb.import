@@ -1917,7 +1917,7 @@ _subresources={
 "slice_79/save_to_file/keep_custom_tracks": false,
 "slice_79/save_to_file/path": "",
 "slice_79/start_frame": 0,
-"slice_8/end_frame": 45,
+"slice_8/end_frame": 46,
 "slice_8/loop_mode": 0,
 "slice_8/name": "IDLE",
 "slice_8/save_to_file/enabled": false,

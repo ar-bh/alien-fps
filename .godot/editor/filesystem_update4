@@ -4,3 +4,4 @@ res://common/cel_shader_fx.gdshader
 res://common/retrofx.gdshader
 res://environment/chunk.gd
 res://player/player_3d.tscn
+res://weapons/pistol/pistol_3d.tscn
