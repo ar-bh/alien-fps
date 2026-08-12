@@ -1,0 +1,48 @@
+class_name Pistol3D extends Node3D
+
+#region node variables
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+#endregion
+
+
+#region animation functions
+func pistol_play_idle() -> void:
+	animation_player.play("IDLE", 0.2)
+
+func pistol_play_fire() -> void:
+	animation_player.play("FIRE", 0.05)
+	
+func pistol_play_reload() -> void:
+	animation_player.play("RELOAD", 0.05)
+
+func pistol_play_up() -> void:
+	animation_player.play("UP", 0.05)
+	
+func pistol_play_down() -> void:
+	animation_player.play("DOWN", 0.05)
+	
+func pistol_play_inspection() -> void:
+	animation_player.play("INSPECTION", 0.1)
+#endregion
+
+@export var damage := 1
+
+@onready var player: Player3D = get_parent().get_parent().get_parent().get_parent()
+
+func _ready() -> void:
+	animation_player.animation_finished.connect(_on_animation_player_animation_finished)
+	
+func is_attacking() -> bool:
+	var animation := String(animation_player.current_animation)
+	return animation_player.is_playing() and animation == "FIRE"
+	
+func pistol_attack() -> void:
+	if is_attacking():
+		return
+	pistol_play_fire()
+	
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	if anim_name == &"DOWN":
+		return
+	
+	pistol_play_idle()

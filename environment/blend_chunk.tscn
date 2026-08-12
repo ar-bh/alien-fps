@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bb6eirildbf0i"]
 
-[ext_resource type="Script" uid="uid://brc13qe6xjny7" path="res://blend_chunk.gd" id="1_p6tth"]
+[ext_resource type="Script" uid="uid://brc13qe6xjny7" path="res://environment/blend_chunk.gd" id="1_p6tth"]
 [ext_resource type="PackedScene" uid="uid://0tn7dopaur0g" path="res://environment/chunk.tscn" id="2_64bpe"]
 
 [node name="BlendChunk" type="Node3D" unique_id=195745641]

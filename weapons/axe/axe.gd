@@ -1,3 +1,4 @@
+@icon("res://weapons/axe/axe_icon.png")
 class_name Axe3D  extends Node3D
 
 #region node variables

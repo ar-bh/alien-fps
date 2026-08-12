@@ -1,13 +1,18 @@
 [gd_scene format=3 uid="uid://lqvyhgay44wu"]
 
 [ext_resource type="PackedScene" uid="uid://ble3ptowh5r15" path="res://weapons/pistol/pistol.glb" id="1_uoc7u"]
+[ext_resource type="Script" uid="uid://3efho5dcn6ov" path="res://weapons/pistol/pistol_3d.gd" id="2_pistol"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uoc7u"]
+albedo_color = Color(0.9098039, 0.74509805, 0.6745098, 1)
 
 [node name="Pistol3D" unique_id=610045667 instance=ExtResource("1_uoc7u")]
+script = ExtResource("2_pistol")
 
-[node name="Arms" parent="." index="0" unique_id=145698797]
+[node name="Arms" parent="." index="0" unique_id=2097262845]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0.125, 0.125)
 
-[node name="Skeleton3D" parent="Arms" index="0" unique_id=1535877274]
+[node name="Skeleton3D" parent="Arms" index="0" unique_id=991021374]
 bones/1/position = Vector3(0.07474727, -0.07702599, -0.0063435063)
 bones/1/rotation = Quaternion(0.116195336, -0.082205035, -0.50935143, 0.84870625)
 bones/2/rotation = Quaternion(0.53412557, -0.3188626, 0.19529076, 0.75822043)
@@ -65,10 +70,13 @@ bones/40/rotation = Quaternion(0.42048055, -0.15630183, 0.050181486, 0.8923272)
 bones/41/rotation = Quaternion(0.4376185, -0.0003525541, -0.0007409035, 0.8991605)
 bones/42/rotation = Quaternion(0.38818082, 2.8469332e-05, 5.880435e-05, 0.92158324)
 
-[node name="Gun" parent="." index="1" unique_id=1763159837]
+[node name="Ch22_Body" parent="Arms/Skeleton3D" index="0" unique_id=1874144613]
+material_override = SubResource("StandardMaterial3D_uoc7u")
+
+[node name="Gun" parent="." index="1" unique_id=526144919]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0.125, 0.125)
 
-[node name="Skeleton3D" parent="Gun" index="0" unique_id=172513744]
+[node name="Skeleton3D" parent="Gun" index="0" unique_id=1004128673]
 bones/0/position = Vector3(-0.038967907, 0.02761993, 0.2947644)
 bones/0/rotation = Quaternion(0.70907944, -8.405785e-08, -8.452879e-08, 0.7051286)
 bones/1/rotation = Quaternion(0.6351425, -9.251232e-08, -2.207431e-07, 0.77239496)

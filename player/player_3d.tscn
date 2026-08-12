@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://ctwvqqqr7oxax" path="res://player/player_3d.gd" id="1_nni6y"]
 [ext_resource type="PackedScene" uid="uid://b3jddq8fv2qcs" path="res://player/health_bar.tscn" id="2_a5lo2"]
-[ext_resource type="PackedScene" uid="uid://lqvyhgay44wu" path="res://weapons/pistol/pistol_3d.tscn" id="2_nrofp"]
 [ext_resource type="Script" uid="uid://bkx355bvrlhfq" path="res://player/inventory_display.gd" id="3_6g8ua"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_oyqej"]
@@ -26,7 +25,6 @@ shape = SubResource("CapsuleShape3D_oyqej")
 
 [node name="Skin3D" type="MeshInstance3D" parent="." unique_id=913911856]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-visible = false
 mesh = SubResource("CapsuleMesh_c3rh7")
 
 [node name="Head3D" type="Node3D" parent="." unique_id=594584254]
@@ -39,8 +37,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5885699, 0)
 [node name="ItemHolder3D" type="Node3D" parent="Head3D/Camera3D" unique_id=1601375636]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.18223214, -0.10068807)
-
-[node name="Pistol3D" parent="Head3D/Camera3D/ItemHolder3D" unique_id=610045667 instance=ExtResource("2_nrofp")]
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1667253696]
 

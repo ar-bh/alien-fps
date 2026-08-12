@@ -1918,7 +1918,7 @@ _subresources={
 "slice_79/save_to_file/path": "",
 "slice_79/start_frame": 0,
 "slice_8/end_frame": 46,
-"slice_8/loop_mode": 0,
+"slice_8/loop_mode": 1,
 "slice_8/name": "IDLE",
 "slice_8/save_to_file/enabled": false,
 "slice_8/save_to_file/fallback_path": "",

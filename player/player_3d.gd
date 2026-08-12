@@ -35,7 +35,8 @@ func add_trauma(amount: float) -> void:
 @export_group("Weapons")
 @export var weapons_list: Dictionary = {
 	"none": null,
-	"axe": preload("uid://4bo6plflo2ug")
+	"axe": preload("uid://4bo6plflo2ug"),
+	"pistol": preload("uid://lqvyhgay44wu"),
 }
 @export var switch_time := 0.12
 @export var holder_offset := Vector3(0, -0.45, 0)
@@ -45,7 +46,7 @@ var _is_switching := false
 
 @onready var item_holder: Node3D = %ItemHolder3D
 var current_item: int: set = set_current_item
-var inventory: Array = ["axe", "none", "none", "none", "none", "none", "none", "none", "none", "none"]
+@export var inventory: Array = ["axe", "pistol", "none", "none", "none", "none", "none", "none", "none", "none"]
 var item_in_hand: Node3D
 
 func set_current_item(new_item: int) -> void:
@@ -63,16 +64,20 @@ func set_current_item(new_item: int) -> void:
 		
 	_is_switching = true
 	
-	# put a way current weapon
-	if item_in_hand:
+	# put away current weapon
+	if item_in_hand and item_in_hand is Pistol3D:
+			item_in_hand.pistol_play_down()
+			await item_in_hand.animation_player.animation_finished
+	else:
 		var weapon_tween_down := create_tween()
 		weapon_tween_down.tween_property(item_holder, "position", _rest + holder_offset, switch_time)
 		weapon_tween_down.set_trans(Tween.TRANS_QUAD)
 		weapon_tween_down.set_ease(Tween.EASE_IN)
 		await weapon_tween_down.finished
-		for child in item_holder.get_children():
-			child.queue_free()
-		item_in_hand = null
+		
+	for child in item_holder.get_children():
+		child.queue_free()
+	item_in_hand = null
 		
 	# set current weapon
 	current_item = new_item
@@ -83,14 +88,22 @@ func set_current_item(new_item: int) -> void:
 		_is_switching = false
 		return
 		
-	# bring out new weapon
-	item_holder.position = _rest + holder_offset
+	# bring out new weapon	
+
 	item_in_hand = weapons_list[inventory[new_item]].instantiate()
 	item_holder.add_child(item_in_hand)
 	
-	var weapon_tween_up := create_tween()
-	weapon_tween_up.tween_property(item_holder, "position", _rest, switch_time)
-	await weapon_tween_up.finished
+	if item_in_hand is Pistol3D:
+		item_holder.position = _rest
+		item_in_hand.pistol_play_up()
+		
+		await item_in_hand.animation_player.animation_finished
+	else:
+		item_holder.position = _rest + holder_offset
+		var weapon_tween_up := create_tween()
+		weapon_tween_up.tween_property(item_holder, "position", _rest, switch_time)
+		await weapon_tween_up.finished
+
 	_is_switching = false
 
 #endregion
@@ -225,6 +238,15 @@ func _unhandled_input(event: InputEvent) -> void:
 	
 	
 	#endregion
+	
+	#region pistol
+	if inventory[current_item] == "pistol":
+		if Input.is_action_just_pressed("attack"):
+			item_in_hand.pistol_attack()
+	
+	#endregion
+	
+	
 	#endregion
 	
 	#region inventory
