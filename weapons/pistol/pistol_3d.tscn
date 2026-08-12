@@ -2,9 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://ble3ptowh5r15" path="res://weapons/pistol/pistol.glb" id="1_uoc7u"]
 [ext_resource type="Script" uid="uid://3efho5dcn6ov" path="res://weapons/pistol/pistol_3d.gd" id="2_pistol"]
+[ext_resource type="Texture2D" uid="uid://lkbj5o4lc4fm" path="res://weapons/axe/axe_Arms_Diffuse.png" id="3_82tqe"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uoc7u"]
-albedo_color = Color(0.9098039, 0.74509805, 0.6745098, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8dnsd"]
+albedo_texture = ExtResource("3_82tqe")
 
 [node name="Pistol3D" unique_id=610045667 instance=ExtResource("1_uoc7u")]
 script = ExtResource("2_pistol")
@@ -71,7 +72,7 @@ bones/41/rotation = Quaternion(0.4376185, -0.0003525541, -0.0007409035, 0.899160
 bones/42/rotation = Quaternion(0.38818082, 2.8469332e-05, 5.880435e-05, 0.92158324)
 
 [node name="Ch22_Body" parent="Arms/Skeleton3D" index="0" unique_id=1874144613]
-material_override = SubResource("StandardMaterial3D_uoc7u")
+material_override = SubResource("StandardMaterial3D_8dnsd")
 
 [node name="Gun" parent="." index="1" unique_id=526144919]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0.125, 0.125)
