@@ -29,7 +29,7 @@ func _set_health(new_health):
 		
 var parent
 func _ready() -> void:
-	parent = get_parent().get_parent()
+	parent = get_tree().get_first_node_in_group("player")
 
 	setup_health()	
 

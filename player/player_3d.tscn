@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ctwvqqqr7oxax" path="res://player/player_3d.gd" id="1_nni6y"]
 [ext_resource type="PackedScene" uid="uid://b3jddq8fv2qcs" path="res://player/health_bar.tscn" id="2_a5lo2"]
+[ext_resource type="PackedScene" uid="uid://cfu2sx3i2jl05" path="res://common/unshaded_layer.tscn" id="2_nrofp"]
 [ext_resource type="Script" uid="uid://bkx355bvrlhfq" path="res://player/inventory_display.gd" id="3_6g8ua"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_oyqej"]
@@ -34,18 +35,27 @@ unique_name_in_owner = true
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5885699, 0)
 
-[node name="ItemHolder3D" type="Node3D" parent="Head3D/Camera3D" unique_id=1601375636]
+[node name="UnshadedLayer" parent="Head3D/Camera3D" unique_id=1412566481 instance=ExtResource("2_nrofp")]
+
+[node name="SubViewport" parent="Head3D/Camera3D/UnshadedLayer/SubViewportContainer" parent_id_path=PackedInt32Array(1412566481, 1487096267) index="0" unique_id=1284194751]
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="ItemHolder3D" type="Node3D" parent="Head3D/Camera3D/UnshadedLayer/SubViewportContainer/SubViewport" index="0" unique_id=1601375636]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.18223214, -0.10068807)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, -0.2)
 
-[node name="UI" type="CanvasLayer" parent="." unique_id=1667253696]
+[node name="Camera3DViewmodel" type="Camera3D" parent="Head3D/Camera3D/UnshadedLayer/SubViewportContainer/SubViewport" index="1" unique_id=1188250807]
+current = true
 
-[node name="HealthBar" parent="UI" unique_id=2105761663 instance=ExtResource("2_a5lo2")]
+[node name="UI" type="CanvasLayer" parent="Head3D/Camera3D/UnshadedLayer/SubViewportContainer/SubViewport" index="2" unique_id=1667253696]
+
+[node name="HealthBar" parent="Head3D/Camera3D/UnshadedLayer/SubViewportContainer/SubViewport/UI" unique_id=2105761663 instance=ExtResource("2_a5lo2")]
 unique_name_in_owner = true
 offset_top = -170.0
 offset_bottom = -150.0
 
-[node name="InventoryDisplay" type="HBoxContainer" parent="UI" unique_id=466517212]
+[node name="InventoryDisplay" type="HBoxContainer" parent="Head3D/Camera3D/UnshadedLayer/SubViewportContainer/SubViewport/UI" unique_id=466517212]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -61,14 +71,14 @@ theme_override_constants/separation = 6
 alignment = 1
 script = ExtResource("3_6g8ua")
 
-[node name="Slot0" type="Panel" parent="UI/InventoryDisplay" unique_id=869118904]
+[node name="Slot0" type="Panel" parent="Head3D/Camera3D/UnshadedLayer/SubViewportContainer/SubViewport/UI/InventoryDisplay" unique_id=869118904]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_styles/panel = SubResource("StyleBoxFlat_6g8ua")
 
-[node name="Icon" type="TextureRect" parent="UI/InventoryDisplay/Slot0" unique_id=1613803068]
+[node name="Icon" type="TextureRect" parent="Head3D/Camera3D/UnshadedLayer/SubViewportContainer/SubViewport/UI/InventoryDisplay/Slot0" unique_id=1613803068]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -78,14 +88,14 @@ grow_vertical = 2
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Slot1" type="Panel" parent="UI/InventoryDisplay" unique_id=326766829]
+[node name="Slot1" type="Panel" parent="Head3D/Camera3D/UnshadedLayer/SubViewportContainer/SubViewport/UI/InventoryDisplay" unique_id=326766829]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_styles/panel = SubResource("StyleBoxFlat_6g8ua")
 
-[node name="Icon" type="TextureRect" parent="UI/InventoryDisplay/Slot1" unique_id=1115187961]
+[node name="Icon" type="TextureRect" parent="Head3D/Camera3D/UnshadedLayer/SubViewportContainer/SubViewport/UI/InventoryDisplay/Slot1" unique_id=1115187961]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -95,14 +105,14 @@ grow_vertical = 2
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Slot2" type="Panel" parent="UI/InventoryDisplay" unique_id=1782719978]
+[node name="Slot2" type="Panel" parent="Head3D/Camera3D/UnshadedLayer/SubViewportContainer/SubViewport/UI/InventoryDisplay" unique_id=1782719978]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_styles/panel = SubResource("StyleBoxFlat_6g8ua")
 
-[node name="Icon" type="TextureRect" parent="UI/InventoryDisplay/Slot2" unique_id=1527236505]
+[node name="Icon" type="TextureRect" parent="Head3D/Camera3D/UnshadedLayer/SubViewportContainer/SubViewport/UI/InventoryDisplay/Slot2" unique_id=1527236505]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -112,14 +122,14 @@ grow_vertical = 2
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Slot3" type="Panel" parent="UI/InventoryDisplay" unique_id=1731732898]
+[node name="Slot3" type="Panel" parent="Head3D/Camera3D/UnshadedLayer/SubViewportContainer/SubViewport/UI/InventoryDisplay" unique_id=1731732898]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_styles/panel = SubResource("StyleBoxFlat_6g8ua")
 
-[node name="Icon" type="TextureRect" parent="UI/InventoryDisplay/Slot3" unique_id=1745500021]
+[node name="Icon" type="TextureRect" parent="Head3D/Camera3D/UnshadedLayer/SubViewportContainer/SubViewport/UI/InventoryDisplay/Slot3" unique_id=1745500021]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -129,14 +139,14 @@ grow_vertical = 2
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Slot4" type="Panel" parent="UI/InventoryDisplay" unique_id=578541350]
+[node name="Slot4" type="Panel" parent="Head3D/Camera3D/UnshadedLayer/SubViewportContainer/SubViewport/UI/InventoryDisplay" unique_id=578541350]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_styles/panel = SubResource("StyleBoxFlat_6g8ua")
 
-[node name="Icon" type="TextureRect" parent="UI/InventoryDisplay/Slot4" unique_id=273341368]
+[node name="Icon" type="TextureRect" parent="Head3D/Camera3D/UnshadedLayer/SubViewportContainer/SubViewport/UI/InventoryDisplay/Slot4" unique_id=273341368]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -146,14 +156,14 @@ grow_vertical = 2
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Slot5" type="Panel" parent="UI/InventoryDisplay" unique_id=1276889671]
+[node name="Slot5" type="Panel" parent="Head3D/Camera3D/UnshadedLayer/SubViewportContainer/SubViewport/UI/InventoryDisplay" unique_id=1276889671]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_styles/panel = SubResource("StyleBoxFlat_6g8ua")
 
-[node name="Icon" type="TextureRect" parent="UI/InventoryDisplay/Slot5" unique_id=1650337650]
+[node name="Icon" type="TextureRect" parent="Head3D/Camera3D/UnshadedLayer/SubViewportContainer/SubViewport/UI/InventoryDisplay/Slot5" unique_id=1650337650]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -163,14 +173,14 @@ grow_vertical = 2
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Slot6" type="Panel" parent="UI/InventoryDisplay" unique_id=2129495228]
+[node name="Slot6" type="Panel" parent="Head3D/Camera3D/UnshadedLayer/SubViewportContainer/SubViewport/UI/InventoryDisplay" unique_id=2129495228]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_styles/panel = SubResource("StyleBoxFlat_6g8ua")
 
-[node name="Icon" type="TextureRect" parent="UI/InventoryDisplay/Slot6" unique_id=1191807625]
+[node name="Icon" type="TextureRect" parent="Head3D/Camera3D/UnshadedLayer/SubViewportContainer/SubViewport/UI/InventoryDisplay/Slot6" unique_id=1191807625]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -180,14 +190,14 @@ grow_vertical = 2
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Slot7" type="Panel" parent="UI/InventoryDisplay" unique_id=29197257]
+[node name="Slot7" type="Panel" parent="Head3D/Camera3D/UnshadedLayer/SubViewportContainer/SubViewport/UI/InventoryDisplay" unique_id=29197257]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_styles/panel = SubResource("StyleBoxFlat_6g8ua")
 
-[node name="Icon" type="TextureRect" parent="UI/InventoryDisplay/Slot7" unique_id=47880865]
+[node name="Icon" type="TextureRect" parent="Head3D/Camera3D/UnshadedLayer/SubViewportContainer/SubViewport/UI/InventoryDisplay/Slot7" unique_id=47880865]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -197,14 +207,14 @@ grow_vertical = 2
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Slot8" type="Panel" parent="UI/InventoryDisplay" unique_id=2088843522]
+[node name="Slot8" type="Panel" parent="Head3D/Camera3D/UnshadedLayer/SubViewportContainer/SubViewport/UI/InventoryDisplay" unique_id=2088843522]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_styles/panel = SubResource("StyleBoxFlat_6g8ua")
 
-[node name="Icon" type="TextureRect" parent="UI/InventoryDisplay/Slot8" unique_id=367759582]
+[node name="Icon" type="TextureRect" parent="Head3D/Camera3D/UnshadedLayer/SubViewportContainer/SubViewport/UI/InventoryDisplay/Slot8" unique_id=367759582]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -214,14 +224,14 @@ grow_vertical = 2
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Slot9" type="Panel" parent="UI/InventoryDisplay" unique_id=707023931]
+[node name="Slot9" type="Panel" parent="Head3D/Camera3D/UnshadedLayer/SubViewportContainer/SubViewport/UI/InventoryDisplay" unique_id=707023931]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_styles/panel = SubResource("StyleBoxFlat_6g8ua")
 
-[node name="Icon" type="TextureRect" parent="UI/InventoryDisplay/Slot9" unique_id=196327690]
+[node name="Icon" type="TextureRect" parent="Head3D/Camera3D/UnshadedLayer/SubViewportContainer/SubViewport/UI/InventoryDisplay/Slot9" unique_id=196327690]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -230,3 +240,5 @@ grow_horizontal = 2
 grow_vertical = 2
 expand_mode = 1
 stretch_mode = 5
+
+[editable path="Head3D/Camera3D/UnshadedLayer"]

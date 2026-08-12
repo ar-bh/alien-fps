@@ -114,10 +114,8 @@ transform = Transform3D(0.6508333, 0, -0.43020046, 0, 0.78016436, 0, 0.43020046,
 [node name="FX" type="Node" parent="." unique_id=204154210]
 
 [node name="CelShaderFX" parent="FX" unique_id=964755560 instance=ExtResource("3_52p1e")]
-visible = false
 
 [node name="RetroFX" parent="FX" unique_id=1268121299 instance=ExtResource("4_tscrs")]
-visible = false
 
 [node name="FPSCanvasLayer" type="CanvasLayer" parent="." unique_id=22200906]
 

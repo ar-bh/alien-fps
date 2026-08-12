@@ -6,7 +6,7 @@ extends HBoxContainer
 	"axe": preload("res://weapons/axe/axe_icon.png"),
 }
 
-@onready var player: Player3D = get_parent().get_parent()
+@onready var player: Player3D = get_tree().get_first_node_in_group("player")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

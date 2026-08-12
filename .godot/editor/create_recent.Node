@@ -1,3 +1,4 @@
+Camera3D
 Node
 Timer
 StaticBody3D
@@ -12,4 +13,3 @@ CanvasLayer
 SubViewport
 SubViewportContainer
 ProgressBar
-RichTextLabel

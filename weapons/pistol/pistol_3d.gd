@@ -27,7 +27,7 @@ func pistol_play_inspection() -> void:
 
 @export var damage := 1
 
-@onready var player: Player3D = get_parent().get_parent().get_parent().get_parent()
+@onready var player: Player3D = get_tree().get_first_node_in_group("player")
 
 func _ready() -> void:
 	animation_player.animation_finished.connect(_on_animation_player_animation_finished)
