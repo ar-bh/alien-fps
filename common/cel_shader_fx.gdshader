@@ -2,7 +2,7 @@ shader_type canvas_item;
 
 uniform sampler2D screen_texture : hint_screen_texture, filter_nearest;
 uniform int color_levels : hint_range(2, 16) = 8;
-uniform bool enable_outlines = true;
+uniform bool enable_outlines = false;
 uniform float line_thickness : hint_range(0.0, 6.0) = 0.15;
 uniform float edge_threshold : hint_range(0.01, 1.0) = 0.3;
 uniform float brightness : hint_range(0.5, 2.0) = 1.25;

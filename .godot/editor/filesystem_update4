@@ -12,3 +12,4 @@ res://weapons/pistol/pistol_3d.gd
 res://player/inventory_display.gd
 res://common/notes.gd
 res://player/health_bar.gd
+res://common/weapon_outline.gdshader

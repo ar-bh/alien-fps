@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://b3jddq8fv2qcs" path="res://player/health_bar.tscn" id="2_a5lo2"]
 [ext_resource type="PackedScene" uid="uid://cfu2sx3i2jl05" path="res://common/unshaded_layer.tscn" id="2_nrofp"]
 [ext_resource type="Script" uid="uid://bkx355bvrlhfq" path="res://player/inventory_display.gd" id="3_6g8ua"]
+[ext_resource type="PackedScene" uid="uid://2gqkth17exiv" path="res://common/weapon_outline_fx.tscn" id="5_wxf5c"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_oyqej"]
 
@@ -38,6 +39,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5885699, 0)
 [node name="UnshadedLayer" parent="Head3D/Camera3D" unique_id=1412566481 instance=ExtResource("2_nrofp")]
 
 [node name="SubViewport" parent="Head3D/Camera3D/UnshadedLayer/SubViewportContainer" parent_id_path=PackedInt32Array(1412566481, 1487096267) index="0" unique_id=1284194751]
+own_world_3d = true
 handle_input_locally = false
 render_target_update_mode = 4
 
@@ -240,5 +242,7 @@ grow_horizontal = 2
 grow_vertical = 2
 expand_mode = 1
 stretch_mode = 5
+
+[node name="WeaponOutlineFX" parent="Head3D/Camera3D/UnshadedLayer/SubViewportContainer/SubViewport" index="3" unique_id=72610807 instance=ExtResource("5_wxf5c")]
 
 [editable path="Head3D/Camera3D/UnshadedLayer"]
