@@ -3,3 +3,4 @@ res://environment/field/grass.gdshader
 res://common/cel_shader_fx.gdshader
 res://common/retrofx.gdshader
 res://environment/chunk.gd
+res://player/player_3d.tscn
