@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cceitt32vdi31" path="res://environment/biome_data.gd" id="1_6jl1t"]
 [ext_resource type="PackedScene" uid="uid://cnramwjnwhmku" path="res://environment/desert/cactus.tscn" id="1_qgbj3"]
+[ext_resource type="PackedScene" uid="uid://dyatm1x1enkuo" path="res://enemies/eye monster/eye_monster_3d.tscn" id="2_tm8oh"]
 [ext_resource type="Texture2D" uid="uid://cdb644716fxx1" path="res://environment/desert/1_diffuseOriginal.bmp" id="2_vsh7j"]
 
 [resource]
@@ -11,4 +12,5 @@ texture = ExtResource("2_vsh7j")
 amount_of_content = [1, 10]
 content = Array[PackedScene]([ExtResource("1_qgbj3")])
 environment_color = Color(0.8281156, 0.5230941, 0.27941766, 1)
+enemies = Array[PackedScene]([ExtResource("2_tm8oh")])
 metadata/_custom_type_script = "uid://cceitt32vdi31"

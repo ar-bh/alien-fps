@@ -15,11 +15,19 @@ class_name Chunk extends Node3D
 @export var show_spawns_in_editor := true: set = _set_show_spawns_in_editor
 #endregion
 
-@onready var ground: CSGBox3D = %Ground
+@onready var ground: CSGBox3D = $Ground
+@onready var _enemy_timer: Timer = $EnemyTimer
+
+@export_group("Enemies")
+@export var spawn_timer_range := [1.0, 20.0]
 
 func _ready() -> void:
 	add_to_group("chunks")
 	_update_chunk()
+	
+	if not Engine.is_editor_hint() and (biome.enemies.size() > 0):
+		_enemy_timer.start()
+		_enemy_timer.timeout.connect(_on_enemy_timer_timeout)
 
 func _set_biome(new_biome: BiomeData) -> void:
 	biome = new_biome
@@ -74,6 +82,10 @@ func _apply_material_texture() -> void:
 
 func _clear_contents() -> void:
 	for child in get_children():
+		
+		if child is Timer:
+			continue
+		
 		if child != ground:
 			if Engine.is_editor_hint():
 				child.free()
@@ -113,8 +125,8 @@ func _spawn_contents() -> void:
 		item.scale = Vector3(s, s, s)
 		item.rotate_y(randf_range(-PI/2, PI/2))
 
-const GRASS_PLANE = preload("res://environment/field/grass_plane.tscn")
-
+@export_group("Extras")
+@export var grass_plane: PackedScene = preload("res://environment/field/grass_plane.tscn")
 func _spawn_extras() -> void:
 	if Engine.is_editor_hint():
 		return
@@ -123,10 +135,19 @@ func _spawn_extras() -> void:
 	if biome.biome_name == "field":
 		print("extras biome: ", biome.biome_name)
 		
-		var grass := GRASS_PLANE.instantiate()
+		var grass := grass_plane.instantiate()
 		print(grass)
 		add_child(grass)
 		grass.position = Vector3(0.0, chunk_height, 0.0)
+
+func _on_enemy_timer_timeout() -> void:
+	_enemy_timer.wait_time = randf_range(spawn_timer_range[0], spawn_timer_range[1])
+	_spawn_enemy()
+
+func _spawn_enemy () -> void:
+	var enemy = biome.enemies.pick_random().instantiate()
+	get_tree().current_scene.add_child(enemy)
+	enemy.global_position = to_global(get_random_point_on_chunk())
 
 func get_random_point_on_chunk() -> Vector3:
 	var x := randf_range(-chunk_width * 0.5, chunk_width * 0.5)
