@@ -45,8 +45,15 @@ func pistol_attack() -> void:
 		return
 	pistol_play_fire()
 	
+	AudioBus.pistol_shot_fired.emit()
+	player.add_trauma(fire_trauma)
+	
 	var ray := player.get_node("%ShootRay") as RayCast3D
-	ray.target_position = Vector3(0.0, 0.0, range_distance)
+	
+	ray.position = Vector3.ZERO
+	ray.rotation = Vector3.ZERO
+	
+	ray.target_position = Vector3(0.0, 0.0, -range_distance)
 	ray.force_raycast_update()
 	if not ray.is_colliding():
 		return

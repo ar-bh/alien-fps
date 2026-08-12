@@ -11,6 +11,7 @@ const GRAVITY := 9.8
 
 @onready var _head: Node3D = %Head3D
 @onready var _camera_3d: Camera3D = %Camera3D
+@onready var _viewmodel_camera: Camera3D = %Camera3DViewmodel
 #endregion
 
 #region screenshake
@@ -140,7 +141,7 @@ func set_new_health(new_health: int) -> void:
 	var previous := health
 	health = maxi(new_health, 0)
 	if health < previous:
-		add_trauma(0.3)
+		add_trauma(0.3*(max_health-health))
 		_health_bar.health = health
 	print(health)
 	if health == 0:
@@ -187,6 +188,15 @@ func _process(delta: float) -> void:
 		_camera_3d.h_offset = 0.0
 		_camera_3d.v_offset = 0.0
 		_camera_3d.rotation.z = 0.0
+		
+	#if shake > 0.0:
+		#_viewmodel_camera.h_offset = max_offset.x * shake * _noise.get_noise_1d(_noise_t)
+		#_viewmodel_camera.v_offset = max_offset.y * shake * _noise.get_noise_1d(_noise_t + 100.0)
+		#_viewmodel_camera.rotation.z = max_roll * shake * _noise.get_noise_1d(_noise_t + 200.0)
+	#else:
+		#_viewmodel_camera.h_offset = 0.0
+		#_viewmodel_camera.v_offset = 0.0
+		#_viewmodel_camera.rotation.z = 0.0
 	#endregion
 
 	var biome := get_current_biome()

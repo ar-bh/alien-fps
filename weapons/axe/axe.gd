@@ -56,6 +56,8 @@ func _activate_hitbox_window() -> void:
 		return
 		
 	player.enable_melee_hitbox()
+	AudioBus.axe_swung.emit()
+	
 	await get_tree().create_timer(hitbox_duration).timeout
 	player.disable_melee_hitbox()
 

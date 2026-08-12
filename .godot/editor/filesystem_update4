@@ -15,3 +15,6 @@ res://player/health_bar.gd
 res://common/weapon_outline.gdshader
 res://environment/environment resources/desert.tres
 res://common/weapon_outline_fx.tscn
+res://common/audio_bus.gd
+res://common/game_audio.tscn
+res://common/game_audio.gd

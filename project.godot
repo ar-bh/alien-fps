@@ -16,6 +16,10 @@ config/features=PackedStringArray("4.6", "GL Compatibility")
 run/max_fps=60
 config/icon="res://icon.svg"
 
+[autoload]
+
+AudioBus="*uid://44rgmglm2rhu"
+
 [display]
 
 window/size/mode=4

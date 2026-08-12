@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://ka6p6bncr0in"]
+
+[ext_resource type="AudioStream" uid="uid://csigml7utyrtx" path="res://weapons/pistol/pistol-firing-sound-full-sounds.mp3" id="1_uqyd5"]
+[ext_resource type="Script" uid="uid://dpugtpo8rcca8" path="res://common/game_audio.gd" id="1_xnn0j"]
+
+[node name="GameAudio" type="Node" unique_id=1280094974]
+script = ExtResource("1_xnn0j")
+
+[node name="PistolShotPlayer" type="AudioStreamPlayer" parent="." unique_id=595413246]
+stream = ExtResource("1_uqyd5")
+max_polyphony = 2
+
+[node name="AxeSwungPlayer" type="AudioStreamPlayer" parent="." unique_id=937929898]
