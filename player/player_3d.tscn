@@ -253,6 +253,7 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="WeaponOutlineFX" parent="Head3D/Camera3D/UnshadedLayer/SubViewportContainer/SubViewport" index="3" unique_id=72610807 instance=ExtResource("5_wxf5c")]
+layer = 2
 
 [node name="RetroFX" parent="Head3D/Camera3D/UnshadedLayer/SubViewportContainer/SubViewport" index="4" unique_id=1268121299 instance=ExtResource("6_1obgi")]
 visible = false

@@ -11,7 +11,7 @@ albedo_texture = ExtResource("3_82tqe")
 script = ExtResource("2_pistol")
 
 [node name="Arms" parent="." index="0" unique_id=2097262845]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0.125, 0.125)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0.2, 0.125)
 
 [node name="Skeleton3D" parent="Arms" index="0" unique_id=991021374]
 bones/1/rotation = Quaternion(0.09201373, -0.10668929, -0.70216376, 0.6979376)
@@ -29,7 +29,7 @@ bones/40/rotation = Quaternion(0.038012523, -0.0009547501, -0.025093196, 0.99896
 material_override = SubResource("StandardMaterial3D_8dnsd")
 
 [node name="Gun" parent="." index="1" unique_id=526144919]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0.125, 0.125)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0.2, 0.125)
 
 [node name="Skeleton3D" parent="Gun" index="0" unique_id=1004128673]
 bones/0/position = Vector3(0.17343535, -0.15753427, 0.19985518)
