@@ -1,7 +1,6 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1786494195
+::res://::1786494294
 blend_chunk.gd::GDScript::3585389273081459740::1786397467::0::1::::BlendChunk<>Node3D<><>0<>1<><>::
-field.tres::Resource/BiomeData::2504293573142973879::1786493208::0::1::::<><><>0<>0<><>::uid://cxpp7s8mhdamr::::res://environment/field/tree_1.tscn<>uid://cceitt32vdi31::::res://environment/biome_data.gd<>uid://3nd27gix68ae::::res://environment/field/5_diffuseOriginal.png
 icon.svg::CompressedTexture2D::2161755544460959011::1785346976::1785347119::1::::<><><>0<>0<>5084b3fcdd6ce8f2abaf420c2a9a3a42<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile::-1::1785346995::0::1::::<><><>0<>0<><>::
 ::res://addons/::1785346995
@@ -28,7 +27,7 @@ eye_alien.glb::PackedScene::504969181041416319::1786059121::1786233759::1::::<><
 eye_alien_eye_monster_albedo.png::CompressedTexture2D::4760267974404257845::1786059138::1786233759::1::::<><><>0<>0<>9b1b50f05d1224ae991d25c65297a59d<>res://.godot/imported/eye_alien_eye_monster_albedo.png-151209f8d3b7f8542d11c644c6e2c0ec.s3tc.ctex::
 eye_monster_3d.gd::GDScript::3725420268599769340::1786487026::0::1::::EyeMonster3D<>CharacterBody3D<><>0<>0<><>::
 eye_monster_3d.tscn::PackedScene::8844970753106296838::1786301040::0::1::::<><><>0<>0<><>::uid://hgu1esonp6sx::::res://enemies/eye monster/eye_alien.glb<>uid://btcvelotdu6vg::::res://enemies/eye monster/eye_monster_3d.gd<>uid://b8256hjhnics0::::res://enemies/eye monster/eye_alien_eye_monster_albedo.png
-::res://environment/::1786494184
+::res://environment/::1786494294
 biome_data.gd::GDScript::4921997274157954746::1786487026::0::1::::BiomeData<>Resource<><>0<>0<><>::
 blend_chunk.tscn::PackedScene::2520863297788523910::1786397636::0::1::::<><><>0<>0<><>::uid://brc13qe6xjny7::::res://blend_chunk.gd<>uid://0tn7dopaur0g::::res://environment/chunk.tscn
 blend_ground.gdshader::Shader::1910973591546468328::1786395476::0::1::::<><><>0<>0<><>::
@@ -37,12 +36,8 @@ chunk.tscn::PackedScene::1794790914468516252::1786493933::0::1::::<><><>0<>0<><>
 giant_blend_chunk.tscn::PackedScene::1617022717687614313::1786398913::0::1::::<><><>0<>0<><>::uid://bb6eirildbf0i::::res://environment/blend_chunk.tscn
 giant_chunk.gd::GDScript::1995810239441139047::1786487026::0::1::::GiantChunk<>Node3D<><>0<>1<><>::
 giant_chunk.tscn::PackedScene::6459280594540503797::1786378841::0::1::::<><><>0<>0<><>::uid://3o1x5y0155jn::::res://environment/giant_chunk.gd<>uid://0tn7dopaur0g::::res://environment/chunk.tscn
-glacier_biome.tres::Resource/BiomeData::4520096908033325927::1786306803::0::1::::<><><>0<>0<><>::uid://cceitt32vdi31::::res://environment/biome_data.gd<>uid://ba2omj1b8cmpk::::res://environment/glacier/icicles.tscn<>uid://d28b8dhtbi4mq::::res://environment/glacier/4_diffuseOriginal.bmp
-desert.tres::Resource/BiomeData::2239343746203693368::1786493208::0::1::::<><><>0<>0<><>::uid://cceitt32vdi31::::res://environment/biome_data.gd<>uid://cnramwjnwhmku::::res://environment/desert/cactus.tscn<>uid://dyatm1x1enkuo::::res://enemies/eye monster/eye_monster_3d.tscn<>uid://cdb644716fxx1::::res://environment/desert/1_diffuseOriginal.bmp
-snowy.tres::Resource/BiomeData::3361596268250291717::1786492794::0::1::::<><><>0<>0<><>::uid://cceitt32vdi31::::res://environment/biome_data.gd<>uid://d1hlvp03hhjug::::res://environment/snowy/6_diffuseOriginal.bmp
 sunflowers_puresky_4k.hdr::CompressedTexture2D::7154013134401591865::1786292067::1786292092::1::::<><><>0<>0<>e2d72bae62704aae0b5436be73edce52<>res://.godot/imported/sunflowers_puresky_4k.hdr-1d39b4623226f7c5fe1c9d46bb0e11f2.ctex::
-wasteland_biome.tres::Resource/BiomeData::3472408882270350215::1786493208::0::1::::<><><>0<>0<><>::uid://cceitt32vdi31::::res://environment/biome_data.gd<>uid://dkitb677t41ly::::res://environment/wasteland/burned_tree_1.tscn<>uid://bit6q3c80jx3j::::res://environment/wasteland/burned_tree_2.tscn<>uid://bnpwtrhwl34bs::::res://environment/wasteland/rock_cluster.tscn<>uid://q5wr20h35o3u::::res://environment/wasteland/burned_grass.tscn<>uid://dyatm1x1enkuo::::res://enemies/eye monster/eye_monster_3d.tscn<>uid://7jjjwyabhkfy::::res://environment/wasteland/3_diffuseOriginal.bmp
-::res://environment/desert/::1786493983
+::res://environment/desert/::1786494199
 1_diffuseOriginal.bmp::CompressedTexture2D::4987407864687228252::1696356840::1786291416::1::::<><><>0<>0<>86e0f27af8171a6948a2f37c0c9bc05a<>res://.godot/imported/1_diffuseOriginal.bmp-9649b99a9b6d43f889244e1988b58b03.s3tc.ctex::
 Cactus.glb::PackedScene::1477760384121399729::1786291489::1786493983::1::::<><><>0<>0<>49ad8a068a357f660852fab833e00a00<>res://.godot/imported/Cactus.glb-36b84b690466aee74e77576e90cc2a0d.scn::uid://4ev5uvajqayf::::res://environment/desert/Cactus_2.png<>uid://dfuogjw31xxaj::::res://environment/desert/Cactus_3.png
 cactus.tscn::PackedScene::5720413356063790224::1786492319::0::1::::<><><>0<>0<><>::uid://vb3q6itrlgvh::::res://environment/desert/Cactus.glb
@@ -50,6 +45,12 @@ Cactus_0.png::CompressedTexture2D::7041746892989042427::1786291489::1786291490::
 Cactus_1.png::CompressedTexture2D::9182519549052518063::1786291491::1786291492::1::::<><><>0<>0<>2f4c55bffd92e0467ec1c515f3fcfd75<>res://.godot/imported/Cactus_1.png-a7e6ea06606a4a505d222d20ab919c3a.ctex::
 Cactus_2.png::CompressedTexture2D::2045063690104973189::1786291492::1786493981::1::::<><><>0<>0<>3a9f6d9bdbf3ec4188860fd363b58238<>res://.godot/imported/Cactus_2.png-ca793b40a2217c648865fc395cce2bfd.s3tc.ctex::
 Cactus_3.png::CompressedTexture2D::7552355085016536125::1786291493::1786493981::1::::<><><>0<>0<>ecbb4e8d7715699853d5b49d4fc28b9e<>res://.godot/imported/Cactus_3.png-01027dc3de39f3890d2a06cd28913a08.s3tc.ctex::
+::res://environment/environment resources/::1786494265
+desert.tres::Resource/BiomeData::2239343746203693368::1786493208::0::1::::<><><>0<>0<><>::uid://cceitt32vdi31::::res://environment/biome_data.gd<>uid://cnramwjnwhmku::::res://environment/desert/cactus.tscn<>uid://dyatm1x1enkuo::::res://enemies/eye monster/eye_monster_3d.tscn<>uid://cdb644716fxx1::::res://environment/desert/1_diffuseOriginal.bmp
+glacier_biome.tres::Resource/BiomeData::4520096908033325927::1786306803::0::1::::<><><>0<>0<><>::uid://cceitt32vdi31::::res://environment/biome_data.gd<>uid://ba2omj1b8cmpk::::res://environment/glacier/icicles.tscn<>uid://d28b8dhtbi4mq::::res://environment/glacier/4_diffuseOriginal.bmp
+field.tres::Resource/BiomeData::2504293573142973879::1786493208::0::1::::<><><>0<>0<><>::uid://cxpp7s8mhdamr::::res://environment/field/tree_1.tscn<>uid://cceitt32vdi31::::res://environment/biome_data.gd<>uid://3nd27gix68ae::::res://environment/field/5_diffuseOriginal.png
+snowy.tres::Resource/BiomeData::3361596268250291717::1786492794::0::1::::<><><>0<>0<><>::uid://cceitt32vdi31::::res://environment/biome_data.gd<>uid://d1hlvp03hhjug::::res://environment/snowy/6_diffuseOriginal.bmp
+wasteland_biome.tres::Resource/BiomeData::3472408882270350215::1786493208::0::1::::<><><>0<>0<><>::uid://cceitt32vdi31::::res://environment/biome_data.gd<>uid://dkitb677t41ly::::res://environment/wasteland/burned_tree_1.tscn<>uid://bit6q3c80jx3j::::res://environment/wasteland/burned_tree_2.tscn<>uid://bnpwtrhwl34bs::::res://environment/wasteland/rock_cluster.tscn<>uid://q5wr20h35o3u::::res://environment/wasteland/burned_grass.tscn<>uid://dyatm1x1enkuo::::res://enemies/eye monster/eye_monster_3d.tscn<>uid://7jjjwyabhkfy::::res://environment/wasteland/3_diffuseOriginal.bmp
 ::res://environment/field/::1786494195
 5_diffuseOriginal.png::CompressedTexture2D::1992356590492922224::1696212732::1786308773::1::::<><><>0<>0<>ed008a9ef5c5f955aa622a1cdbb65969<>res://.godot/imported/5_diffuseOriginal.png-5d79a5fef39a078db8f14a930768fd86.s3tc.ctex::
 13_diffuseOriginal.bmp::CompressedTexture2D::3963519959948772906::1726430562::1786301455::1::::<><><>0<>0<>51db3380de2444c1d94d16b15ec4cec6<>res://.godot/imported/13_diffuseOriginal.bmp-b1c730ba77fe1e936e74143aca18af12.s3tc.ctex::
@@ -81,10 +82,10 @@ burned_tree_2.tscn::PackedScene::2989066884879306133::1786492653::0::1::::<><><>
 rock_cluster.glb::PackedScene::8997803792671069914::1786290697::1786493984::1::::<><><>0<>0<>9af4ccccf3635ba4640f428c1db2c278<>res://.godot/imported/rock_cluster.glb-d10bc03d640962c1de8df571865d8edd.scn::
 rock_cluster.tscn::PackedScene::3331211925949470392::1786492703::0::1::::<><><>0<>0<><>::uid://d1gurqbet8pmo::::res://environment/wasteland/rock_cluster.glb
 wooden_spikes.glb::PackedScene::5079646346793480588::1786291016::1786291016::1::::<><><>0<>0<>a72d7ebfa317438dbf67a0fc15be23f6<>res://.godot/imported/wooden_spikes.glb-705e1bd5fabc191ae1374ef675825ee2.scn::
-::res://gameplay/::1786494195
+::res://gameplay/::1786494294
 fpscounter.gd::GDScript::794534812659427086::1786228946::0::1::::<>Label<><>0<>0<><>::
 main_gameplay_3d.gd::GDScript::4513925865123517323::1786487026::0::1::::<>Node3D<><>0<>0<><>::
-main_gameplay_3d.tscn::PackedScene::1655603678145136064::1786494199::0::1::::<><><>0<>0<><>::uid://b5ktx1vmy478b::::res://gameplay/main_gameplay_3d.gd<>uid://ch3lbhgo5khsv::::res://player/player_3d.tscn<>uid://0tn7dopaur0g::::res://environment/chunk.tscn<>uid://cp0g50kdmg1lm::::res://common/cel_shader_fx.tscn<>uid://650wt70dnxt5::::res://environment/desert/desert.tres<>uid://bbxdl40velwv4::::res://field.tres<>uid://ddw2sid0bv6ua::::res://common/retro_fx.tscn<>uid://cnramwjnwhmku::::res://environment/desert/cactus.tscn<>uid://bn5m88kr3mxon::::res://environment/snowy.tres<>uid://lk44wmfglrk5::::res://gameplay/fpscounter.gd<>uid://cxpp7s8mhdamr::::res://environment/field/tree_1.tscn<>uid://b5ntlobupmyhj::::res://environment/glacier_biome.tres<>uid://ba2omj1b8cmpk::::res://environment/glacier/icicles.tscn<>uid://bpqccjoaxia36::::res://environment/wasteland_biome.tres<>uid://bit6q3c80jx3j::::res://environment/wasteland/burned_tree_2.tscn
+main_gameplay_3d.tscn::PackedScene::1655603678145136064::1786494305::0::1::::<><><>0<>0<><>::uid://b5ktx1vmy478b::::res://gameplay/main_gameplay_3d.gd<>uid://ch3lbhgo5khsv::::res://player/player_3d.tscn<>uid://0tn7dopaur0g::::res://environment/chunk.tscn<>uid://cp0g50kdmg1lm::::res://common/cel_shader_fx.tscn<>uid://650wt70dnxt5::::res://environment/environment resources/desert.tres<>uid://bbxdl40velwv4::::res://environment/field.tres<>uid://ddw2sid0bv6ua::::res://common/retro_fx.tscn<>uid://cnramwjnwhmku::::res://environment/desert/cactus.tscn<>uid://bn5m88kr3mxon::::res://environment/environment resources/snowy.tres<>uid://lk44wmfglrk5::::res://gameplay/fpscounter.gd<>uid://cxpp7s8mhdamr::::res://environment/field/tree_1.tscn<>uid://b5ntlobupmyhj::::res://environment/environment resources/glacier_biome.tres<>uid://ba2omj1b8cmpk::::res://environment/glacier/icicles.tscn<>uid://bpqccjoaxia36::::res://environment/environment resources/wasteland_biome.tres<>uid://bnpwtrhwl34bs::::res://environment/wasteland/rock_cluster.tscn<>uid://dkitb677t41ly::::res://environment/wasteland/burned_tree_1.tscn<>uid://bit6q3c80jx3j::::res://environment/wasteland/burned_tree_2.tscn
 ::res://player/::1786491245
 health_bar.gd::GDScript::8617714789743601375::1786487026::0::1::::HealthBar<>ProgressBar<><>0<>0<><>::
 health_bar.tscn::PackedScene::4370476105313027870::1786476621::0::1::::<><><>0<>0<><>::uid://du1qrecqfue76::::res://player/health_bar.gd
