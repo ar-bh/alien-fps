@@ -10,7 +10,7 @@
 
 [resource]
 script = ExtResource("1_oocw5")
-biome_name = "\"wasteland\""
+biome_name = "wasteland"
 texture = ExtResource("6_e5vil")
 content = Array[PackedScene]([ExtResource("1_xx6r6"), ExtResource("2_4o6ge"), ExtResource("3_4o6ge"), ExtResource("4_074bb")])
 environment_color = Color(0.6942758, 0.5189226, 0.4547277, 1)

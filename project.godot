@@ -32,6 +32,7 @@ import/blender/enabled=false
 
 chunks=""
 player=""
+enemy=""
 
 [input]
 

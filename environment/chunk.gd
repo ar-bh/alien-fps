@@ -146,8 +146,8 @@ func _on_enemy_timer_timeout() -> void:
 
 func _spawn_enemy () -> void:
 	var enemy = biome.enemies.pick_random().instantiate()
-	get_tree().current_scene.add_child(enemy)
 	enemy.global_position = to_global(get_random_point_on_chunk())
+	get_tree().current_scene.add_child(enemy)
 
 func get_random_point_on_chunk() -> Vector3:
 	var x := randf_range(-chunk_width * 0.5, chunk_width * 0.5)

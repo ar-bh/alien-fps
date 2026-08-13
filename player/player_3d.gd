@@ -123,8 +123,10 @@ func disable_melee_hitbox() -> void:
 
 
 func _on_melee_hitbox_area_entered(area: Node3D) -> void:
+	if area.name != "HurtBox3D":
+		return
 	var monster := area.get_parent()
-	if monster is EyeMonster3D:
+	if monster.is_in_group("enemy"):
 		if "damage" in item_in_hand:
 			monster.health -= item_in_hand.damage
 	
@@ -189,14 +191,6 @@ func _process(delta: float) -> void:
 		_camera_3d.v_offset = 0.0
 		_camera_3d.rotation.z = 0.0
 		
-	#if shake > 0.0:
-		#_viewmodel_camera.h_offset = max_offset.x * shake * _noise.get_noise_1d(_noise_t)
-		#_viewmodel_camera.v_offset = max_offset.y * shake * _noise.get_noise_1d(_noise_t + 100.0)
-		#_viewmodel_camera.rotation.z = max_roll * shake * _noise.get_noise_1d(_noise_t + 200.0)
-	#else:
-		#_viewmodel_camera.h_offset = 0.0
-		#_viewmodel_camera.v_offset = 0.0
-		#_viewmodel_camera.rotation.z = 0.0
 	#endregion
 
 	var biome := get_current_biome()
@@ -262,6 +256,7 @@ func _input(event: InputEvent) -> void:
 		_head.rotate_y(-event.relative.x * sensitivity)
 		_camera_3d.rotate_x(-event.relative.y * sensitivity)
 		_camera_3d.rotation.x = clampf(_camera_3d.rotation.x, deg_to_rad(-90), deg_to_rad(90))
+		_viewmodel_camera.rotation.x = clampf(_viewmodel_camera.rotation.x, deg_to_rad(-90), deg_to_rad(90))
 	#endregion
 
 func _unhandled_input(event: InputEvent) -> void:

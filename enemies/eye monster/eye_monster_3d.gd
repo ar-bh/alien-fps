@@ -63,9 +63,6 @@ enum State {
 	DEAD,
 }
 
-
-
-var home_position: Vector3
 var wander_target: Vector3
 var wait_left := 0.0
 
@@ -128,18 +125,21 @@ var player
 @export var biome_colors: Dictionary = {
 	"wasteland": Color(1.0, 1.0, 1.0),
 	"glacier": Color("3fc4ff"),
-	"dessert": Color("d5b04d")
+	"desert": Color("d5b04d")
 }
 
 #endregion
 
 func _ready() -> void:
 	#region spawn info
-		
+	
+	add_to_group("enemy")
+	
 	set_current_state(State.IDLE)
+	_select_variation()
 	_calculate_stats()
 	
-	_select_variation()
+
 	
 	_pick_wander_target()
 	wait_left = wander_wait

@@ -18,3 +18,10 @@ res://common/weapon_outline_fx.tscn
 res://common/audio_bus.gd
 res://common/game_audio.tscn
 res://common/game_audio.gd
+res://environment/environment resources/glacier_biome.tres
+res://environment/environment resources/wasteland_biome.tres
+res://enemies/eye monster/eye_monster_3d.gd
+res://enemies/snowman/snowman_3d.tscn
+res://enemies/eye monster/eye_monster_3d.tscn
+res://enemies/snowman/snowman_3d.gd
+res://environment/environment resources/snowy.tres

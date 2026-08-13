@@ -27,7 +27,7 @@ func pistol_play_inspection() -> void:
 	animation_player.play("INSPECTION", 0.1)
 #endregion
 
-@export var damage := 1
+@export var damage := 2
 @export var range_distance := 100.0
 @export var fire_trauma := 0.2
 
@@ -60,7 +60,7 @@ func pistol_attack() -> void:
 		
 	var node = ray.get_collider()
 	while node:
-		if node is EyeMonster3D:
+		if node.is_in_group("enemy"):
 			node.health -= damage
 			break
 		node = node.get_parent()
