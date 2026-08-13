@@ -1,0 +1,16 @@
+# Godot
+.godot/
+
+# Exports (keep builds/ out of git; re-export when needed)
+builds/
+*.pck
+*.wasm
+
+# OS / editor junk
+.DS_Store
+*~
+*.tmp
+
+# Blender backups (keep .blend if you want; ignore autosaves)
+*.blend1
+*.blend2
