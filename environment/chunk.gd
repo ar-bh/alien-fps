@@ -25,9 +25,10 @@ func _ready() -> void:
 	add_to_group("chunks")
 	_update_chunk()
 	
-	if not Engine.is_editor_hint() and (biome.enemies.size() > 0):
-		_enemy_timer.start()
-		_enemy_timer.timeout.connect(_on_enemy_timer_timeout)
+	if biome:
+		if not Engine.is_editor_hint() and (biome.enemies.size() > 0):
+			_enemy_timer.start()
+			_enemy_timer.timeout.connect(_on_enemy_timer_timeout)
 
 func _set_biome(new_biome: BiomeData) -> void:
 	biome = new_biome

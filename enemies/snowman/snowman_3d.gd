@@ -285,8 +285,8 @@ func _explode() -> void:
 	_is_fusing = false
 	current_state = State.DEAD
 
-	if player in detection_area.get_overlapping_areas():
-		player.health -= damage
+	if player and global_position.distance_to(player.global_position) <= 4.0:
+		player.health -= int(damage)
 
 	body_mesh.visible = false
 	staff_mesh.visible = false

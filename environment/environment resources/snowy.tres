@@ -8,6 +8,6 @@
 script = ExtResource("1_58on8")
 biome_name = "snowy"
 texture = ExtResource("2_28b45")
-uv1_scale = Vector3(10, 10, 1)
+uv1_scale = Vector3(20, 20, 1)
 enemies = Array[PackedScene]([ExtResource("1_xdx4k")])
 metadata/_custom_type_script = "uid://cceitt32vdi31"

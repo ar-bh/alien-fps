@@ -31,7 +31,7 @@ func _setup_blend() -> void:
 		_apply_blend(left, right)
 	elif (forward and backward) and not (left and right):
 		rotation_degrees.y = -90.0
-		_apply_blend(forward, backward)
+		_apply_blend(backward, forward)
 		
 	else:
 		push_warning(name, " need exactly one pair of left/right, or forward/backward", " left=", left, " right=", right, " forward=", forward, " backward=", backward)
