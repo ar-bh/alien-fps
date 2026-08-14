@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b51s3ued3j1fg"]
 
 [ext_resource type="Script" path="res://gameplay/start_screen.gd" id="1_script"]
-[ext_resource type="PackedScene" path="res://gameplay/start_preview.tscn" id="2_preview"]
+[ext_resource type="PackedScene" uid="uid://fffybqkvh3wk" path="res://gameplay/start_preview.tscn" id="2_preview"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBox_panel"]
 content_margin_left = 36.0
@@ -115,8 +115,10 @@ label_settings = SubResource("LabelSettings_subtitle")
 layout_mode = 2
 text = "Eye monster  —  200 pts
 Snowman  —  250 pts
-Axe kill  —  2× score
-Gun kill  —  normal score"
+eye monster = 200 points
+snowman (creeper) = 250 points
+gun kill = 1x score
+axe kill = 2x score"
 label_settings = SubResource("LabelSettings_body")
 autowrap_mode = 3
 
@@ -131,11 +133,11 @@ label_settings = SubResource("LabelSettings_subtitle")
 
 [node name="ControlsBody" type="Label" parent="Split/LeftPanel/Margin/Content" unique_id=1471791818]
 layout_mode = 2
-text = "WASD  —  move
-Mouse  —  look
-LMB  —  attack
-Space  —  jump
-1–0  —  switch weapon"
+text = "wasd = move
+mouse = look around
+left click = attack/shoot
+space = jump
+0-9 = items (axe & gun)"
 label_settings = SubResource("LabelSettings_body")
 autowrap_mode = 3
 
@@ -172,7 +174,7 @@ stretch = true
 [node name="SubViewport" type="SubViewport" parent="Split/RightPanel" unique_id=1126812144]
 own_world_3d = true
 handle_input_locally = false
-size = Vector2i(558, 879)
+size = Vector2i(558, 939)
 render_target_update_mode = 4
 
 [node name="StartPreview" parent="Split/RightPanel/SubViewport" unique_id=2070944572 instance=ExtResource("2_preview")]
