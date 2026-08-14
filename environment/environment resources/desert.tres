@@ -7,7 +7,7 @@
 
 [resource]
 script = ExtResource("1_6jl1t")
-biome_name = "\"desert\""
+biome_name = "desert"
 texture = ExtResource("2_vsh7j")
 amount_of_content = [1, 10]
 content = Array[PackedScene]([ExtResource("1_qgbj3")])

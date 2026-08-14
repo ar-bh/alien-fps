@@ -134,9 +134,9 @@ func _ready() -> void:
 	#region spawn info
 	
 	add_to_group("enemy")
-	
+	select_variation()
 	set_current_state(State.IDLE)
-	_select_variation()
+
 	_calculate_stats()
 	
 
@@ -215,13 +215,17 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 #region chunk funcs
-func _select_variation() -> void:
+func select_variation() -> void:
 	var biome: BiomeData = _get_current_biome()
+	if biome == null:
+		return
 	var biome_name = biome.biome_name
 	if biome_colors.has(biome_name):
 		var mat = mesh.material_override
 		if mat == null:
 			mat = mesh.get_active_material(0)
+		if mat == null:
+			return
 			
 		mat = mat.duplicate()
 		mesh.material_override = mat

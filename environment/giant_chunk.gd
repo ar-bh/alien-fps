@@ -51,6 +51,6 @@ func _spawn_enemy() -> void:
 	
 	var chunk: Chunk = chunks.pick_random()
 	var enemy = biome.enemies.pick_random().instantiate()
-	get_tree().current_scene.add_child(enemy)
 	enemy.global_position = chunk.to_global(chunk.get_random_point_on_chunk())
-	
+	get_tree().current_scene.add_child(enemy)
+	_enemies.append(enemy)

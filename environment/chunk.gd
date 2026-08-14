@@ -20,6 +20,8 @@ class_name Chunk extends Node3D
 
 @export_group("Enemies")
 @export var spawn_timer_range := [1.0, 20.0]
+@export var max_enemies := 4
+var _enemies: Array = []
 
 func _ready() -> void:
 	add_to_group("chunks")
@@ -34,6 +36,11 @@ func _start_enemies() -> void:
 		return
 	if biome == null or biome.enemies.is_empty():
 		return
+		
+	_enemies = _enemies.filter(func(enemy): return is_instance_valid(enemy))
+	if _enemies.size() >= max_enemies:
+		return
+	
 	_enemy_timer.timeout.connect(_on_enemy_timer_timeout)
 	_enemy_timer.start()
 
@@ -150,10 +157,12 @@ func _spawn_extras() -> void:
 
 func _on_enemy_timer_timeout() -> void:
 	_enemy_timer.wait_time = randf_range(spawn_timer_range[0], spawn_timer_range[1])
-	_spawn_enemy()
+	spawn_enemy()
 
-func _spawn_enemy () -> void:
+func spawn_enemy() -> void:
 	var enemy = biome.enemies.pick_random().instantiate()
+	if enemy.has_method("select_variation"):
+		enemy.select_variation()
 	enemy.global_position = to_global(get_random_point_on_chunk())
 	get_tree().current_scene.add_child(enemy)
 
