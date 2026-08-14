@@ -24,6 +24,8 @@ func set_health(new_health: int) -> void:
 		current_state = State.HIT
 		
 @export var death_animation_time: float = 0.5
+@export var score_value := 250
+var score_multiplier := 1
 #endregion
 
 #region animation
@@ -284,6 +286,7 @@ func _explode() -> void:
 	_is_dead = true
 	_is_fusing = false
 	current_state = State.DEAD
+	GameScore.add(score_value * score_multiplier)
 
 	if player and global_position.distance_to(player.global_position) <= 4.0:
 		player.health -= int(damage)

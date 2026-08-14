@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 AudioBus="*uid://44rgmglm2rhu"
+GameScore="*res://common/game_score.gd"
 
 [display]
 

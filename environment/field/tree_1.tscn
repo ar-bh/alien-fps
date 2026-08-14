@@ -2,12 +2,18 @@
 
 [ext_resource type="PackedScene" uid="uid://dxtvudqy46x2q" path="res://environment/field/realistic_tree_models_for_games.glb" id="1_dyvk4"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dyvk4"]
+albedo_color = Color(0.10953436, 0.68479943, 0.39563045, 1)
+
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_dyvk4"]
 height = 8.95025
 radius = 0.5439453
 
 [node name="Tree1" unique_id=968166954 instance=ExtResource("1_dyvk4")]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model" parent_id_path=PackedInt32Array(244286463) index="1" unique_id=595294275]
+[node name="Euro_Beech_7_Euro_Beech_Leaf_0" parent="Sketchfab_model/GameObject_fbx/RootNode/GameObject/Euro_Beech_7" parent_id_path=PackedInt32Array(1164107906) index="1" unique_id=1185954272]
+material_override = SubResource("StandardMaterial3D_dyvk4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model" parent_id_path=PackedInt32Array(525545091) index="1" unique_id=595294275]
 transform = Transform3D(-1, -8.742278e-08, 3.821371e-15, 0, -4.371139e-08, -1, 8.742278e-08, -1, 4.371139e-08, 3.9122784e-07, 1.9561392e-07, 4.475125)
 shape = SubResource("CylinderShape3D_dyvk4")

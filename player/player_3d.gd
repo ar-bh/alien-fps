@@ -128,6 +128,7 @@ func _on_melee_hitbox_area_entered(area: Node3D) -> void:
 	var monster := area.get_parent()
 	if monster.is_in_group("enemy"):
 		if "damage" in item_in_hand:
+			monster.score_multiplier = 2
 			monster.health -= item_in_hand.damage
 	
 #endregion

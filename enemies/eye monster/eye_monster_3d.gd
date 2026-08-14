@@ -25,6 +25,8 @@ func set_health(new_health: int) -> void:
 
 
 @export var death_animation_time: float = 0.5
+@export var score_value := 200
+var score_multiplier := 1
 #endregion
 
 #region animation 
@@ -291,6 +293,7 @@ func die() -> void:
 		return
 	_is_dead = true
 	current_state = State.DEAD
+	GameScore.add(score_value * score_multiplier)
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	var name := String(anim_name)

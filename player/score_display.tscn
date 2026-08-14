@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://player/score_label.gd" id="1_score"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_score"]
+font_size = 42
+font_color = Color(1, 1, 1, 1)
+outline_size = 14
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 6
+shadow_color = Color(0, 0, 0, 0.6)
+
+[node name="ScoreCanvas" type="CanvasLayer"]
+layer = 128
+
+[node name="ScoreLabel" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -240.0
+offset_top = 20.0
+offset_right = 240.0
+offset_bottom = 84.0
+grow_horizontal = 2
+text = "SCORE 0"
+label_settings = SubResource("LabelSettings_score")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("1_score")

@@ -11,9 +11,9 @@
 [ext_resource type="Script" uid="uid://lk44wmfglrk5" path="res://gameplay/fpscounter.gd" id="6_pm8vb"]
 [ext_resource type="Resource" uid="uid://b5ntlobupmyhj" path="res://environment/environment resources/glacier_biome.tres" id="7_wbhvp"]
 [ext_resource type="PackedScene" uid="uid://xbkel4ngq8iv" path="res://environment/giant_blend_chunk.tscn" id="9_fidds"]
-[ext_resource type="PackedScene" uid="uid://bb6eirildbf0i" path="res://environment/blend_chunk.tscn" id="10_33lee"]
 [ext_resource type="Resource" uid="uid://bpqccjoaxia36" path="res://environment/environment resources/wasteland_biome.tres" id="10_wbhvp"]
 [ext_resource type="PackedScene" uid="uid://ka6p6bncr0in" path="res://common/game_audio.tscn" id="18_wbhvp"]
+[ext_resource type="PackedScene" path="res://player/score_display.tscn" id="19_score"]
 
 [sub_resource type="Environment" id="Environment_tscrs"]
 background_mode = 1
@@ -31,49 +31,129 @@ environment_switching_duration = 1.0
 unique_name_in_owner = true
 environment = SubResource("Environment_tscrs")
 
-[node name="GiantChunk" parent="World" unique_id=633164688 instance=ExtResource("3_27dgl")]
+[node name="GiantChunk_desert_1" parent="World" unique_id=5001 instance=ExtResource("3_27dgl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -75, 0, -75)
 biome = ExtResource("3_skbmb")
 spawn_timer_range = [1.0, 20.0]
 
-[node name="GiantChunk2" parent="World" unique_id=1199238237 instance=ExtResource("3_27dgl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 200, 0, 0)
+[node name="GiantChunk_desert_2" parent="World" unique_id=5002 instance=ExtResource("3_27dgl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -75, 0, 75)
+biome = ExtResource("3_skbmb")
+spawn_timer_range = [1.0, 20.0]
+
+[node name="GiantChunk_desert_3" parent="World" unique_id=5003 instance=ExtResource("3_27dgl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75, 0, -75)
+biome = ExtResource("3_skbmb")
+spawn_timer_range = [1.0, 20.0]
+
+[node name="GiantChunk_desert_4" parent="World" unique_id=5004 instance=ExtResource("3_27dgl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75, 0, 75)
+biome = ExtResource("3_skbmb")
+spawn_timer_range = [1.0, 20.0]
+
+[node name="GiantChunk_field_1" parent="World" unique_id=5005 instance=ExtResource("3_27dgl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 275, 0, -75)
 biome = ExtResource("3_tr57x")
 spawn_timer_range = [1.0, 20.0]
 
-[node name="GiantChunk3" parent="World" unique_id=312742711 instance=ExtResource("3_27dgl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -200, 0, 0)
+[node name="GiantChunk_field_2" parent="World" unique_id=5006 instance=ExtResource("3_27dgl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 275, 0, 75)
+biome = ExtResource("3_tr57x")
+spawn_timer_range = [1.0, 20.0]
+
+[node name="GiantChunk_field_3" parent="World" unique_id=5007 instance=ExtResource("3_27dgl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 425, 0, -75)
+biome = ExtResource("3_tr57x")
+spawn_timer_range = [1.0, 20.0]
+
+[node name="GiantChunk_field_4" parent="World" unique_id=5008 instance=ExtResource("3_27dgl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 425, 0, 75)
+biome = ExtResource("3_tr57x")
+spawn_timer_range = [1.0, 20.0]
+
+[node name="GiantChunk_glacier_1" parent="World" unique_id=5009 instance=ExtResource("3_27dgl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -425, 0, -75)
 biome = ExtResource("7_wbhvp")
 spawn_timer_range = [1.0, 20.0]
 
-[node name="GiantChunk4" parent="World" unique_id=475870356 instance=ExtResource("3_27dgl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 200)
+[node name="GiantChunk_glacier_2" parent="World" unique_id=5010 instance=ExtResource("3_27dgl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -425, 0, 75)
+biome = ExtResource("7_wbhvp")
+spawn_timer_range = [1.0, 20.0]
+
+[node name="GiantChunk_glacier_3" parent="World" unique_id=5011 instance=ExtResource("3_27dgl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -275, 0, -75)
+biome = ExtResource("7_wbhvp")
+spawn_timer_range = [1.0, 20.0]
+
+[node name="GiantChunk_glacier_4" parent="World" unique_id=5012 instance=ExtResource("3_27dgl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -275, 0, 75)
+biome = ExtResource("7_wbhvp")
+spawn_timer_range = [1.0, 20.0]
+
+[node name="GiantChunk_snowy_1" parent="World" unique_id=5013 instance=ExtResource("3_27dgl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -75, 0, 275)
 biome = ExtResource("6_27dgl")
 spawn_timer_range = [1.0, 20.0]
 
-[node name="GiantChunk5" parent="World" unique_id=557820869 instance=ExtResource("3_27dgl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -200)
+[node name="GiantChunk_snowy_2" parent="World" unique_id=5014 instance=ExtResource("3_27dgl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -75, 0, 425)
+biome = ExtResource("6_27dgl")
+spawn_timer_range = [1.0, 20.0]
+
+[node name="GiantChunk_snowy_3" parent="World" unique_id=5015 instance=ExtResource("3_27dgl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75, 0, 275)
+biome = ExtResource("6_27dgl")
+spawn_timer_range = [1.0, 20.0]
+
+[node name="GiantChunk_snowy_4" parent="World" unique_id=5016 instance=ExtResource("3_27dgl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75, 0, 425)
+biome = ExtResource("6_27dgl")
+spawn_timer_range = [1.0, 20.0]
+
+[node name="GiantChunk_wasteland_1" parent="World" unique_id=5017 instance=ExtResource("3_27dgl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -75, 0, -425)
 biome = ExtResource("10_wbhvp")
 spawn_timer_range = [1.0, 20.0]
 
-[node name="GiantBlendChunk" parent="World" unique_id=1975840459 instance=ExtResource("9_fidds")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100, 0, 0)
+[node name="GiantChunk_wasteland_2" parent="World" unique_id=5018 instance=ExtResource("3_27dgl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -75, 0, -275)
+biome = ExtResource("10_wbhvp")
+spawn_timer_range = [1.0, 20.0]
 
-[node name="GiantBlendChunk2" parent="World" unique_id=297467759 instance=ExtResource("9_fidds")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100, 0, 0)
+[node name="GiantChunk_wasteland_3" parent="World" unique_id=5019 instance=ExtResource("3_27dgl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75, 0, -425)
+biome = ExtResource("10_wbhvp")
+spawn_timer_range = [1.0, 20.0]
 
-[node name="GiantBlendChunk3" type="Node3D" parent="World" unique_id=851650131]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 100)
+[node name="GiantChunk_wasteland_4" parent="World" unique_id=5020 instance=ExtResource("3_27dgl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75, 0, -275)
+biome = ExtResource("10_wbhvp")
+spawn_timer_range = [1.0, 20.0]
 
-[node name="BlendChunk" parent="World/GiantBlendChunk3" unique_id=195745641 instance=ExtResource("10_33lee")]
+[node name="GiantBlendChunk_east_1" parent="World" unique_id=5021 instance=ExtResource("9_fidds")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 175, 0, -75)
 
-[node name="BlendChunk2" parent="World/GiantBlendChunk3" unique_id=1920590656 instance=ExtResource("10_33lee")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -50)
+[node name="GiantBlendChunk_east_2" parent="World" unique_id=5022 instance=ExtResource("9_fidds")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 175, 0, 75)
 
-[node name="BlendChunk3" parent="World/GiantBlendChunk3" unique_id=1488404954 instance=ExtResource("10_33lee")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 50)
+[node name="GiantBlendChunk_west_1" parent="World" unique_id=5023 instance=ExtResource("9_fidds")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -175, 0, -75)
 
-[node name="GiantBlendChunk4" parent="World" unique_id=814962303 instance=ExtResource("9_fidds")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, -100)
+[node name="GiantBlendChunk_west_2" parent="World" unique_id=5024 instance=ExtResource("9_fidds")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -175, 0, 75)
+
+[node name="GiantBlendChunk_north_1" parent="World" unique_id=5025 instance=ExtResource("9_fidds")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -75, 0, 175)
+
+[node name="GiantBlendChunk_north_2" parent="World" unique_id=5026 instance=ExtResource("9_fidds")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 75, 0, 175)
+
+[node name="GiantBlendChunk_south_1" parent="World" unique_id=5027 instance=ExtResource("9_fidds")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -75, 0, -175)
+
+[node name="GiantBlendChunk_south_2" parent="World" unique_id=5028 instance=ExtResource("9_fidds")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 75, 0, -175)
 
 [node name="FX" type="Node" parent="." unique_id=204154210]
 
@@ -88,10 +168,10 @@ offset_right = 170.0
 offset_bottom = 59.0
 script = ExtResource("6_pm8vb")
 
+[node name="ScoreCanvas" parent="." unique_id=403969447 instance=ExtResource("19_score")]
+
 [node name="Player3D" parent="." unique_id=850945551 instance=ExtResource("2_4ssrn")]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 12)
 speed = 15.0
 sensitivity = 0.005
-
-[editable path="World/GiantBlendChunk4"]

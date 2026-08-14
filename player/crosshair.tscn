@@ -19,4 +19,5 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Control" unique_id=742950325]
+position = Vector2(-11, -11)
 texture = ExtResource("1_k2v2k")
