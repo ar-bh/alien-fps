@@ -1,0 +1,178 @@
+[gd_scene format=3 uid="uid://b51s3ued3j1fg"]
+
+[ext_resource type="Script" path="res://gameplay/start_screen.gd" id="1_script"]
+[ext_resource type="PackedScene" path="res://gameplay/start_preview.tscn" id="2_preview"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_panel"]
+content_margin_left = 36.0
+content_margin_top = 36.0
+content_margin_right = 36.0
+content_margin_bottom = 36.0
+bg_color = Color(0.06, 0.07, 0.09, 0.92)
+
+[sub_resource type="LabelSettings" id="LabelSettings_title"]
+font_size = 64
+font_color = Color(0.95, 0.95, 0.92, 1)
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_subtitle"]
+font_size = 20
+font_color = Color(0.75, 0.78, 0.82, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_body"]
+line_spacing = 4.0
+font_size = 18
+font_color = Color(0.88, 0.9, 0.92, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_button"]
+content_margin_left = 28.0
+content_margin_top = 14.0
+content_margin_right = 28.0
+content_margin_bottom = 14.0
+bg_color = Color(0.85, 0.22, 0.18, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_button_pressed"]
+content_margin_left = 28.0
+content_margin_top = 14.0
+content_margin_right = 28.0
+content_margin_bottom = 14.0
+bg_color = Color(0.55, 0.12, 0.1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_button_hover"]
+content_margin_left = 28.0
+content_margin_top = 14.0
+content_margin_right = 28.0
+content_margin_bottom = 14.0
+bg_color = Color(1, 0.35, 0.25, 1)
+
+[node name="StartScreen" type="Control" unique_id=2124683623]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1131621524]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.04, 0.05, 0.06, 1)
+
+[node name="Split" type="HBoxContainer" parent="." unique_id=371210233]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="LeftPanel" type="PanelContainer" parent="Split" unique_id=346456384]
+custom_minimum_size = Vector2(420, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.42
+theme_override_styles/panel = SubResource("StyleBox_panel")
+
+[node name="Margin" type="MarginContainer" parent="Split/LeftPanel" unique_id=610511727]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Content" type="VBoxContainer" parent="Split/LeftPanel/Margin" unique_id=803524995]
+layout_mode = 2
+theme_override_constants/separation = 18
+
+[node name="Title" type="Label" parent="Split/LeftPanel/Margin/Content" unique_id=958282931]
+layout_mode = 2
+text = "arjun's alien fps!"
+label_settings = SubResource("LabelSettings_title")
+
+[node name="Tagline" type="Label" parent="Split/LeftPanel/Margin/Content" unique_id=1196107603]
+layout_mode = 2
+text = "Hi! I'm Arjun, and this is my game for the Stardance Challenge. go explore and kill enemies! that's all, have fun!"
+label_settings = SubResource("LabelSettings_subtitle")
+autowrap_mode = 3
+
+[node name="Spacer1" type="Control" parent="Split/LeftPanel/Margin/Content" unique_id=1658106096]
+custom_minimum_size = Vector2(0, 12)
+layout_mode = 2
+
+[node name="ScoreHeader" type="Label" parent="Split/LeftPanel/Margin/Content" unique_id=285894677]
+layout_mode = 2
+text = "SCORING"
+label_settings = SubResource("LabelSettings_subtitle")
+
+[node name="ScoreBody" type="Label" parent="Split/LeftPanel/Margin/Content" unique_id=1606513916]
+layout_mode = 2
+text = "Eye monster  —  200 pts
+Snowman  —  250 pts
+Axe kill  —  2× score
+Gun kill  —  normal score"
+label_settings = SubResource("LabelSettings_body")
+autowrap_mode = 3
+
+[node name="Spacer2" type="Control" parent="Split/LeftPanel/Margin/Content" unique_id=793276171]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+
+[node name="ControlsHeader" type="Label" parent="Split/LeftPanel/Margin/Content" unique_id=1529645246]
+layout_mode = 2
+text = "CONTROLS"
+label_settings = SubResource("LabelSettings_subtitle")
+
+[node name="ControlsBody" type="Label" parent="Split/LeftPanel/Margin/Content" unique_id=1471791818]
+layout_mode = 2
+text = "WASD  —  move
+Mouse  —  look
+LMB  —  attack
+Space  —  jump
+1–0  —  switch weapon"
+label_settings = SubResource("LabelSettings_body")
+autowrap_mode = 3
+
+[node name="SpacerGrow" type="Control" parent="Split/LeftPanel/Margin/Content" unique_id=1104908160]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PlayButton" type="Button" parent="Split/LeftPanel/Margin/Content" unique_id=1792362148]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 56)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBox_button")
+theme_override_styles/pressed = SubResource("StyleBox_button_pressed")
+theme_override_styles/hover = SubResource("StyleBox_button_hover")
+theme_override_styles/focus = SubResource("StyleBox_button_hover")
+text = "PLAY"
+
+[node name="Hint" type="Label" parent="Split/LeftPanel/Margin/Content" unique_id=1550082374]
+layout_mode = 2
+text = "Press Enter or Space to start"
+label_settings = SubResource("LabelSettings_subtitle")
+horizontal_alignment = 1
+
+[node name="RightPanel" type="SubViewportContainer" parent="Split" unique_id=2139403169]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.58
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="Split/RightPanel" unique_id=1126812144]
+own_world_3d = true
+handle_input_locally = false
+size = Vector2i(558, 879)
+render_target_update_mode = 4
+
+[node name="StartPreview" parent="Split/RightPanel/SubViewport" unique_id=2070944572 instance=ExtResource("2_preview")]

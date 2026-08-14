@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cyhatkxihpqd5"
+path="res://.godot/imported/Y2Mate.is - Bad Bunny - EoO Video Lyrics.mp3-d404e90ac439cb54ac0039f75f354763.mp3str"
+
+[deps]
+
+source_file="res://common/Y2Mate.is - Bad Bunny - EoO Video Lyrics.mp3"
+dest_files=["res://.godot/imported/Y2Mate.is - Bad Bunny - EoO Video Lyrics.mp3-d404e90ac439cb54ac0039f75f354763.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

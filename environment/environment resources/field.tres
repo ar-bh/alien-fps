@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cxpp7s8mhdamr" path="res://environment/field/tree_1.tscn" id="1_aeg1g"]
 [ext_resource type="Script" uid="uid://cceitt32vdi31" path="res://environment/biome_data.gd" id="1_v4g7r"]
 [ext_resource type="Texture2D" uid="uid://3nd27gix68ae" path="res://environment/field/5_diffuseOriginal.png" id="2_0amq0"]
-[ext_resource type="PackedScene" uid="uid://b8kfurtreefield" path="res://environment/field/tree_2.tscn" id="3_fur"]
+[ext_resource type="PackedScene" uid="uid://edkmc782r8yn" path="res://environment/field/tree_2.tscn" id="3_fur"]
 
 [resource]
 script = ExtResource("1_v4g7r")

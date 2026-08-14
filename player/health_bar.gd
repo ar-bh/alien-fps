@@ -17,7 +17,7 @@ func _set_health(new_health):
 	
 	if health <= 0:
 		if parent.has_method("die"):
-			parent.die()
+			parent.die(false)
 			queue_free()
 			
 	if health < prev_health:

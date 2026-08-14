@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://fffybqkvh3wk"]
+
+[ext_resource type="PackedScene" uid="uid://0tn7dopaur0g" path="res://environment/chunk.tscn" id="1_chunk"]
+[ext_resource type="Resource" uid="uid://650wt70dnxt5" path="res://environment/environment resources/desert.tres" id="2_desert"]
+[ext_resource type="PackedScene" uid="uid://dyatm1x1enkuo" path="res://enemies/eye monster/eye_monster_3d.tscn" id="3_eye"]
+
+[sub_resource type="Environment" id="Environment_preview"]
+background_mode = 1
+background_color = Color(0.83, 0.52, 0.28, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.95, 0.85, 0.7, 1)
+ambient_light_energy = 0.55
+
+[node name="StartPreview" type="Node3D" unique_id=516263252]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=794671851]
+environment = SubResource("Environment_preview")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=324124576]
+transform = Transform3D(0.866, -0.354, 0.354, 0, 0.707, 0.707, -0.5, -0.612, 0.612, 0, 40, 0)
+shadow_enabled = true
+
+[node name="Chunk" parent="." unique_id=1023821900 instance=ExtResource("1_chunk")]
+biome = ExtResource("2_desert")
+show_spawns_in_editor = false
+spawn_timer_range = [1.0, 20.0]
+max_enemies = 0
+
+[node name="Creature" parent="." unique_id=776793316 instance=ExtResource("3_eye")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 100, 0)
+
+[node name="PreviewCamera" type="Camera3D" parent="." unique_id=1158717750]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 105, 8)
+current = true
+fov = 50.0

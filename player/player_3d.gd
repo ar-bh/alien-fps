@@ -139,8 +139,14 @@ func _on_melee_hitbox_area_entered(area: Node3D) -> void:
 @export var max_health := 5
 @export var health := max_health:
 	set = set_new_health
-	
+@export var fall_kill_y := -25.0
+
+var _is_dead := false
+const DEATH_SCREEN := preload("res://gameplay/death_screen.tscn")
+
 func set_new_health(new_health: int) -> void:
+	if _is_dead:
+		return
 	var previous := health
 	health = maxi(new_health, 0)
 	if health < previous:
@@ -148,11 +154,21 @@ func set_new_health(new_health: int) -> void:
 		_health_bar.health = health
 	print(health)
 	if health == 0:
-		die()
+		die(false)
 
 
-func die() -> void:
-	get_tree().quit()
+func die(fell_off_map := false) -> void:
+	if _is_dead:
+		return
+	_is_dead = true
+	set_physics_process(false)
+	set_process(false)
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	var message := "how do you even do that?" if fell_off_map else "you died"
+	var screen := DEATH_SCREEN.instantiate()
+	get_tree().current_scene.add_child(screen)
+	screen.setup(message, GameScore.score)
+	get_tree().paused = true
 
 @onready var _health_bar: HealthBar = %HealthBar
 #endregion
@@ -223,6 +239,10 @@ func _physics_process(delta) -> void:
 		velocity.z = move_toward(velocity.z, 0.0, speed)
 		
 	move_and_slide()
+
+	if global_position.y < fall_kill_y:
+		die(true)
+		return
 	
 	
 	# fall
