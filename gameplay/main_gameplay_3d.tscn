@@ -33,22 +33,27 @@ environment = SubResource("Environment_tscrs")
 
 [node name="GiantChunk" parent="World" unique_id=633164688 instance=ExtResource("3_27dgl")]
 biome = ExtResource("3_skbmb")
+spawn_timer_range = [1.0, 20.0]
 
 [node name="GiantChunk2" parent="World" unique_id=1199238237 instance=ExtResource("3_27dgl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 200, 0, 0)
 biome = ExtResource("3_tr57x")
+spawn_timer_range = [1.0, 20.0]
 
 [node name="GiantChunk3" parent="World" unique_id=312742711 instance=ExtResource("3_27dgl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -200, 0, 0)
 biome = ExtResource("7_wbhvp")
+spawn_timer_range = [1.0, 20.0]
 
 [node name="GiantChunk4" parent="World" unique_id=475870356 instance=ExtResource("3_27dgl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 200)
 biome = ExtResource("6_27dgl")
+spawn_timer_range = [1.0, 20.0]
 
 [node name="GiantChunk5" parent="World" unique_id=557820869 instance=ExtResource("3_27dgl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -200)
 biome = ExtResource("10_wbhvp")
+spawn_timer_range = [1.0, 20.0]
 
 [node name="GiantBlendChunk" parent="World" unique_id=1975840459 instance=ExtResource("9_fidds")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100, 0, 0)
@@ -60,25 +65,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100, 0, 0)
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 100)
 
 [node name="BlendChunk" parent="World/GiantBlendChunk3" unique_id=195745641 instance=ExtResource("10_33lee")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
 [node name="BlendChunk2" parent="World/GiantBlendChunk3" unique_id=1920590656 instance=ExtResource("10_33lee")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, -50)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -50)
 
 [node name="BlendChunk3" parent="World/GiantBlendChunk3" unique_id=1488404954 instance=ExtResource("10_33lee")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 50)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 50)
 
 [node name="GiantBlendChunk4" parent="World" unique_id=814962303 instance=ExtResource("9_fidds")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, -100)
-
-[node name="BlendChunk" parent="World/GiantBlendChunk4" index="0" unique_id=195745641]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
-
-[node name="BlendChunk2" parent="World/GiantBlendChunk4" index="1" unique_id=1920590656]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, -50)
-
-[node name="BlendChunk3" parent="World/GiantBlendChunk4" index="2" unique_id=1488404954]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 50)
 
 [node name="FX" type="Node" parent="." unique_id=204154210]
 

@@ -3,6 +3,8 @@ class_name GiantChunk extends Node3D
 
 @export var biome: BiomeData: set = _set_biome
 @export var spawn_timer_range := [1.0, 20.0]
+@export var max_enemies := 4
+var _enemies: Array = []
 
 var _enemy_timer: Timer
 
@@ -34,6 +36,10 @@ func _on_enemy_timer_timeout() -> void:
 	
 func _spawn_enemy() -> void:
 	if biome == null or biome.enemies.is_empty():
+		return
+		
+	_enemies = _enemies.filter(func(e): return is_instance_valid(e))
+	if _enemies.size() >= max_enemies:
 		return
 		
 	var chunks: Array[Chunk] = []
