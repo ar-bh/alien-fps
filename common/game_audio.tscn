@@ -3,6 +3,7 @@
 [ext_resource type="AudioStream" uid="uid://csigml7utyrtx" path="res://weapons/pistol/pistol-firing-sound-full-sounds.mp3" id="1_uqyd5"]
 [ext_resource type="Script" uid="uid://dpugtpo8rcca8" path="res://common/game_audio.gd" id="1_xnn0j"]
 [ext_resource type="AudioStream" uid="uid://b0wybluhaf5qd" path="res://weapons/axe/punch-sound-effect.mp3" id="2_punch"]
+[ext_resource type="AudioStream" uid="uid://cyhatkxihpqd5" path="res://common/Y2Mate.is - Bad Bunny - EoO Video Lyrics.mp3" id="3_eeo"]
 
 [node name="GameAudio" type="Node" unique_id=1280094974]
 script = ExtResource("1_xnn0j")
@@ -14,3 +15,7 @@ max_polyphony = 2
 [node name="AxeSwungPlayer" type="AudioStreamPlayer" parent="." unique_id=937929898]
 stream = ExtResource("2_punch")
 max_polyphony = 2
+
+[node name="EeoMusicPlayer" type="AudioStreamPlayer" parent="." unique_id=915634729]
+stream = ExtResource("3_eeo")
+volume_db = -20.079
