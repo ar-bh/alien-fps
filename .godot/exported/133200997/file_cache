@@ -1,0 +1,31 @@
+res://addons/godot_super-wakatime/api_key_prompt.tscn::a6988a5ba43d5aa92a08f216c1db28db::1785346995::res://.godot/exported/133200997/export-cd8705cb5e2533bd79c64579ac674dae-api_key_prompt.scn
+res://addons/godot_super-wakatime/counter.tscn::7f13ad35960e259f6de719f9785ce249::1785346995::res://.godot/exported/133200997/export-4af6c9115c1c285af5925fa1ce6a526e-counter.scn
+res://common/cel_shader_fx.tscn::6dac7a1f80d9f56ad32330a7f66677db::1786226558::res://.godot/exported/133200997/export-252dabfcb130d031dd9730120b4514c0-cel_shader_fx.scn
+res://common/game_audio.tscn::5fbe065a026f52ffa02ceb7e4bfeff8f::1786573358::res://.godot/exported/133200997/export-b75e82ba2f54db5f99a6fe9f3ff75477-game_audio.scn
+res://common/retro_fx.tscn::b903b1c2ce0a2289e65982741350c8ee::1786052719::res://.godot/exported/133200997/export-0c0b825201822c6b6fd14d6a879dffcf-retro_fx.scn
+res://common/unshaded_layer.tscn::e3564723034271e55c6cbb760ce94d56::1786468114::res://.godot/exported/133200997/export-d30c05099b6058ccebcbab5a8f3468cf-unshaded_layer.scn
+res://common/weapon_outline_fx.tscn::165936ba31eb29b714025d22c9229ea2::1786566280::res://.godot/exported/133200997/export-4b4b88a2e6f8c04671daeb0f79ae45ca-weapon_outline_fx.scn
+res://enemies/eye monster/eye_monster_3d.tscn::45fa80239580c36ef99ff45e86b1d6f9::1786658446::res://.godot/exported/133200997/export-814125770a03d42bb4e3d87903eee0c7-eye_monster_3d.scn
+res://enemies/snowman/snowman_3d.tscn::682126c93ddcb245bf3759187e73e7fc::1786654478::res://.godot/exported/133200997/export-9c79fc7151f8f53121401ef788de41f2-snowman_3d.scn
+res://environment/desert/cactus.tscn::d3639eaa3ba3c4101173d03ecf0e39bc::1786492319::res://.godot/exported/133200997/export-a69d9ce66f943c59ffc4ba9f86de1806-cactus.scn
+res://environment/environment resources/desert.tres::b9e49dc72aba5884b60f9245d5c00ac8::1786565718::res://.godot/exported/133200997/export-e6073da317de9752c90ea745796770b2-desert.res
+res://environment/environment resources/field.tres::069cff220c48894633ef1cf8f0914e38::1786493208::res://.godot/exported/133200997/export-2457baa1d375c9c197f52229ac72b0cb-field.res
+res://environment/environment resources/glacier_biome.tres::4b82726e6bf3bc60d3f05d33e87375b9::1786645424::res://.godot/exported/133200997/export-fc63f8b93163504cc0bbbc0d5290dbb4-glacier_biome.res
+res://environment/environment resources/snowy.tres::754c628be18575d9ed0689ec127af0ca::1786665327::res://.godot/exported/133200997/export-9b292b8d6f35b9d8e3812b164b13bf3a-snowy.res
+res://environment/environment resources/wasteland_biome.tres::a2e360b17a6df198d61c5c7d67e73185::1786577227::res://.godot/exported/133200997/export-da694a5b3d2ccb8f4f11c91039aa9e1e-wasteland_biome.res
+res://environment/field/grass_plane.tscn::67b5a0e84a1f12a3d859fb69a2fb9edf::1786493633::res://.godot/exported/133200997/export-1e02e1784de2cdacff3304cd6eb2ad13-grass_plane.scn
+res://environment/field/tree_1.tscn::8165485290ccfe89a69e7c4c79cdf67e::1786492141::res://.godot/exported/133200997/export-50a15b82959d0dfe9b96ef649a7696ea-tree_1.scn
+res://environment/glacier/icicles.tscn::bd0f517cc65465966dd32e636da881e1::1786492502::res://.godot/exported/133200997/export-9d6522c2b941a69aea2c9d41b28c8c1b-icicles.scn
+res://environment/wasteland/burned_grass.tscn::709a38024e2a88ce3eac0a1d3086cf42::1786291079::res://.godot/exported/133200997/export-e8de22878c65fb30beaf08fa4d4cf76c-burned_grass.scn
+res://environment/wasteland/burned_tree_1.tscn::9355fea8b7b0a35d9caff0c67998b1ed::1786492621::res://.godot/exported/133200997/export-db623615a0cc6a51a58655bf296987b9-burned_tree_1.scn
+res://environment/wasteland/burned_tree_2.tscn::dae6a148bfaa0e8613fa03db2889881b::1786492653::res://.godot/exported/133200997/export-036a40240180a4648a46220947993a1f-burned_tree_2.scn
+res://environment/wasteland/rock_cluster.tscn::d62ea1d078d2fc6ab161a28591592da0::1786492703::res://.godot/exported/133200997/export-d29fb47f3da19eac240181ad50ce285e-rock_cluster.scn
+res://environment/blend_chunk.tscn::99b40a6a9c25431f22630eeaddfd472c::1786553660::res://.godot/exported/133200997/export-0507de971ce5d2ba3e7f06134b989207-blend_chunk.scn
+res://environment/chunk.tscn::a3446a25e8f5d26728ccbdb716c3057e::1786493933::res://.godot/exported/133200997/export-a56513e58693ab40228e07baac343c30-chunk.scn
+res://environment/giant_blend_chunk.tscn::438114f8932c8e94d95fb6cfd3d2dc5d::1786398913::res://.godot/exported/133200997/export-68fb4503c92c5e07bc0fd1b085188aa0-giant_blend_chunk.scn
+res://environment/giant_chunk.tscn::a72ef2ab352ba4077d729d9e953a5cca::1786378841::res://.godot/exported/133200997/export-2387e02275ec8caef6f32120d5971b86-giant_chunk.scn
+res://gameplay/main_gameplay_3d.tscn::337da70046793afde0dc66e10c61c6fc::1786665290::res://.godot/exported/133200997/export-34bdc69639f4895569e182aaa31f829a-main_gameplay_3d.scn
+res://player/crosshair.tscn::10d29f9feadf26dc1eef11fc9fc0ec07::1786566173::res://.godot/exported/133200997/export-f8877b82e55b66c998ff9d14d72c554c-crosshair.scn
+res://player/health_bar.tscn::735282306a243e865c81ba38156565b7::1786476621::res://.godot/exported/133200997/export-75b04dbbe38c078215c4822de9f63480-health_bar.scn
+res://player/player_3d.tscn::3c57b61dc26c1e05b010bec5b675a38d::1786578342::res://.godot/exported/133200997/export-a7131b3bab722f1d71a2b4979701fffd-player_3d.scn
+res://weapons/axe/axe.tscn::20f7bfa65ccdce0beb4fa7352de0f5c7::1786570831::res://.godot/exported/133200997/export-ab949f781fa00fe069c3de98922749a9-axe.scn

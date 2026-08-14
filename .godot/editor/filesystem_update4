@@ -25,3 +25,7 @@ res://enemies/snowman/snowman_3d.tscn
 res://enemies/eye monster/eye_monster_3d.tscn
 res://enemies/snowman/snowman_3d.gd
 res://environment/environment resources/snowy.tres
+res://environment/blend_chunk.gd
+res://environment/chunk.tscn
+res://environment/giant_chunk.tscn
+res://environment/giant_chunk.gd

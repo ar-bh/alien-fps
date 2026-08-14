@@ -5,30 +5,40 @@
 
 [node name="GiantChunk" type="Node3D" unique_id=633164688]
 script = ExtResource("1_juho1")
+spawn_timer_range = null
 
 [node name="Chunk" parent="." unique_id=785402397 instance=ExtResource("1_x7u80")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -100, 0)
+spawn_timer_range = [1.0, 20.0]
 
 [node name="Chunk2" parent="." unique_id=1791471982 instance=ExtResource("1_x7u80")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, -100, 0)
+spawn_timer_range = [1.0, 20.0]
 
 [node name="Chunk3" parent="." unique_id=451613470 instance=ExtResource("1_x7u80")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50, -100, 0)
+spawn_timer_range = [1.0, 20.0]
 
 [node name="Chunk7" parent="." unique_id=236593602 instance=ExtResource("1_x7u80")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -100, 50)
+spawn_timer_range = [1.0, 20.0]
 
 [node name="Chunk8" parent="." unique_id=1797701244 instance=ExtResource("1_x7u80")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, -100, 50)
+spawn_timer_range = [1.0, 20.0]
 
 [node name="Chunk9" parent="." unique_id=1004799449 instance=ExtResource("1_x7u80")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50, -100, 50)
+spawn_timer_range = [1.0, 20.0]
 
 [node name="Chunk4" parent="." unique_id=176207205 instance=ExtResource("1_x7u80")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -100, -50)
+spawn_timer_range = [1.0, 20.0]
 
 [node name="Chunk5" parent="." unique_id=1360001198 instance=ExtResource("1_x7u80")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, -100, -50)
+spawn_timer_range = [1.0, 20.0]
 
 [node name="Chunk6" parent="." unique_id=47091006 instance=ExtResource("1_x7u80")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50, -100, -50)
+spawn_timer_range = [1.0, 20.0]
