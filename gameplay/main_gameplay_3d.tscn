@@ -43,7 +43,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 200, 0, -0.778)
 biome = ExtResource("6_27dgl")
 
 [node name="GiantChunk4" parent="World" unique_id=633164688 instance=ExtResource("3_27dgl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 200)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.058, 200)
 biome = ExtResource("3_skbmb")
 
 [node name="GiantChunk5" parent="World" unique_id=937834615 instance=ExtResource("3_27dgl")]
