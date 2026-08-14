@@ -10,7 +10,7 @@
 script = ExtResource("1_ehxbm")
 biome_name = "glacier"
 texture = ExtResource("2_8rvnn")
-amount_of_content = [1, 1]
+amount_of_content = [1, 0]
 content = Array[PackedScene]([ExtResource("1_t0kox")])
 content_size_range = [2.0, 4.0]
 environment_color = Color(0.7396758, 0.8644652, 0.98342985, 1)

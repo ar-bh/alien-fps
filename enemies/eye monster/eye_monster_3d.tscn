@@ -8,8 +8,8 @@
 albedo_texture = ExtResource("3_kbpa6")
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_knd1k"]
-radius = 6.932617
-height = 13.865234
+radius = 11.0
+height = 22.0
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_kbpa6"]
 height = 9.49646

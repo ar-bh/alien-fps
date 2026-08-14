@@ -52,6 +52,8 @@ func pistol_attack() -> void:
 	
 	ray.position = Vector3.ZERO
 	ray.rotation = Vector3.ZERO
+	ray.collide_with_areas = true
+	ray.collide_with_bodies = true
 	
 	ray.target_position = Vector3(0.0, 0.0, -range_distance)
 	ray.force_raycast_update()
@@ -59,6 +61,9 @@ func pistol_attack() -> void:
 		return
 		
 	var node = ray.get_collider()
+	# Area hits (HurtBox3D) live on the enemy; body hits are the enemy itself.
+	if node is Area3D and node.name == "HurtBox3D":
+		node = node.get_parent()
 	while node:
 		if node.is_in_group("enemy"):
 			node.health -= damage

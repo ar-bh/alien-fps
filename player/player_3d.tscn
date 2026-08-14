@@ -270,7 +270,7 @@ shape = SubResource("BoxShape3D_jeexd")
 
 [node name="ShootRay" type="RayCast3D" parent="Head3D/Camera3D" unique_id=1778730185]
 unique_name_in_owner = true
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
-target_position = Vector3(0, 0, 100)
+collide_with_areas = true
+target_position = Vector3(0, 0, -100)
 
 [editable path="Head3D/Camera3D/UnshadedLayer"]
