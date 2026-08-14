@@ -1,19 +1,18 @@
 [gd_scene format=3 uid="uid://lqvyhgay44wu"]
 
-[ext_resource type="PackedScene" uid="uid://ble3ptowh5r15" path="res://weapons/pistol/pistol.glb" id="1_uoc7u"]
 [ext_resource type="Script" uid="uid://3efho5dcn6ov" path="res://weapons/pistol/pistol_3d.gd" id="2_pistol"]
 [ext_resource type="Texture2D" uid="uid://lkbj5o4lc4fm" path="res://weapons/axe/axe_Arms_Diffuse.png" id="3_82tqe"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8dnsd"]
 albedo_texture = ExtResource("3_82tqe")
 
-[node name="Pistol3D" unique_id=610045667 instance=ExtResource("1_uoc7u")]
+[node name="Pistol3D" unique_id=610045667]
 script = ExtResource("2_pistol")
 
-[node name="Arms" parent="." index="0" unique_id=2097262845]
+[node name="Arms" parent="." index="0" unique_id=1711783416]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.041048408, 0.15059315, 0.17176378)
 
-[node name="Skeleton3D" parent="Arms" index="0" unique_id=991021374]
+[node name="Skeleton3D" parent="Arms" index="0" unique_id=1634236842]
 bones/1/rotation = Quaternion(0.09201373, -0.10668929, -0.70216376, 0.6979376)
 bones/2/rotation = Quaternion(-0.097536854, 0.0029745933, -0.050378285, 0.9939516)
 bones/3/rotation = Quaternion(-0.073382266, -0.0045434735, 0.08231712, 0.9938905)
@@ -25,13 +24,13 @@ bones/27/rotation = Quaternion(0.72519636, -0.008060372, -0.006772209, 0.6884616
 bones/30/rotation = Quaternion(-0.09401362, 3.2367117e-07, 6.265282e-07, 0.99557096)
 bones/40/rotation = Quaternion(0.038012523, -0.0009547501, -0.025093196, 0.99896175)
 
-[node name="Ch22_Body" parent="Arms/Skeleton3D" index="0" unique_id=1874144613]
+[node name="Ch22_Body" parent="Arms/Skeleton3D" index="0" unique_id=1143123493]
 material_override = SubResource("StandardMaterial3D_8dnsd")
 
-[node name="Gun" parent="." index="1" unique_id=526144919]
+[node name="Gun" parent="." index="1" unique_id=1895639214]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.041048408, 0.15059315, 0.17176378)
 
-[node name="Skeleton3D" parent="Gun" index="0" unique_id=1004128673]
+[node name="Skeleton3D" parent="Gun" index="0" unique_id=1610788148]
 bones/0/position = Vector3(-0.03631883, 0.030683052, 0.2917782)
 bones/0/rotation = Quaternion(0.7297673, -0.04258805, -0.10214487, 0.67467946)
 bones/1/rotation = Quaternion(0.6351425, -9.248405e-08, -2.2115852e-07, 0.77239496)

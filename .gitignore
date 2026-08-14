@@ -1,0 +1,11 @@
+# Godot cache (not needed on GitHub)
+.godot/
+
+# OS / editor junk
+.DS_Store
+*~
+*.tmp
+
+# Blender autosave backups
+*.blend1
+*.blend2
