@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cxpp7s8mhdamr" path="res://environment/field/tree_1.tscn" id="1_aeg1g"]
 [ext_resource type="Script" uid="uid://cceitt32vdi31" path="res://environment/biome_data.gd" id="1_v4g7r"]
 [ext_resource type="Texture2D" uid="uid://3nd27gix68ae" path="res://environment/field/5_diffuseOriginal.png" id="2_0amq0"]
+[ext_resource type="PackedScene" uid="uid://b8kfurtreefield" path="res://environment/field/tree_2.tscn" id="3_fur"]
 
 [resource]
 script = ExtResource("1_v4g7r")
@@ -10,6 +11,6 @@ biome_name = "field"
 texture = ExtResource("2_0amq0")
 uv1_scale = Vector3(10, 10, 0)
 amount_of_content = [1, 2]
-content = Array[PackedScene]([ExtResource("1_aeg1g")])
+content = Array[PackedScene]([ExtResource("1_aeg1g"), ExtResource("3_fur")])
 content_size_range = [0.3, 3.0]
 metadata/_custom_type_script = "uid://cceitt32vdi31"

@@ -150,10 +150,10 @@ func _spawn_extras() -> void:
 	if biome.biome_name == "field":
 		print("extras biome: ", biome.biome_name)
 		
-		var grass := grass_plane.instantiate()
-		print(grass)
-		add_child(grass)
-		grass.position = Vector3(0.0, chunk_height, 0.0)
+		#var grass := grass_plane.instantiate()
+		#print(grass)
+		#add_child(grass)
+		#grass.position = Vector3(0.0, chunk_height, 0.0)
 
 func _on_enemy_timer_timeout() -> void:
 	_enemy_timer.wait_time = randf_range(spawn_timer_range[0], spawn_timer_range[1])

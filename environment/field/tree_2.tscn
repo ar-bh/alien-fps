@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://edkmc782r8yn"]
+
+[ext_resource type="PackedScene" uid="uid://flg6ovmholnc" path="res://environment/field/fur_tree.glb" id="1_fur"]
+
+[node name="Tree2" instance=ExtResource("1_fur")]
