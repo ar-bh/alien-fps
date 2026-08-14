@@ -161,6 +161,7 @@ func die(fell_off_map := false) -> void:
 	if _is_dead:
 		return
 	_is_dead = true
+	GameScore.stop_tracking()
 	set_physics_process(false)
 	set_process(false)
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE

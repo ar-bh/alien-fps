@@ -137,7 +137,8 @@ text = "wasd = move
 mouse = look around
 left click = attack/shoot
 space = jump
-0-9 = items (axe & gun)"
+0-9 = items (axe & gun)
+m = toggle music"
 label_settings = SubResource("LabelSettings_body")
 autowrap_mode = 3
 
@@ -174,7 +175,7 @@ stretch = true
 [node name="SubViewport" type="SubViewport" parent="Split/RightPanel" unique_id=1126812144]
 own_world_3d = true
 handle_input_locally = false
-size = Vector2i(558, 939)
+size = Vector2i(558, 969)
 render_target_update_mode = 4
 
 [node name="StartPreview" parent="Split/RightPanel/SubViewport" unique_id=2070944572 instance=ExtResource("2_preview")]

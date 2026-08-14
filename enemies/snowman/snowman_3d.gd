@@ -304,9 +304,15 @@ func _explode() -> void:
 	
 	
 func _calculate_stats() -> void:
-	var size := randi_range(health_range_minimum, health_range_maximum)
-	scale = Vector3(size, size, size)
-	max_health = mini(size, 5)
+	var tier := GameScore.enemy_tier()
+	var size := randi_range(int(health_range_minimum), int(health_range_maximum)) + tier
+	size = maxi(size, 1)
+	var s := float(size) * GameScore.enemy_scale_mult()
+	scale = Vector3(s, s, s)
+	max_health = size + GameScore.enemy_extra_health()
 	health = max_health
-	
+	damage = maxi(1, int(damage) + GameScore.enemy_extra_damage())
+	move_speed *= GameScore.enemy_speed_mult()
+	fuse_move_speed = move_speed / 2.0
+
 	
