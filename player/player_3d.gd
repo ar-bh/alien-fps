@@ -5,7 +5,11 @@ class_name Player3D extends CharacterBody3D
 @export var speed := 5.0
 const JUMP_VELOCITY := 4.5
 @export var sensitivity := 0.01
+@export var min_pitch := deg_to_rad(-80.0)
+@export var max_pitch := deg_to_rad(80.0)
 var mouse_is_playing := false
+var _yaw := 0.0
+var _pitch := 0.0
 
 const GRAVITY := 9.8
 
@@ -184,6 +188,12 @@ func _ready() -> void:
 	set_current_item(0)
 	#endregion
 
+	#region camera
+	_yaw = _head.rotation.y
+	_pitch = _camera_3d.rotation.x
+	_apply_look()
+	#endregion
+
 	#region screenshake
 	_noise.seed = randi()
 	_noise.frequency = noise_frequency
@@ -194,21 +204,28 @@ func _ready() -> void:
 	_health_bar.setup_health()
 	#endregion
 
+func _apply_look() -> void:
+	_head.transform.basis = Basis.from_euler(Vector3(0.0, _yaw, 0.0))
+	# World camera pitches; viewmodel camera must stay fixed so weapons don't orbit.
+	var cam_pos := _camera_3d.position
+	_camera_3d.transform.basis = Basis.from_euler(Vector3(_pitch, 0.0, 0.0))
+	_camera_3d.position = cam_pos
+	_viewmodel_camera.transform.basis = Basis.IDENTITY
+
 func _process(delta: float) -> void:
 	#region screenshake
 	trauma = move_toward(trauma, 0.0, trauma_decay * delta)
 	_noise_t += delta
 	
 	var shake := pow(trauma, trauma_power)
+	# Only use positional shake — roll + steep pitch flips the camera and inverts movement feel.
 	if shake > 0.0:
 		_camera_3d.h_offset = max_offset.x * shake * _noise.get_noise_1d(_noise_t)
 		_camera_3d.v_offset = max_offset.y * shake * _noise.get_noise_1d(_noise_t + 100.0)
-		_camera_3d.rotation.z = max_roll * shake * _noise.get_noise_1d(_noise_t + 200.0)
 	else:
 		_camera_3d.h_offset = 0.0
 		_camera_3d.v_offset = 0.0
-		_camera_3d.rotation.z = 0.0
-		
+	_apply_look()
 	#endregion
 
 	var biome := get_current_biome()
@@ -231,8 +248,12 @@ func _physics_process(delta) -> void:
 			
 		
 	var input_direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
-	var direction = (_head.transform.basis * Vector3(input_direction.x, 0.0, input_direction.y)).normalized()
-	if direction:
+	# Move from yaw only (never camera pitch), so looking down can't invert W/S.
+	var basis := Basis.from_euler(Vector3(0.0, _yaw, 0.0))
+	var direction := basis * Vector3(input_direction.x, 0.0, input_direction.y)
+	direction.y = 0.0
+	if direction.length_squared() > 0.0001:
+		direction = direction.normalized()
 		velocity.x = direction.x * speed
 		velocity.z = direction.z * speed
 	else:
@@ -275,10 +296,10 @@ func _input(event: InputEvent) -> void:
 		mouse_is_playing = false
 	
 	if event is InputEventMouseMotion and mouse_is_playing:
-		_head.rotate_y(-event.relative.x * sensitivity)
-		_camera_3d.rotate_x(-event.relative.y * sensitivity)
-		_camera_3d.rotation.x = clampf(_camera_3d.rotation.x, deg_to_rad(-90), deg_to_rad(90))
-		_viewmodel_camera.rotation.x = clampf(_viewmodel_camera.rotation.x, deg_to_rad(-90), deg_to_rad(90))
+		_yaw -= event.relative.x * sensitivity
+		_pitch -= event.relative.y * sensitivity
+		_pitch = clampf(_pitch, min_pitch, max_pitch)
+		_apply_look()
 	#endregion
 
 func _unhandled_input(event: InputEvent) -> void:
