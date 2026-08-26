@@ -245,7 +245,7 @@ func _pick_wander_target() -> void:
 	var chunk = _get_current_chunk()
 	if chunk == null:
 		return
-	wander_target = chunk.to_global(chunk.get_random_point_on_chunk())
+	wander_target = chunk.to_global(chunk.get_clear_point_on_chunk(4.0))
 	
 func _start_fuse() -> void:
 	if _is_fusing or _is_dead:

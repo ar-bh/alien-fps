@@ -9,7 +9,7 @@
 script = ExtResource("1_6jl1t")
 biome_name = "desert"
 texture = ExtResource("2_vsh7j")
-amount_of_content = [1, 10]
+amount_of_content = [1, 3]
 content = Array[PackedScene]([ExtResource("1_qgbj3")])
 environment_color = Color(0.8281156, 0.5230941, 0.27941766, 1)
 enemies = Array[PackedScene]([ExtResource("2_tm8oh")])

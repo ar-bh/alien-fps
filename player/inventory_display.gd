@@ -9,13 +9,17 @@ extends HBoxContainer
 
 @onready var player: Player3D = get_tree().get_first_node_in_group("player")
 
-# Called when the node enters the scene tree for the first time.
+var _last_item := -999
+
 func _ready() -> void:
 	refresh()
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
+	if player == null:
+		return
+	if player.current_item == _last_item:
+		return
+	_last_item = player.current_item
 	refresh()
 
 func refresh() -> void:

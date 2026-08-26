@@ -127,7 +127,8 @@ var player
 @export var biome_colors: Dictionary = {
 	"wasteland": Color(1.0, 1.0, 1.0),
 	"glacier": Color("3fc4ff"),
-	"desert": Color("d5b04d")
+	"desert": Color("d5b04d"),
+	"field": Color("6dbf4c")
 }
 
 #endregion
@@ -252,7 +253,7 @@ func _pick_wander_target() -> void:
 	var chunk = _get_current_chunk()
 	if chunk == null:
 		return
-	wander_target = chunk.to_global(chunk.get_random_point_on_chunk())
+	wander_target = chunk.to_global(chunk.get_clear_point_on_chunk(4.0))
 	
 func _move_toward_point(point: Vector3, delta: float) -> void:
 	var target := point

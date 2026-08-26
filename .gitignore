@@ -9,3 +9,7 @@
 # Blender autosave backups
 *.blend1
 *.blend2
+
+# Local export tooling / builds
+tools/
+builds/

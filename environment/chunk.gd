@@ -22,6 +22,7 @@ class_name Chunk extends Node3D
 @export var spawn_timer_range := [1.0, 20.0]
 @export var max_enemies := 4
 var _enemies: Array = []
+var _prop_points: Array[Vector2] = []
 
 func _ready() -> void:
 	add_to_group("chunks")
@@ -96,6 +97,7 @@ func _apply_material_texture() -> void:
 	ground.material = mat
 
 func _clear_contents() -> void:
+	_prop_points.clear()
 	for child in get_children():
 		
 		if child is Timer:
@@ -135,8 +137,10 @@ func _spawn_contents() -> void:
 		add_child(item)
 		if Engine.is_editor_hint():
 			item.owner = get_tree().edited_scene_root
-		item.position = get_random_point_on_chunk()
 		var s := randf_range(biome.content_size_range[0], biome.content_size_range[1])
+		var clearance := maxf(3.0, 2.5 * s)
+		item.position = get_clear_point_on_chunk(clearance)
+		_prop_points.append(Vector2(item.position.x, item.position.z))
 		item.scale = Vector3(s, s, s)
 		item.rotate_y(randf_range(-PI/2, PI/2))
 
@@ -145,15 +149,7 @@ func _spawn_contents() -> void:
 func _spawn_extras() -> void:
 	if Engine.is_editor_hint():
 		return
-	if biome == null:
-		return
-	if biome.biome_name == "field":
-		print("extras biome: ", biome.biome_name)
-		
-		#var grass := grass_plane.instantiate()
-		#print(grass)
-		#add_child(grass)
-		#grass.position = Vector3(0.0, chunk_height, 0.0)
+	# Grass Multimesh is intentionally disabled (too expensive on weak PCs).
 
 func _on_enemy_timer_timeout() -> void:
 	_enemy_timer.wait_time = randf_range(spawn_timer_range[0], spawn_timer_range[1])
@@ -163,10 +159,25 @@ func spawn_enemy() -> void:
 	var enemy = biome.enemies.pick_random().instantiate()
 	if enemy.has_method("select_variation"):
 		enemy.select_variation()
-	enemy.global_position = to_global(get_random_point_on_chunk())
+	enemy.global_position = to_global(get_clear_point_on_chunk(4.0))
 	get_tree().current_scene.add_child(enemy)
 
 func get_random_point_on_chunk() -> Vector3:
 	var x := randf_range(-chunk_width * 0.5, chunk_width * 0.5)
 	var z := randf_range(-chunk_depth * 0.5, chunk_depth * 0.5)
 	return Vector3(x, chunk_height, z)
+
+## Returns a surface point that stays clear of spawned props (XZ distance).
+func get_clear_point_on_chunk(min_clearance := 4.0, max_attempts := 24) -> Vector3:
+	var point := get_random_point_on_chunk()
+	for _i in max_attempts:
+		point = get_random_point_on_chunk()
+		var xz := Vector2(point.x, point.z)
+		var blocked := false
+		for prop in _prop_points:
+			if xz.distance_to(prop) < min_clearance:
+				blocked = true
+				break
+		if not blocked:
+			return point
+	return point

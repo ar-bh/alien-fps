@@ -137,8 +137,7 @@ text = "wasd = move
 mouse = look around
 left click = attack/shoot
 space = jump
-0-9 = items (axe & gun)
-m = toggle music"
+0-9 = items (axe & gun)"
 label_settings = SubResource("LabelSettings_body")
 autowrap_mode = 3
 

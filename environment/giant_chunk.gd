@@ -2,8 +2,8 @@
 class_name GiantChunk extends Node3D
 
 @export var biome: BiomeData: set = _set_biome
-@export var spawn_timer_range := [1.0, 20.0]
-@export var max_enemies := 4
+@export var spawn_timer_range := [8.0, 25.0]
+@export var max_enemies := 2
 var _enemies: Array = []
 
 var _enemy_timer: Timer
@@ -51,6 +51,6 @@ func _spawn_enemy() -> void:
 	
 	var chunk: Chunk = chunks.pick_random()
 	var enemy = biome.enemies.pick_random().instantiate()
-	enemy.global_position = chunk.to_global(chunk.get_random_point_on_chunk())
+	enemy.global_position = chunk.to_global(chunk.get_clear_point_on_chunk(4.0))
 	get_tree().current_scene.add_child(enemy)
 	_enemies.append(enemy)

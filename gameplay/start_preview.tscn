@@ -18,7 +18,7 @@ environment = SubResource("Environment_preview")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=324124576]
 transform = Transform3D(0.866, -0.354, 0.354, 0, 0.707, 0.707, -0.5, -0.612, 0.612, 0, 40, 0)
-shadow_enabled = true
+shadow_enabled = false
 
 [node name="Chunk" parent="." unique_id=1023821900 instance=ExtResource("1_chunk")]
 biome = ExtResource("2_desert")

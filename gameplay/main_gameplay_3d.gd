@@ -5,6 +5,8 @@ extends Node3D
 @onready var world: Node = $World
 
 @export var environment_switching_duration := 0.2
+@export var chunk_cull_distance := 420.0
+@export var cull_check_interval := 0.35
 
 const LOCAL_CHUNK_OFFSETS: Array[Vector3] = [
 	Vector3(-75, 0, -75),
@@ -22,6 +24,8 @@ const REGION_ORIGINS := {
 }
 
 var current_biome: BiomeData: set = _set_current_biome
+var _cull_nodes: Array[Node3D] = []
+var _cull_timer := 0.0
 
 func _set_current_biome(new_biome: BiomeData) -> void:
 	if current_biome == new_biome:
@@ -40,6 +44,35 @@ func _set_current_biome(new_biome: BiomeData) -> void:
 func _ready() -> void:
 	player.gameplay = self
 	_layout_biomes()
+	_collect_cull_nodes()
+	_update_chunk_culling()
+
+func _process(delta: float) -> void:
+	_cull_timer -= delta
+	if _cull_timer > 0.0:
+		return
+	_cull_timer = cull_check_interval
+	_update_chunk_culling()
+
+func _collect_cull_nodes() -> void:
+	_cull_nodes.clear()
+	for child in world.get_children():
+		if child is Node3D and (child.name.begins_with("GiantChunk_") or child.name.begins_with("GiantBlendChunk_")):
+			_cull_nodes.append(child)
+
+func _update_chunk_culling() -> void:
+	if player == null:
+		return
+	var origin := player.global_position
+	var max_d2 := chunk_cull_distance * chunk_cull_distance
+	for node in _cull_nodes:
+		if not is_instance_valid(node):
+			continue
+		var offset := node.global_position - origin
+		offset.y = 0.0
+		var near := offset.length_squared() <= max_d2
+		node.visible = near
+		node.process_mode = Node.PROCESS_MODE_INHERIT if near else Node.PROCESS_MODE_DISABLED
 
 func _layout_biomes() -> void:
 	var by_biome: Dictionary = {}

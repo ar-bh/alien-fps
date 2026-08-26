@@ -55,8 +55,6 @@ var current_item: int: set = set_current_item
 var item_in_hand: Node3D
 
 func set_current_item(new_item: int) -> void:
-	print(new_item)
-	
 	if not is_node_ready():
 		current_item = new_item
 		return
@@ -156,7 +154,6 @@ func set_new_health(new_health: int) -> void:
 	if health < previous:
 		add_trauma(0.3*(max_health-health))
 		_health_bar.health = health
-	print(health)
 	if health == 0:
 		die(false)
 
@@ -379,13 +376,21 @@ func _unhandled_input(event: InputEvent) -> void:
 	#endregion
 
 var gameplay: Node3D
+var _cached_chunk: Chunk
 
 func get_current_chunk() -> Chunk:
+	if _cached_chunk != null and is_instance_valid(_cached_chunk):
+		var local := _cached_chunk.to_local(global_position)
+		if absf(local.x) <= _cached_chunk.chunk_width * 0.5 \
+		and absf(local.z) <= _cached_chunk.chunk_depth * 0.5:
+			return _cached_chunk
 	for chunk in get_tree().get_nodes_in_group("chunks"):
 		var local = chunk.to_local(global_position)
 		if absf(local.x) <= chunk.chunk_width * 0.5 \
 		and absf(local.z) <= chunk.chunk_depth * 0.5:
+			_cached_chunk = chunk
 			return chunk
+	_cached_chunk = null
 	return null
 	
 func get_current_biome() -> BiomeData:

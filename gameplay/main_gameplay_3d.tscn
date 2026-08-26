@@ -34,102 +34,122 @@ environment = SubResource("Environment_tscrs")
 [node name="GiantChunk_desert_1" parent="World" unique_id=5001 instance=ExtResource("3_27dgl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -75, 0, -75)
 biome = ExtResource("3_skbmb")
-spawn_timer_range = [1.0, 20.0]
+spawn_timer_range = [8.0, 25.0]
+max_enemies = 2
 
 [node name="GiantChunk_desert_2" parent="World" unique_id=5002 instance=ExtResource("3_27dgl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -75, 0, 75)
 biome = ExtResource("3_skbmb")
-spawn_timer_range = [1.0, 20.0]
+spawn_timer_range = [8.0, 25.0]
+max_enemies = 2
 
 [node name="GiantChunk_desert_3" parent="World" unique_id=5003 instance=ExtResource("3_27dgl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75, 0, -75)
 biome = ExtResource("3_skbmb")
-spawn_timer_range = [1.0, 20.0]
+spawn_timer_range = [8.0, 25.0]
+max_enemies = 2
 
 [node name="GiantChunk_desert_4" parent="World" unique_id=5004 instance=ExtResource("3_27dgl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75, 0, 75)
 biome = ExtResource("3_skbmb")
-spawn_timer_range = [1.0, 20.0]
+spawn_timer_range = [8.0, 25.0]
+max_enemies = 2
 
 [node name="GiantChunk_field_1" parent="World" unique_id=5005 instance=ExtResource("3_27dgl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 275, 0, -75)
 biome = ExtResource("3_tr57x")
-spawn_timer_range = [1.0, 20.0]
+spawn_timer_range = [8.0, 25.0]
+max_enemies = 2
 
 [node name="GiantChunk_field_2" parent="World" unique_id=5006 instance=ExtResource("3_27dgl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 275, 0, 75)
 biome = ExtResource("3_tr57x")
-spawn_timer_range = [1.0, 20.0]
+spawn_timer_range = [8.0, 25.0]
+max_enemies = 2
 
 [node name="GiantChunk_field_3" parent="World" unique_id=5007 instance=ExtResource("3_27dgl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 425, 0, -75)
 biome = ExtResource("3_tr57x")
-spawn_timer_range = [1.0, 20.0]
+spawn_timer_range = [8.0, 25.0]
+max_enemies = 2
 
 [node name="GiantChunk_field_4" parent="World" unique_id=5008 instance=ExtResource("3_27dgl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 425, 0, 75)
 biome = ExtResource("3_tr57x")
-spawn_timer_range = [1.0, 20.0]
+spawn_timer_range = [8.0, 25.0]
+max_enemies = 2
 
 [node name="GiantChunk_glacier_1" parent="World" unique_id=5009 instance=ExtResource("3_27dgl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -425, 0, -75)
 biome = ExtResource("7_wbhvp")
-spawn_timer_range = [1.0, 20.0]
+spawn_timer_range = [8.0, 25.0]
+max_enemies = 2
 
 [node name="GiantChunk_glacier_2" parent="World" unique_id=5010 instance=ExtResource("3_27dgl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -425, 0, 75)
 biome = ExtResource("7_wbhvp")
-spawn_timer_range = [1.0, 20.0]
+spawn_timer_range = [8.0, 25.0]
+max_enemies = 2
 
 [node name="GiantChunk_glacier_3" parent="World" unique_id=5011 instance=ExtResource("3_27dgl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -275, 0, -75)
 biome = ExtResource("7_wbhvp")
-spawn_timer_range = [1.0, 20.0]
+spawn_timer_range = [8.0, 25.0]
+max_enemies = 2
 
 [node name="GiantChunk_glacier_4" parent="World" unique_id=5012 instance=ExtResource("3_27dgl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -275, 0, 75)
 biome = ExtResource("7_wbhvp")
-spawn_timer_range = [1.0, 20.0]
+spawn_timer_range = [8.0, 25.0]
+max_enemies = 2
 
 [node name="GiantChunk_snowy_1" parent="World" unique_id=5013 instance=ExtResource("3_27dgl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -75, 0, 275)
 biome = ExtResource("6_27dgl")
-spawn_timer_range = [1.0, 20.0]
+spawn_timer_range = [8.0, 25.0]
+max_enemies = 2
 
 [node name="GiantChunk_snowy_2" parent="World" unique_id=5014 instance=ExtResource("3_27dgl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -75, 0, 425)
 biome = ExtResource("6_27dgl")
-spawn_timer_range = [1.0, 20.0]
+spawn_timer_range = [8.0, 25.0]
+max_enemies = 2
 
 [node name="GiantChunk_snowy_3" parent="World" unique_id=5015 instance=ExtResource("3_27dgl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75, 0, 275)
 biome = ExtResource("6_27dgl")
-spawn_timer_range = [1.0, 20.0]
+spawn_timer_range = [8.0, 25.0]
+max_enemies = 2
 
 [node name="GiantChunk_snowy_4" parent="World" unique_id=5016 instance=ExtResource("3_27dgl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75, 0, 425)
 biome = ExtResource("6_27dgl")
-spawn_timer_range = [1.0, 20.0]
+spawn_timer_range = [8.0, 25.0]
+max_enemies = 2
 
 [node name="GiantChunk_wasteland_1" parent="World" unique_id=5017 instance=ExtResource("3_27dgl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -75, 0, -425)
 biome = ExtResource("10_wbhvp")
-spawn_timer_range = [1.0, 20.0]
+spawn_timer_range = [8.0, 25.0]
+max_enemies = 2
 
 [node name="GiantChunk_wasteland_2" parent="World" unique_id=5018 instance=ExtResource("3_27dgl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -75, 0, -275)
 biome = ExtResource("10_wbhvp")
-spawn_timer_range = [1.0, 20.0]
+spawn_timer_range = [8.0, 25.0]
+max_enemies = 2
 
 [node name="GiantChunk_wasteland_3" parent="World" unique_id=5019 instance=ExtResource("3_27dgl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75, 0, -425)
 biome = ExtResource("10_wbhvp")
-spawn_timer_range = [1.0, 20.0]
+spawn_timer_range = [8.0, 25.0]
+max_enemies = 2
 
 [node name="GiantChunk_wasteland_4" parent="World" unique_id=5020 instance=ExtResource("3_27dgl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75, 0, -275)
 biome = ExtResource("10_wbhvp")
-spawn_timer_range = [1.0, 20.0]
+spawn_timer_range = [8.0, 25.0]
+max_enemies = 2
 
 [node name="GiantBlendChunk_east_1" parent="World" unique_id=5021 instance=ExtResource("9_fidds")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 175, 0, -75)
@@ -160,6 +180,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 75, 
 [node name="CelShaderFX" parent="FX" unique_id=964755560 instance=ExtResource("3_52p1e")]
 
 [node name="RetroFX" parent="FX" unique_id=1268121299 instance=ExtResource("4_tscrs")]
+visible = false
 
 [node name="FPSCanvasLayer" type="CanvasLayer" parent="." unique_id=22200906]
 
