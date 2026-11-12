@@ -1,5 +1,5 @@
 # hi, I'm Arjun, and this is my first 3d godot game: [Alien FPS!]([34871928](https://arjun-bhumula.itch.io/alien-fps))
-My name is Arjun Bhumula and I'm a solo indie dev who does gamedev as a hobby. This project was made for Hack Club's Stardance challenge, and has around 50 hours of work on it.
+My name is Arjun Bhumula. This project was made for Hack Club's Stardance challenge, and has around 50 hours of work on it.
 
 ---
 
